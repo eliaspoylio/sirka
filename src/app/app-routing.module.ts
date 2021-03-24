@@ -13,14 +13,14 @@ import { UserInfoComponent } from './user-info/user-info.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/frontpage', pathMatch: 'full'},
-  {path: '/frontpage', component: FrontpageComponent},
-  {path: '/items', component: ItemsComponent },
-  {path: '/favourites', component: FavouritesComponent},
-  {path: '/login', component: LoginComponent},
-  {path: '/map', component: MapComponent},
-  {path: '/navbar', component: NavbarComponent},
-  {path: '/searchbar', component: SearchbarComponent},
-  {path: '/user-info', component: UserInfoComponent},
+  {path: 'frontpage', component: FrontpageComponent},
+  {path: 'items', component: ItemsComponent },
+  {path: 'favourites', component: FavouritesComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'map', component: MapComponent},
+  {path: 'navbar', component: NavbarComponent},
+  {path: 'searchbar', component: SearchbarComponent},
+  {path: 'user-info', component: UserInfoComponent},
 ];
 
 @NgModule({
