@@ -1,38 +1,57 @@
 <section class="tausta">
-
-  <h2>TÄHÄN SÄÄ </h2>
-  <input type="text" placeholder="Search...">
-  <h2>Explore</h2>
-  <nav class="navbar">
-    <div class="row">
-      <ul class="column">
-      <li class="col-6 border btn btn-lg bg-light"><a routerLink="/items" routerLinkActive="active">Events</a></li>
-      <li class="col-6 border btn btn-lg bg-light"><a routerLink="/items" routerLinkActive="active"> Activities</a></li>
-      <li class="col-6 border btn btn-lg bg-light"> <a routerLink="/items" routerLinkActive="active">Places</a> </li>
-    </ul>
-    <ul class="column">
-      <li class="col-6 border btn btn-lg bg-light"><a routerLink="/items" routerLinkActive="active">Restaurant</a></li>
-      <li class="col-6 border btn btn-lg bg-light"><a routerLink="/items" routerLinkActive="active">Shops</a></li>
-      <li class="col-6 border btn btn-lg bg-light"><a routerLink="/items" routerLinkActive="active">Kids</a></li>
-    </ul>
-    </div>
-  </nav>
+  <div class="search">
+    <a routerLink="/weather" routerLinkActive="active"
+      ><img src="../../assets/weather.png" alt=""
+    /></a>
+    <input type="text" placeholder="Search..." />
+  </div>
+  <div>
+    <h2>Explore</h2>
+    <nav class="navbar">
+      <div class="row">
+        <ul class="column">
+          <li class="col-6 border btn btn-lg bg-light">
+            <a routerLink="/items" routerLinkActive="active">Events</a>
+          </li>
+          <li class="col-6 border btn btn-lg bg-light">
+            <a routerLink="/items" routerLinkActive="active"> Activities</a>
+          </li>
+          <li class="col-6 border btn btn-lg bg-light">
+            <a routerLink="/items" routerLinkActive="active">Places</a>
+          </li>
+        </ul>
+        <ul class="column">
+          <li class="col-6 border btn btn-lg bg-light">
+            <a routerLink="/items" routerLinkActive="active">Restaurant</a>
+          </li>
+          <li class="col-6 border btn btn-lg bg-light">
+            <a routerLink="/items" routerLinkActive="active">Shops</a>
+          </li>
+          <li class="col-6 border btn btn-lg bg-light">
+            <a routerLink="/items" routerLinkActive="active">Kids</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 
   <div class="map">
     <h2>Nearby</h2>
     <div id="frame">
-      <a routerLink="/map" routerLinkActive="active"><img src="../../assets/helsinki.png" alt=""></a>
+      <a routerLink="/map" routerLinkActive="active"
+        ><img src="../../assets/helsinki.png" alt=""
+      /></a>
     </div>
   </div>
 
-  <hr>
+  <hr />
 
   <div class="trending">
     <h2>Trending right now</h2>
     <ul class="column" id="trend">
-      <li class="col-3"><img src="../../assets/default_image.png" alt=""></li>
-      <li class="col-3"><img src="../../assets/default_image.png" alt=""></li>
-      <li class="col-3"><img src="../../assets/default_image.png" alt=""></li>
+      <li class="col-3"><img src="../../assets/default_image.png" alt="" /></li>
+      <li class="col-3"><img src="../../assets/default_image.png" alt="" /></li>
+      <li class="col-3"><img src="../../assets/default_image.png" alt="" /></li>
     </ul>
   </div>
 </section>

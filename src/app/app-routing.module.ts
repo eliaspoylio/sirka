@@ -10,6 +10,7 @@ import { MapComponent } from './map/map.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { UserInfoComponent } from './user-info/user-info.component';
+import { WeatherComponent } from './weather/weather.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path: 'searchbar', component: SearchbarComponent},
   {path: 'user-info', component: UserInfoComponent},
   {path: 'footer', component: FooterComponent},
+  {path: 'weather', component: WeatherComponent},
 ];
 
 @NgModule({
