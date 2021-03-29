@@ -16,6 +16,7 @@ import { Page1Component } from './page1/page1.component';
 import { Page2Component } from './page2/page2.component';
 import { Page3Component } from './page3/page3.component';
 import { FooterComponent } from './footer/footer.component';
+import { WeatherComponent } from './weather/weather.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { FooterComponent } from './footer/footer.component';
     Page1Component,
     Page2Component,
     Page3Component,
-    FooterComponent
+    FooterComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,
