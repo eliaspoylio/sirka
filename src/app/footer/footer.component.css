@@ -1,0 +1,16 @@
+.column {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: #F8F9FA;
+}
+
+i {
+  padding: 10px;
+  margin-top: 20px;
+}
+
+a {
+  color: black;
+}
+
