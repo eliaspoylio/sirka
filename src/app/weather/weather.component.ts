@@ -23,17 +23,39 @@ export class WeatherComponent implements OnInit {
   setWeatherData(data) {
     this.Weatherdata = data;
 
-   //Get times from API:
-   this.Weatherdata.firstHour_dt = (this.Weatherdata.hourly[0].dt);
-   this.Weatherdata.secondHour_dt = (this.Weatherdata.hourly[1].dt);
-   this.Weatherdata.thirdHour_dt = (this.Weatherdata.hourly[2].dt);
-   this.Weatherdata.fourthHour_dt = (this.Weatherdata.hourly[3].dt);
+    //Get times from API:
+    this.Weatherdata.firstHour_dt = (this.Weatherdata.hourly[0].dt);
+    this.Weatherdata.secondHour_dt = (this.Weatherdata.hourly[1].dt);
+    this.Weatherdata.thirdHour_dt = (this.Weatherdata.hourly[2].dt);
+    this.Weatherdata.fourthHour_dt = (this.Weatherdata.hourly[3].dt);
 
     //Get Icons from API:
     this.Weatherdata.firstHourIcon = (this.Weatherdata.hourly[0].weather[0].icon);
     this.Weatherdata.secondHourIcon = (this.Weatherdata.hourly[1].weather[0].icon);
     this.Weatherdata.thirdHourIcon = (this.Weatherdata.hourly[2].weather[0].icon);
     this.Weatherdata.fourthHourIcon = (this.Weatherdata.hourly[3].weather[0].icon);
+
+    //Get temperatures from API:
+    this.Weatherdata.firstHour_temp = (this.Weatherdata.hourly[0].temp - 273.15).toFixed(0);
+    this.Weatherdata.secondHour_temp = (this.Weatherdata.hourly[1].temp - 273.15).toFixed(0);
+    this.Weatherdata.thirdHour_temp = (this.Weatherdata.hourly[2].temp - 273.15).toFixed(0);
+    this.Weatherdata.fourthHour_temp = (this.Weatherdata.hourly[3].temp - 273.15).toFixed(0);
+
+    //Get feels like- temperatures from API:
+
+    this.Weatherdata.firstHour_feelsLike = (this.Weatherdata.hourly[0].feels_like - 273.15).toFixed(0);    
+    this.Weatherdata.secondHour_feelsLike = (this.Weatherdata.hourly[1].feels_like - 273.15).toFixed(0);    
+    this.Weatherdata.thirdHour_feelsLike = (this.Weatherdata.hourly[2].feels_like - 273.15).toFixed(0);    
+    this.Weatherdata.fourthHour_feelsLike = (this.Weatherdata.hourly[3].feels_like - 273.15).toFixed(0);    
+
+
+
+    
+    
+
+    
+
+
 
 
 
