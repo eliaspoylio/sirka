@@ -48,6 +48,27 @@ export class WeatherComponent implements OnInit {
     this.Weatherdata.thirdHour_feelsLike = (this.Weatherdata.hourly[2].feels_like - 273.15).toFixed(0);    
     this.Weatherdata.fourthHour_feelsLike = (this.Weatherdata.hourly[3].feels_like - 273.15).toFixed(0);    
 
+    //Get windspeed from API:
+    this.Weatherdata.firstHour_wind = (this.Weatherdata.hourly[0].wind_speed);
+    this.Weatherdata.secondHour_wind = (this.Weatherdata.hourly[1].wind_speed);
+    this.Weatherdata.thirdHour_wind = (this.Weatherdata.hourly[2].wind_speed);
+    this.Weatherdata.fourthHour_wind = (this.Weatherdata.hourly[3].wind_speed);
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     
