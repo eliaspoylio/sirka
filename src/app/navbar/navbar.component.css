@@ -4,6 +4,7 @@ nav {
 
 .navbar-nav {
   display: flex;
+  flex-direction: row;
   padding: 0px 0 0;
   justify-content: space-evenly;
   text-transform: uppercase;
