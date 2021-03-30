@@ -22,6 +22,10 @@ export class NavbarComponent implements OnInit {
 
   setCurrentWeatherData(data) {
     this.CurrentWeatherdata = data;
+    //Get current weather from API:
+    this.CurrentWeatherdata.current_temp = (this.CurrentWeatherdata.current.temp -273.15).toFixed(0);
+    //Get current weather icon from API:
+    this.CurrentWeatherdata.current_icon = (this.CurrentWeatherdata.current.weather[0].icon);
   }
 
 }
