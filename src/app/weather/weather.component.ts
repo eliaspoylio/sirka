@@ -22,6 +22,16 @@ export class WeatherComponent implements OnInit {
 
   setWeatherData(data) {
     this.Weatherdata = data;
+
+    //Get Icons from API:
+    this.Weatherdata.firstHourIcon = (this.Weatherdata.hourly[0].weather[0].icon);
+    this.Weatherdata.secondHourIcon = (this.Weatherdata.hourly[1].weather[0].icon);
+    this.Weatherdata.thirdHourIcon = (this.Weatherdata.hourly[2].weather[0].icon);
+    this.Weatherdata.fourthHourIcon = (this.Weatherdata.hourly[3].weather[0].icon);
+
+
+
+
   }
 
 }
