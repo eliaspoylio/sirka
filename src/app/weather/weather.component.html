@@ -5,7 +5,6 @@
         <p class ="temperature">{{Weatherdata.firstHour_temp}}°C</p>
         <p>Tuntuu kuin {{Weatherdata.firstHour_feelsLike}}°C</p>
         <p> <i class="fas fa-wind"></i> {{Weatherdata.firstHour_wind | number: '1.0-0'}} m/s</p>
-        <p><i class="fas fa-tint"></i> mm</p>
     </div>
     <div class="weatherDiv">
         <h1 class="time">{{Weatherdata.secondHour_dt * 1000 | date: 'HH.mm'}}</h1>
@@ -13,7 +12,6 @@
         <p class ="temperature">{{Weatherdata.secondHour_temp}}°C</p>
         <p>Tuntuu kuin {{Weatherdata.secondHour_feelsLike}}°C</p>
         <p><i class="fas fa-wind"></i> {{Weatherdata.secondHour_wind | number: '1.0-0'}} m/s</p>
-        <p><i class="fas fa-tint"></i> mm</p>
     </div>
     <div class="weatherDiv">
         <h1 class="time">{{Weatherdata.thirdHour_dt * 1000 | date: 'HH.mm'}}</h1>
@@ -21,7 +19,6 @@
         <p class ="temperature">{{Weatherdata.thirdHour_temp}}°C</p>
         <p>Tuntuu kuin {{Weatherdata.thirdHour_feelsLike}}°C</p>
         <p><i class="fas fa-wind"></i> {{Weatherdata.thirdHour_wind | number: '1.0-0'}} m/s</p>
-        <p><i class="fas fa-tint"></i> mm</p>
     </div>
     <div class="weatherDiv">
         <h1 class="time">{{Weatherdata.fourthHour_dt * 1000 | date: 'HH.mm'}}</h1>
@@ -29,6 +26,5 @@
         <p class ="temperature">{{Weatherdata.fourthHour_temp}}°C</p>
         <p>Tuntuu kuin {{Weatherdata.fourthHour_feelsLike}}°C</p>
         <p><i class="fas fa-wind"></i> {{Weatherdata.fourthHour_wind | number: '1.0-0'}} m/s</p>
-        <p><i class="fas fa-tint"></i> mm</p>
     </div>
 </div>

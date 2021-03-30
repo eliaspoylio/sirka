@@ -70,9 +70,6 @@ export class WeatherComponent implements OnInit {
     this.Weatherdata.thirdHour_wind = (this.Weatherdata.hourly[2].wind_speed);
     this.Weatherdata.fourthHour_wind = (this.Weatherdata.hourly[3].wind_speed);
 
-    //Get rainfall from API:
-
-
   }
 
 }
