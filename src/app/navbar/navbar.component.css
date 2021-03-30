@@ -7,6 +7,7 @@ nav {
   padding: 0px 0 0;
   justify-content: space-evenly;
   text-transform: uppercase;
+  align-items: center;
   margin: 0;
 }
 
@@ -21,6 +22,26 @@ ul {
 
 #weather, #login {
   padding-top: 20px;
+}
+
+.btn.btn-sm.btn-outline-dark.p-2 {
+  display: flex;
+  height: 50px;
+  width: 140px;
+  background-color: rgb(80, 209, 209);
+  border: none;
+  color: white;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+:hover.btn.btn-sm.btn-outline-dark.p-2 {
+  background-color: rgb(57, 151, 151);
+}
+
+.weatherIcon {
+  height: 40px;
 }
 
 
