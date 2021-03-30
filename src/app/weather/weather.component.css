@@ -1,0 +1,18 @@
+.mainWeatherDiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.weatherDiv {
+    border-radius: 10px;
+    width: 200px;
+    height: auto;
+    background: linear-gradient(#007fb1, #9ac9df);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+}
