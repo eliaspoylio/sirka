@@ -45,6 +45,9 @@ ul {
   color:#A4D5EB;
   background: none;
 }
+.navbar.fixed-top.navbar-expand-lg.navbar-light.bg-light{
+  position:relative;
+}
 
 :hover.btn.btn-sm.btn-outline-dark.p-2 {
   background-color: #3B81A1;
