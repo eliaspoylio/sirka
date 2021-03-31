@@ -5,9 +5,11 @@ import { FavouritesComponent } from './favourites/favourites.component';
 import { FooterComponent } from './footer/footer.component';
 import { FrontpageComponent } from './frontpage/frontpage.component';
 import { ItemsComponent } from './items/items.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './user-login/login/login.component';
 import { MapComponent } from './map/map.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { RegisterComponent } from './user-login/register/register.component';
+import { ResetPasswordComponent } from './user-login/reset-password/reset-password.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { UserInfoComponent } from './user-info/user-info.component';
 import { WeatherComponent } from './weather/weather.component';
@@ -25,6 +27,8 @@ const routes: Routes = [
   {path: 'user-info', component: UserInfoComponent},
   {path: 'footer', component: FooterComponent},
   {path: 'weather', component: WeatherComponent},
+  {path: 'register', component: RegisterComponent}, 
+  {path: 'reset-password', component: ResetPasswordComponent}
 ];
 
 @NgModule({
