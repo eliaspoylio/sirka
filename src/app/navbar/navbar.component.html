@@ -1,13 +1,15 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
     <ul class="navbar-nav">
         <li class="nav-item" id="weather">
-            <a class="btn btn-sm btn-outline-dark p-2" href="">Weather</a>
+            <a class="btn btn-sm btn-outline-dark p-2" routerLink="/weather" routerLinkActive="active"> Helsinki
+                <img class="weatherIcon" src="https://openweathermap.org/img/wn/{{CurrentWeatherdata.current_icon}}@2x.png" alt="icon">
+                {{CurrentWeatherdata.current_temp}}°C</a>
         </li>
         <li class="nav-item" id="logo">
             <a class="nav-link navbar-brand"  routerLink="/frontpage" routerLinkActive="active"><img src="../../assets/logo2.png" alt=""></a>
         </li>
         <li class="nav-item" id="login">
-            <a class="btn btn-sm btn-outline-dark p-2" routerLink="/login" routerLinkaActive="active">Login</a>
+            <a class="login btn btn-sm btn-outline-dark p-2" routerLink="/login" routerLinkActive="active"><i class="fas fa-user"></i></a>
         </li>
     </ul>
 </nav>

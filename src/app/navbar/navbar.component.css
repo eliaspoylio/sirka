@@ -4,9 +4,11 @@ nav {
 
 .navbar-nav {
   display: flex;
+  flex-direction: row;
   padding: 0px 0 0;
   justify-content: space-evenly;
   text-transform: uppercase;
+  align-items: center;
   margin: 0;
 }
 
@@ -21,6 +23,43 @@ ul {
 
 #weather, #login {
   padding-top: 20px;
+}
+
+.btn.btn-sm.btn-outline-dark.p-2 {
+  display: flex;
+  height: 50px;
+  width: 140px;
+  background-color: #A4D5EB;
+  border: none;
+  color: white;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.login.btn.btn-sm.btn-outline-dark.p-2 {
+  border-radius: 40%;
+  height: auto;
+  width: auto;
+  font-size: 2rem;
+  color:#A4D5EB;
+  background: none;
+}
+.navbar.fixed-top.navbar-expand-lg.navbar-light.bg-light{
+  position:relative;
+}
+
+:hover.btn.btn-sm.btn-outline-dark.p-2 {
+  background-color: #3B81A1;
+}
+
+:hover.login.btn.btn-sm.btn-outline-dark.p-2{
+  color: #3B81A1;
+  background: none;
+}
+
+.weatherIcon {
+  height: 40px;
 }
 
 
