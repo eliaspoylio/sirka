@@ -29,7 +29,7 @@ ul {
   display: flex;
   height: 50px;
   width: 140px;
-  background-color: rgb(80, 209, 209);
+  background-color: #A4D5EB;
   border: none;
   color: white;
   margin-bottom: 20px;
@@ -37,8 +37,22 @@ ul {
   justify-content: center;
 }
 
+.login.btn.btn-sm.btn-outline-dark.p-2 {
+  border-radius: 40%;
+  height: auto;
+  width: auto;
+  font-size: 2rem;
+  color:#A4D5EB;
+  background: none;
+}
+
 :hover.btn.btn-sm.btn-outline-dark.p-2 {
-  background-color: rgb(57, 151, 151);
+  background-color: #3B81A1;
+}
+
+:hover.login.btn.btn-sm.btn-outline-dark.p-2{
+  color: #3B81A1;
+  background: none;
 }
 
 .weatherIcon {
