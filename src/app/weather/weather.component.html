@@ -1,1 +1,30 @@
-<p>weather works!</p>
+<div class="mainWeatherDiv">
+    <div class="weatherDiv">
+        <h1 class="time">{{Weatherdata.firstHour_dt * 1000 | date: 'HH.mm'}}</h1>
+        <img src="https://openweathermap.org/img/wn/{{Weatherdata.firstHourIcon}}@2x.png" alt="firstIcon">
+        <p class ="temperature">{{Weatherdata.firstHour_temp}}°C</p>
+        <p>Tuntuu kuin {{Weatherdata.firstHour_feelsLike}}°C</p>
+        <p> <i class="fas fa-wind"></i> {{Weatherdata.firstHour_wind | number: '1.0-0'}} m/s</p>
+    </div>
+    <div class="weatherDiv">
+        <h1 class="time">{{Weatherdata.secondHour_dt * 1000 | date: 'HH.mm'}}</h1>
+        <img src="https://openweathermap.org/img/wn/{{Weatherdata.secondHourIcon}}@2x.png" alt="secondIcon">
+        <p class ="temperature">{{Weatherdata.secondHour_temp}}°C</p>
+        <p>Tuntuu kuin {{Weatherdata.secondHour_feelsLike}}°C</p>
+        <p><i class="fas fa-wind"></i> {{Weatherdata.secondHour_wind | number: '1.0-0'}} m/s</p>
+    </div>
+    <div class="weatherDiv">
+        <h1 class="time">{{Weatherdata.thirdHour_dt * 1000 | date: 'HH.mm'}}</h1>
+        <img src="https://openweathermap.org/img/wn/{{Weatherdata.thirdHourIcon}}@2x.png" alt="thirdIcon">
+        <p class ="temperature">{{Weatherdata.thirdHour_temp}}°C</p>
+        <p>Tuntuu kuin {{Weatherdata.thirdHour_feelsLike}}°C</p>
+        <p><i class="fas fa-wind"></i> {{Weatherdata.thirdHour_wind | number: '1.0-0'}} m/s</p>
+    </div>
+    <div class="weatherDiv">
+        <h1 class="time">{{Weatherdata.fourthHour_dt * 1000 | date: 'HH.mm'}}</h1>
+        <img src="https://openweathermap.org/img/wn/{{Weatherdata.fourthHourIcon}}@2x.png" alt="fourthIcon">
+        <p class ="temperature">{{Weatherdata.fourthHour_temp}}°C</p>
+        <p>Tuntuu kuin {{Weatherdata.fourthHour_feelsLike}}°C</p>
+        <p><i class="fas fa-wind"></i> {{Weatherdata.fourthHour_wind | number: '1.0-0'}} m/s</p>
+    </div>
+</div>

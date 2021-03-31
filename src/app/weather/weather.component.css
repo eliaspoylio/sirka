@@ -1,0 +1,28 @@
+.mainWeatherDiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 160px;
+}
+
+.weatherDiv {
+    border-radius: 10px;
+    width: 200px;
+    height: auto;
+    background: linear-gradient(#08597e, #b2e0f5);
+    color: white;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.temperature {
+    font-size: 2rem;
+}
+
+.time {
+    font-size: 2rem;
+    font-weight: bold;
+}
