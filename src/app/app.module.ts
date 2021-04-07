@@ -5,7 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MapComponent } from './map/map.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './user-login/login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { FavouritesComponent } from './favourites/favourites.component';
@@ -17,6 +17,8 @@ import { Page2Component } from './page2/page2.component';
 import { Page3Component } from './page3/page3.component';
 import { FooterComponent } from './footer/footer.component';
 import { WeatherComponent } from './weather/weather.component';
+import { RegisterComponent } from './user-login/register/register.component';
+import { ResetPasswordComponent } from './user-login/reset-password/reset-password.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { WeatherComponent } from './weather/weather.component';
     Page2Component,
     Page3Component,
     FooterComponent,
-    WeatherComponent
+    WeatherComponent,
+    RegisterComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,
