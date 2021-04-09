@@ -39,6 +39,12 @@ export class WeatherComponent implements OnInit {
   setWeatherData(data) {
     this.Weatherdata = data;
 
+    //Get sunrise and sunsettime from API:
+    let sunriseTime = new Date(this.Weatherdata.current.sunrise * 1000);
+    let sunsetTime = new Date(this.Weatherdata.current.sunset *1000);
+    this.Weatherdata.sunrise_time = sunriseTime.toLocaleTimeString('fi-FI', { hour: '2-digit', minute: '2-digit' });
+    this.Weatherdata.sunset_time = sunsetTime.toLocaleTimeString('fi-FI', { hour: '2-digit', minute: '2-digit' });
+
     //Get times from API:
     this.Weatherdata.current_dt =(this.Weatherdata.current.dt);
     this.Weatherdata.secondHour_dt = (this.Weatherdata.hourly[1].dt);
