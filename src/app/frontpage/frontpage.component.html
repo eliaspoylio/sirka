@@ -1,57 +1,35 @@
-<section class="tausta">
+<section class="wrapper">
   <div class="search">
-    <a routerLink="/weather" routerLinkActive="active"
-      ><img src="../../assets/weather.png" alt=""
-    /></a>
-    <input type="text" placeholder="Search..." />
+    <h1>Welcome to your personal Helsinki city guide</h1>
+    <input type="search" placeholder="Search the site.." />
   </div>
-  <div>
-    <h2>Explore</h2>
+  <h2>Explore</h2>
+  <div class="box">
     <nav class="navbar">
-      <div class="row">
-        <ul class="column">
-          <li class="col-6 border btn btn-lg bg-light">
-            <a routerLink="/items" routerLinkActive="active">Events</a>
-          </li>
-          <li class="col-6 border btn btn-lg bg-light">
-            <a routerLink="/items" routerLinkActive="active"> Activities</a>
-          </li>
-          <li class="col-6 border btn btn-lg bg-light">
-            <a routerLink="/items" routerLinkActive="active">Places</a>
-          </li>
-        </ul>
-        <ul class="column">
-          <li class="col-6 border btn btn-lg bg-light">
-            <a routerLink="/items" routerLinkActive="active">Restaurant</a>
-          </li>
-          <li class="col-6 border btn btn-lg bg-light">
-            <a routerLink="/items" routerLinkActive="active">Shops</a>
-          </li>
-          <li class="col-6 border btn btn-lg bg-light">
-            <a routerLink="/items" routerLinkActive="active">Kids</a>
-          </li>
-        </ul>
-      </div>
+      <a class="box1" routerLink="/items" routerLinkActive="active">Events</a>
+      <a class="box2" routerLink="/items" routerLinkActive="active"
+        >Activities</a>
+      <a class="box3" routerLink="/items" routerLinkActive="active">Places</a>
     </nav>
   </div>
 
-  <div class="map">
+  <section class="nearby">
     <h2>Nearby</h2>
-    <div id="frame">
+    <div class="map">
       <a routerLink="/map" routerLinkActive="active"
         ><img src="../../assets/helsinki.png" alt=""
       /></a>
     </div>
-  </div>
+  </section>
 
-  <hr />
 
   <div class="trending">
-    <h2>Trending right now</h2>
-    <ul class="column" id="trend">
-      <li class="col-3"><img src="../../assets/default_image.png" alt="" /></li>
-      <li class="col-3"><img src="../../assets/default_image.png" alt="" /></li>
-      <li class="col-3"><img src="../../assets/default_image.png" alt="" /></li>
+    <h2 id="trend">Trending right now</h2>
+    <ul class="column">
+      <li class="col-4"><img id="trend-img" src="../../assets/events.jpg" alt="" /><figcaption>tekstii..</figcaption></li>
+      <li class="col-4"><img id="trend-img" src="../../assets/activities.jpg" alt="" /><figcaption>tekstii..</figcaption></li>
+      <li class="col-4"><img id="trend-img" src="../../assets/places.jpg" alt="" /><figcaption>tekstii..</figcaption></li>
     </ul>
   </div>
+
 </section>

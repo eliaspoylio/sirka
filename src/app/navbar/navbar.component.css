@@ -1,5 +1,8 @@
 nav {
   padding: 0;
+  box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.30);
+  -webkit-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.30);
+  -moz-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.30);
 }
 
 .navbar-nav {
@@ -21,14 +24,11 @@ ul {
   padding: 0;
 }
 
-#weather, #login {
-  padding-top: 20px;
-}
+
 
 .btn.btn-sm.btn-outline-dark.p-2 {
   display: flex;
   height: 50px;
-  width: 140px;
   background-color: #A4D5EB;
   border: none;
   color: white;
@@ -43,6 +43,7 @@ ul {
   width: auto;
   font-size: 2rem;
   color:#A4D5EB;
+
   background: none;
 }
 .navbar.fixed-top.navbar-expand-lg.navbar-light.bg-light{
@@ -60,6 +61,10 @@ ul {
 
 .weatherIcon {
   height: 40px;
+}
+
+i {
+  color: black;
 }
 
 
