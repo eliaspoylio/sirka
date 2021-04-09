@@ -1,13 +1,20 @@
-<h1 class="mainHeader">Sää tänään</h1>
-<h2 class="subtitle">Helsinki</h2>
-<div class="mainWeatherDiv">
-    <div class="weatherDiv">
-        <h1 class="time">{{Weatherdata.current_dt * 1000 | date: 'HH.mm'}}</h1>
-        <img src="https://openweathermap.org/img/wn/{{Weatherdata.currentIcon}}@2x.png" alt="firstIcon">
-        <p class="temperature">{{Weatherdata.current_temp}}°C</p>
-        <p>Tuntuu kuin {{Weatherdata.current_feelsLike}}°C</p>
-        <p> <i class="fas fa-wind"></i> {{Weatherdata.current_wind | number: '1.0-0'}} m/s</p>
+<div class="mainWeather">
+    <div class="weatherNow">
+        <h1 class="item1">Helsinki</h1>
+        <h2 class="item2">Sää nyt</h2>
+        <div class=item3>
+            <p class="temperature">{{Weatherdata.current_temp}}°C</p>
+            <p>Tuntuu kuin {{Weatherdata.current_feelsLike}}°C</p>
+            <p> <i class="fas fa-wind"></i> {{Weatherdata.current_wind | number: '1.0-0'}} m/s</p>
+        </div>
+        <img src="https://openweathermap.org/img/wn/{{Weatherdata.currentIcon}}@2x.png" alt="firstIcon" class="item4">
+        <div class="item5">
+            <p>Aurinko nousee<br>7.00</p>
+            <p>Aurinko laskee <br>21.00</p>
+        </div>
     </div>
+</div>
+<div class="nextHoursWeather">
     <div class="weatherDiv">
         <h1 class="time">{{Weatherdata.secondHour_dt * 1000 | date: 'HH.mm'}}</h1>
         <img src="https://openweathermap.org/img/wn/{{Weatherdata.secondHourIcon}}@2x.png" alt="secondIcon">
@@ -29,9 +36,4 @@
         <p>Tuntuu kuin {{Weatherdata.fourthHour_feelsLike}}°C</p>
         <p><i class="fas fa-wind"></i> {{Weatherdata.fourthHour_wind | number: '1.0-0'}} m/s</p>
     </div>
-
-</div>
-<div class="sunRiseSunSet">
-    <p>Aurinko nousee</p>
-    <p>Aurinko laskee</p>
 </div>

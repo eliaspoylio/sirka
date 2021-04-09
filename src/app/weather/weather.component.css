@@ -1,20 +1,64 @@
-.mainHeader {
-    text-align: center;
-    padding-top: 40px;
-    font-size: 3rem;
+.mainWeather {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-top: 10px;
 }
 
-.subtitle {
-    text-align: center;
-    font-size: 1.5rem;
+.weatherNow {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    justify-items: center;
+    border-radius: 10px;
+    width: 620px;
+    height: auto;
+    background: linear-gradient(185deg, rgba(93,232,148,0.6746987951807228) 12%, rgba(50,229,231,1) 79%);
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+    box-shadow: 9px 8px 42px -14px rgba(0,0,0,0.58);
+    -webkit-box-shadow: 9px 8px 42px -14px rgba(0,0,0,0.58);
+    -moz-box-shadow: 9px 8px 42px -14px rgba(0,0,0,0.58)
 }
 
-.mainWeatherDiv {
+.item1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    font-weight: bold;
+}
+
+.item2 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.item3 {
+    align-self: center;
+    text-align: center;
+}
+
+
+.item4 {
+    align-self: center;
+    text-align: center;
+}
+
+.item5 {
+    align-self: center;
+}
+
+.item5{
+    align-self: center;
+}
+
+.nextHoursWeather {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
-    padding: 40px;
+    margin: 10px;
+  
 }
 
 .weatherDiv {
