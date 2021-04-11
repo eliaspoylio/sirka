@@ -1,9 +1,12 @@
 <section class="wrapper">
   <div class="search">
-    <h1>Welcome to your personal Helsinki city guide</h1>
-    <input type="search" placeholder="Search the site.." />
-  </div>
-  <h2>Explore</h2>
+    <h1>Welcome to your personal Helsinki city guide!</h1>
+    <div class="input-group-append">
+      <input type="search" class="form-control" placeholder="Search the site.."/>
+      <button class="btn btn-sm btn-light" type="button"><i class="fas fa-search"></i></button>
+    </div>
+    </div>
+  <h2 id="explore"><span><i class="far fa-lightbulb"></i></span>Explore</h2>
   <div class="box">
     <nav class="navbar">
       <a class="box1" routerLink="/items" routerLinkActive="active">Events</a>
@@ -13,8 +16,23 @@
     </nav>
   </div>
 
+  <!-- <div class="row">
+    <div class="events">
+      <a href=""><img src="https://cdn.pixabay.com/photo/2016/11/18/17/47/iphone-1836071_960_720.jpg"></a>
+      <h2>Events</h2>
+    </div>
+    <div class="places">
+      <a href=""><img src="https://cdn.pixabay.com/photo/2019/05/08/22/01/helsinki-cathedral-4189821_960_720.jpg"></a>
+      <h2>Places</h2>
+    </div>
+    <div class="activities">
+      <a href=""><img src="https://digital.ihg.com/is/image/ihg/holiday-inn-helsinki-6581319389-2x1?wid=2400&hei=1200&qlt=85,0&resMode=sharp2&op_usm=1.75,0.9,2,0&qlt=85,0&resMode=sharp2&op_usm=1.75,0.9,2,0"></a>
+      <h2>Activities</h2>
+    </div>
+  </div> -->
+
   <section class="nearby">
-    <h2>Nearby</h2>
+    <h2><span><i class="far fa-compass"></i></span>Nearby</h2>
     <div class="map">
       <a routerLink="/map" routerLinkActive="active"
         ><img src="../../assets/helsinki.png" alt=""
@@ -24,12 +42,11 @@
 
 
   <div class="trending">
-    <h2 id="trend">Trending right now</h2>
+    <h2 id="trend"><span><i class="fas fa-chart-line"></i></span>Trending</h2>
     <ul class="column">
-      <li class="col-4"><img id="trend-img" src="../../assets/events.jpg" alt="" /><figcaption>tekstii..</figcaption></li>
-      <li class="col-4"><img id="trend-img" src="../../assets/activities.jpg" alt="" /><figcaption>tekstii..</figcaption></li>
-      <li class="col-4"><img id="trend-img" src="../../assets/places.jpg" alt="" /><figcaption>tekstii..</figcaption></li>
+      <li class="col-4"><img id="trend-img" src="../../assets/default_image.png" alt="" /><figcaption></figcaption></li>
+      <li class="col-4"><img id="trend-img" src="../../assets/default_image.png" alt="" /><figcaption></figcaption></li>
+      <li class="col-4"><img id="trend-img" src="../../assets/default_image.png" alt="" /><figcaption></figcaption></li>
     </ul>
   </div>
-
 </section>

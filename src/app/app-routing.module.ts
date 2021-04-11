@@ -10,7 +10,6 @@ import { MapComponent } from './map/map.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RegisterComponent } from './user-login/register/register.component';
 import { ResetPasswordComponent } from './user-login/reset-password/reset-password.component';
-import { SearchbarComponent } from './searchbar/searchbar.component';
 import { UserInfoComponent } from './user-info/user-info.component';
 import { WeatherComponent } from './weather/weather.component';
 
@@ -23,11 +22,10 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'map', component: MapComponent},
   {path: 'navbar', component: NavbarComponent},
-  {path: 'searchbar', component: SearchbarComponent},
   {path: 'user-info', component: UserInfoComponent},
   {path: 'footer', component: FooterComponent},
   {path: 'weather', component: WeatherComponent},
-  {path: 'register', component: RegisterComponent}, 
+  {path: 'register', component: RegisterComponent},
   {path: 'reset-password', component: ResetPasswordComponent}
 ];
 
@@ -37,4 +35,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const routingComponents = [ FrontpageComponent, ItemsComponent, FavouritesComponent, LoginComponent, MapComponent, SearchbarComponent, UserInfoComponent ]
+export const routingComponents = [ FrontpageComponent, ItemsComponent, FavouritesComponent, LoginComponent, MapComponent, UserInfoComponent ]

@@ -1,1 +1,30 @@
-<p>items works!</p>
+<section class="wrapper">
+  <div class="input-group-append">
+    <input type="search" class="form-control" placeholder="Search the site.."/>
+    <button class="btn btn-sm btn-light" type="button"><i class="fas fa-search"></i></button>
+  </div>
+
+  <h2><span><i class="fas fa-filter"></i></span>Categories</h2>
+  <nav class="navbar">
+    <a id="music">Music</a>
+    <a>Culture</a>
+    <a>Sport</a>
+    <a>Kids</a>
+  </nav>
+
+  <section class="nearby">
+    <h2><span><i class="far fa-compass"></i></span>Nearby</h2>
+    <div class="map">
+      <a routerLink="/map" routerLinkActive="active"
+        ><img src="../../assets/helsinki.png" alt=""
+      /></a>
+    </div>
+  </section>
+
+  <div class="list">
+    <h2><span><i class="far fa-calendar-alt"></i></span>All events</h2>
+    <input type="date" id="calendar" name="calendar" value="Pick a date"
+    min="2021-01-04" max="2022-31-12">
+    <p>Tähän listaus eventeistä kyseisenä päivänä</p>
+  </div>
+</section>

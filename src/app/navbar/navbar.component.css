@@ -24,8 +24,6 @@ ul {
   padding: 0;
 }
 
-
-
 .btn.btn-sm.btn-outline-dark.p-2 {
   display: flex;
   height: 50px;
@@ -43,6 +41,7 @@ ul {
   width: auto;
   font-size: 2rem;
   color:#A4D5EB;
+  margin-bottom: 0;
 
   background: none;
 }
@@ -67,4 +66,19 @@ i {
   color: black;
 }
 
+@media only screen and (max-width: 601px) {
+
+#logo {
+  order: 0;
+}
+
+#weather {
+  order: 1;
+}
+
+#login {
+  order: 2;
+}
+
+}
 

@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { MapComponent } from './map/map.component';
 import { LoginComponent } from './user-login/login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { SearchbarComponent } from './searchbar/searchbar.component';
 import { FavouritesComponent } from './favourites/favourites.component';
 import { ItemsComponent } from './items/items.component';
 import { UserInfoComponent } from './user-info/user-info.component';
@@ -26,7 +25,6 @@ import { ResetPasswordComponent } from './user-login/reset-password/reset-passwo
     MapComponent,
     LoginComponent,
     NavbarComponent,
-    SearchbarComponent,
     FavouritesComponent,
     ItemsComponent,
     UserInfoComponent,
