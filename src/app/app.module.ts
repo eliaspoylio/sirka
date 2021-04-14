@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AgmCoreModule } from '@agm/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -39,7 +40,10 @@ import { ResetPasswordComponent } from './user-login/reset-password/reset-passwo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    AgmCoreModule.forRoot({
+      apiKey: 'YOUR_API_KEY'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
