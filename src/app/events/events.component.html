@@ -1,1 +1,11 @@
-<p>events works!</p>
+<div *ngFor="let event of events.slice(0,7)">
+  <h2>{{event.name.fi}}</h2>
+  <p>
+    {{event.description.body}}
+  </p>
+  <p>{{event.location.address.street_address}}</p>
+  <p>{{event.location.lat}}</p>
+  <p>{{event.location.lon}}</p>
+
+</div>
+
