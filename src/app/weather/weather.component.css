@@ -1,4 +1,4 @@
-.mainWeather {
+.weather {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -83,10 +83,6 @@
 .time {
     font-size: 2rem;
     font-weight: bold;
-}
-
-.sunRiseSunSet {
-    text-align: center;
 }
 
 @media only screen and (max-width: 600px) {

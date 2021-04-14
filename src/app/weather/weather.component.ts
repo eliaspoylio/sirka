@@ -46,10 +46,12 @@ export class WeatherComponent implements OnInit {
     this.Weatherdata.sunset_time = sunsetTime.toLocaleTimeString('fi-FI', { hour: '2-digit', minute: '2-digit' });
 
     //Get times from API:
-    this.Weatherdata.current_dt =(this.Weatherdata.current.dt);
-    this.Weatherdata.secondHour_dt = (this.Weatherdata.hourly[1].dt);
-    this.Weatherdata.thirdHour_dt = (this.Weatherdata.hourly[2].dt);
-    this.Weatherdata.fourthHour_dt = (this.Weatherdata.hourly[3].dt);
+    let secondHour = new Date(this.Weatherdata.hourly[1].dt *1000);
+    this.Weatherdata.secondHour_time = (secondHour.toLocaleTimeString('fi-FI', { hour: '2-digit', minute: '2-digit' }));
+    let thirdHour = new Date(this.Weatherdata.hourly[2].dt *1000);
+    this.Weatherdata.thirdHour_time = (thirdHour.toLocaleTimeString('fi-FI', { hour: '2-digit', minute: '2-digit' }));
+    let fourthHour = new Date(this.Weatherdata.hourly[3].dt *1000);
+    this.Weatherdata.fourthHour_time = (fourthHour.toLocaleTimeString('fi-FI', { hour: '2-digit', minute: '2-digit' }));
 
     //Get Icons from API:
     this.Weatherdata.currentIcon = (this.Weatherdata.current.weather[0].icon);
