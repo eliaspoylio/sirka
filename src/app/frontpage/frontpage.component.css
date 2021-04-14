@@ -1,4 +1,5 @@
 .wrapper {
+  margin: 5%;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -6,7 +7,7 @@ h1 {
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
-  padding: 50px 0 30px;
+  padding-bottom: 30px;
 }
 
 .input-group-append{
@@ -52,8 +53,8 @@ a {
   padding-bottom: 20px;
   border-radius: 10px;
 
-
-  /* box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
+/*
+  box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
   -webkit-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
   -moz-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58); */
 }
@@ -170,6 +171,10 @@ ul {
 
 @media only screen and (max-width: 601px) {
 
+.wrapper {
+  margin: 0;
+}
+
 .search {
   margin-top: 40px;
 }
@@ -183,7 +188,7 @@ ul {
   display: none;
 }
 
-.box, .trending {
+.box {
   width: 90%;
 }
 
@@ -198,7 +203,6 @@ span {
 
 h2 {
   margin-top: 0;
-  margin-left: 5%;
   font-size: 1.5rem;
 }
 
@@ -206,8 +210,12 @@ h2 {
   height: 150px;
 }
 
+.nearby {
+  background-color: rgba(187, 247, 211, 0.675);
+}
+
 .map {
-  width: 85%;
+  width: 100%;
   padding-bottom: 50px;
 }
 
