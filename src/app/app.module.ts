@@ -18,6 +18,9 @@ import { FooterComponent } from './footer/footer.component';
 import { WeatherComponent } from './weather/weather.component';
 import { RegisterComponent } from './user-login/register/register.component';
 import { ResetPasswordComponent } from './user-login/reset-password/reset-password.component';
+import { EventsComponent } from './events/events.component';
+import { PlacesComponent } from './places/places.component';
+import { ActivitiesComponent } from './activities/activities.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import { ResetPasswordComponent } from './user-login/reset-password/reset-passwo
     FooterComponent,
     WeatherComponent,
     RegisterComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    EventsComponent,
+    PlacesComponent,
+    ActivitiesComponent
   ],
   imports: [
     BrowserModule,
