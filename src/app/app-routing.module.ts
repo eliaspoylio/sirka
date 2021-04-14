@@ -12,6 +12,9 @@ import { RegisterComponent } from './user-login/register/register.component';
 import { ResetPasswordComponent } from './user-login/reset-password/reset-password.component';
 import { UserInfoComponent } from './user-info/user-info.component';
 import { WeatherComponent } from './weather/weather.component';
+import { EventsComponent } from './events/events.component';
+import { PlacesComponent } from './places/places.component';
+import { ActivitiesComponent } from './activities/activities.component';
 
 
 const routes: Routes = [
@@ -26,7 +29,10 @@ const routes: Routes = [
   {path: 'footer', component: FooterComponent},
   {path: 'weather', component: WeatherComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'reset-password', component: ResetPasswordComponent}
+  {path: 'reset-password', component: ResetPasswordComponent},
+  {path: 'event', component: EventsComponent},
+  {path: 'places', component: ResetPasswordComponent},
+  {path: 'activities', component: ResetPasswordComponent}
 ];
 
 @NgModule({

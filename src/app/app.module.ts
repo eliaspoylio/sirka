@@ -19,6 +19,9 @@ import { EventsComponent } from './events/events.component';
 import { PlacesComponent } from './places/places.component';
 import { ActivitiesComponent } from './activities/activities.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +42,9 @@ import { ActivitiesComponent } from './activities/activities.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
