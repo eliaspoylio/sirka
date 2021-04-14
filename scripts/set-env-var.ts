@@ -4,7 +4,9 @@ const envVarFile = "./env-var.ts"
 
 const envVar = `
 export const ENV = {
-    WEATHER_API: ""
+    WEATHER_API_KEY: "",
+    DB_URI: "",
+    GOOGLEMAPS_API_KEY: ""
 }
 `;
 
