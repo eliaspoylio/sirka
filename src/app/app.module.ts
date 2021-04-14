@@ -11,13 +11,16 @@ import { FavouritesComponent } from './favourites/favourites.component';
 import { ItemsComponent } from './items/items.component';
 import { UserInfoComponent } from './user-info/user-info.component';
 import { FrontpageComponent } from './frontpage/frontpage.component';
-import { Page1Component } from './page1/page1.component';
-import { Page2Component } from './page2/page2.component';
-import { Page3Component } from './page3/page3.component';
 import { FooterComponent } from './footer/footer.component';
 import { WeatherComponent } from './weather/weather.component';
 import { RegisterComponent } from './user-login/register/register.component';
 import { ResetPasswordComponent } from './user-login/reset-password/reset-password.component';
+import { EventsComponent } from './events/events.component';
+import { PlacesComponent } from './places/places.component';
+import { ActivitiesComponent } from './activities/activities.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,17 +32,19 @@ import { ResetPasswordComponent } from './user-login/reset-password/reset-passwo
     ItemsComponent,
     UserInfoComponent,
     FrontpageComponent,
-    Page1Component,
-    Page2Component,
-    Page3Component,
     FooterComponent,
     WeatherComponent,
     RegisterComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    EventsComponent,
+    PlacesComponent,
+    ActivitiesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
