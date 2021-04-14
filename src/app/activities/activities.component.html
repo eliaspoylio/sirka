@@ -1,0 +1,13 @@
+<h1>Activities </h1>
+<div *ngFor="let activity of activities.slice(0,7)">
+  <h2>{{activity.name.fi}}</h2>
+  <p>
+    {{activity.description.body}}
+  </p>
+  <p>{{activity.location.address.street_address}}</p>
+  <p>{{activity.location.lat}}</p>
+  <p>{{activity.location.lon}}</p>
+
+</div>
+
+
