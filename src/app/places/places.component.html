@@ -1,0 +1,11 @@
+<h1>Places</h1>
+<div *ngFor="let place of places.slice(0,7)">
+  <h2>{{place.name.fi}}</h2>
+  <p>
+    {{place.description.body}}
+  </p>
+  <p>{{place.location.address.street_address}}</p>
+  <p>{{place.location.lat}}</p>
+  <p>{{place.location.lon}}</p>
+
+</div>
