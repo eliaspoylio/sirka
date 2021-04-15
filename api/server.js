@@ -3,10 +3,12 @@ const mongoose = require("mongoose")
 const app = express()
 const authRoute = require('./routes/auth')
 const favRoute = require('./routes/addfav')
-//const env = require('./path to env variables');
+//const env = require('../env-var');
+var cors = require('cors')
 
 //const dbURL = 
 
+app.use(cors())
 app.use(express.json())
 app.use('/api/auth', authRoute)
 app.use('/api/fav', favRoute)
