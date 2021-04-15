@@ -42,16 +42,27 @@ export class WeatherComponent implements OnInit {
     //Get sunrise and sunsettime from API:
     let sunriseTime = new Date(this.Weatherdata.current.sunrise * 1000);
     let sunsetTime = new Date(this.Weatherdata.current.sunset *1000);
-    this.Weatherdata.sunrise_time = sunriseTime.toLocaleTimeString('fi-FI', { hour: '2-digit', minute: '2-digit' });
-    this.Weatherdata.sunset_time = sunsetTime.toLocaleTimeString('fi-FI', { hour: '2-digit', minute: '2-digit' });
+    this.Weatherdata.sunrise_time = sunriseTime.toLocaleTimeString('fi-FI', { hour: '2-digit', minute: '2-digit'});
+    this.Weatherdata.sunset_time = sunsetTime.toLocaleTimeString('fi-FI', { hour: '2-digit', minute: '2-digit'});
 
     //Get times from API:
+    let currentHour = new Date(this.Weatherdata.current.dt*1000);
+    this.Weatherdata.currentHour_time = (currentHour.toLocaleTimeString('fi-FI', { hour: '2-digit', minute: '2-digit' }));
     let secondHour = new Date(this.Weatherdata.hourly[1].dt *1000);
     this.Weatherdata.secondHour_time = (secondHour.toLocaleTimeString('fi-FI', { hour: '2-digit', minute: '2-digit' }));
     let thirdHour = new Date(this.Weatherdata.hourly[2].dt *1000);
     this.Weatherdata.thirdHour_time = (thirdHour.toLocaleTimeString('fi-FI', { hour: '2-digit', minute: '2-digit' }));
     let fourthHour = new Date(this.Weatherdata.hourly[3].dt *1000);
     this.Weatherdata.fourthHour_time = (fourthHour.toLocaleTimeString('fi-FI', { hour: '2-digit', minute: '2-digit' }));
+
+    //Day or night -> change background image
+    this.Weatherdata.currentHour_isDay = (this.Weatherdata.currentHour_time < this.Weatherdata.sunset_time && this.Weatherdata.currentHour_time > this.Weatherdata.sunrise_time);
+
+    //Day or night by hours -> Not in use atm:
+    /*
+    this.Weatherdata.secondHour_isDay = (this.Weatherdata.secondHour_time < this.Weatherdata.sunset_time && this.Weatherdata.secondHour_time > this.Weatherdata.sunrise_time);
+    this.Weatherdata.thirdHour_isDay = (this.Weatherdata.thirdHour_time < this.Weatherdata.sunset_time && this.Weatherdata.thirdHour_time > this.Weatherdata.sunrise_time);
+    this.Weatherdata.fourthHour_isDay = (this.Weatherdata.fourthHour_time < this.Weatherdata.sunset_time && this.Weatherdata.fourthHour_time > this.Weatherdata.sunrise_time);*/
 
     //Get Icons from API:
     this.Weatherdata.currentIcon = (this.Weatherdata.current.weather[0].icon);

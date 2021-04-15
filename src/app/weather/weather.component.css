@@ -1,9 +1,14 @@
+section {
+    background-image: url(../../assets/daysky.jpg);
+    background-size: cover;
+    padding: 30px;
+}
+
 .weather {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    margin-top: 30px;
 }
 
 .weatherNow {
@@ -13,7 +18,8 @@
     border-radius: 10px;
     width: 620px;
     height: auto;
-    background: linear-gradient(185deg, rgba(93,232,148,0.6746987951807228) 12%, rgba(50,229,231,1) 79%);
+    background-color: rgba(0, 0, 0, 0.15);  
+    backdrop-filter: blur(5px);
     color: white;
     padding: 10px;
     font-size: 1rem;
@@ -57,7 +63,6 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
-    margin-bottom: 30px;
     margin-top: 5px;
 }
 
@@ -65,7 +70,8 @@
     border-radius: 10px;
     width: 200px;
     height: auto;
-    background: linear-gradient(185deg, rgba(93,232,148,0.6746987951807228) 12%, rgba(50,229,231,1) 79%);
+    background-color: rgba(0, 0, 0, 0.15);  
+    backdrop-filter: blur(5px);
     color: white;
     margin: 5px;
     padding: 10px;
@@ -85,6 +91,10 @@
     font-weight: bold;
 }
 
+.sunRiseSunSet {
+    text-align: center;
+}
+
 @media only screen and (max-width: 600px) {
     .weatherNow {
         display: grid;
@@ -96,3 +106,4 @@
       padding: 5px;
   }
 }
+
