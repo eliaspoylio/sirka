@@ -1,12 +1,43 @@
-<h1>Events</h1>
-<div *ngFor="let event of events.slice(0,7)">
-  <h2>{{event.name.fi}}</h2>
-  <p>
-    {{event.description.body}}
-  </p>
-  <p>{{event.location.address.street_address}}</p>
-  <p>{{event.location.lat}}</p>
-  <p>{{event.location.lon}}</p>
+<section class="wrapper">
+  <div class="input-group-append">
+    <input type="search" class="form-control" placeholder="Etsi sivustolta.."/>
+    <button class="btn btn-sm btn-light" type="button"><i class="fas fa-search"></i></button>
+  </div>
+  <h1>Tapahtumat</h1>
+  <p>Tutustu Helsingin tapahtumiin helposti kategorioittain tai kartan avulla</p>
 
-</div>
+  <h2>Kategoriat</h2>
+  <nav class="navbar">
+    <a id="music">Musiikki</a>
+    <a>Kulttuuri</a>
+    <a>Urheilu</a>
+    <a>Lapset</a>
+  </nav>
 
+  <section class="nearby">
+    <h2><span><i class="far fa-compass"></i></span>Lähistöllä</h2>
+    <div class="map">
+      <app-map></app-map>
+      <!--a routerLink="/map" routerLinkActive="active"
+        ><img src="../../assets/helsinki.png" alt=""
+      /></a-->
+    </div>
+  </section>
+
+  <div class="list">
+    <h2>Kaikki tapahtumat</h2>
+    <input type="date" id="calendar" name="calendar" value="Pick a date"
+    min="2021-01-04" max="2022-31-12">
+    <div *ngFor="let event of events.slice(0,7)">
+      <h2>{{event.name.fi}}</h2>
+      <p>
+        {{event.description.body}}
+      </p>
+      <h5>Sijainti</h5>
+      <p>{{event.location.address.street_address}}</p>
+      <!-- <p>{{event.location.lat}}</p>
+      <p>{{event.location.lon}}</p> -->
+
+    </div>
+  </div>
+</section>
