@@ -44,11 +44,10 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule, 
-    AgmCoreModule.forRoot({
-      apiKey: 'YOUR_API_KEY'
-    AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'YOUR_API_KEY',
     })
   ],
   providers: [],
