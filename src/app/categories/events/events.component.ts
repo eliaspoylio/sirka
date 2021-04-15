@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { IEvent } from '../_models/event';
-import { IApiData } from '../_models/apidata';
+import { IEvent } from '../../_models/event';
+import { IApiData } from '../../_models/apidata';
 import { element } from 'protractor';
 import { Subscription } from 'rxjs';
-import { EventService } from '../_services/event.service';
+import { EventService } from '../../_services/event.service';
 
 @Component({
   selector: 'app-events',

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { element } from 'protractor';
-import { IPlace } from '../_models/place';
-import { IApiData } from '../_models/apidata';
-import { PlaceService } from '../_services/place.service';
+import { IPlace } from '../../_models/place';
+import { IApiData } from '../../_models/apidata';
+import { PlaceService } from '../../_services/place.service';
 import { Subscription } from 'rxjs';
 
 @Component({

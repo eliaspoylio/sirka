@@ -8,16 +8,16 @@ import { MapComponent } from './map/map.component';
 import { LoginComponent } from './user-login/login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FavouritesComponent } from './favourites/favourites.component';
-import { ItemsComponent } from './items/items.component';
+import { CategoriesComponent } from './categories/categories.component';
 import { UserInfoComponent } from './user-info/user-info.component';
 import { FrontpageComponent } from './frontpage/frontpage.component';
 import { FooterComponent } from './footer/footer.component';
 import { WeatherComponent } from './weather/weather.component';
 import { RegisterComponent } from './user-login/register/register.component';
 import { ResetPasswordComponent } from './user-login/reset-password/reset-password.component';
-import { EventsComponent } from './events/events.component';
-import { PlacesComponent } from './places/places.component';
-import { ActivitiesComponent } from './activities/activities.component';
+import { EventsComponent } from './categories/events/events.component';
+import { PlacesComponent } from './categories/places/places.component';
+import { ActivitiesComponent } from './categories/activities/activities.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -29,7 +29,7 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     NavbarComponent,
     FavouritesComponent,
-    ItemsComponent,
+    CategoriesComponent,
     UserInfoComponent,
     FrontpageComponent,
     FooterComponent,
