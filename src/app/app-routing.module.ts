@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { FavouritesComponent } from './favourites/favourites.component';
 import { FooterComponent } from './footer/footer.component';
 import { FrontpageComponent } from './frontpage/frontpage.component';
-import { ItemsComponent } from './items/items.component';
+import { CategoriesComponent } from './categories/categories.component';
 import { LoginComponent } from './user-login/login/login.component';
 import { MapComponent } from './map/map.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -12,15 +12,15 @@ import { RegisterComponent } from './user-login/register/register.component';
 import { ResetPasswordComponent } from './user-login/reset-password/reset-password.component';
 import { UserInfoComponent } from './user-info/user-info.component';
 import { WeatherComponent } from './weather/weather.component';
-import { EventsComponent } from './events/events.component';
-import { PlacesComponent } from './places/places.component';
-import { ActivitiesComponent } from './activities/activities.component';
+import { EventsComponent } from './categories/events/events.component';
+import { PlacesComponent } from './categories/places/places.component';
+import { ActivitiesComponent } from './categories/activities/activities.component';
 
 
 const routes: Routes = [
   {path: '', redirectTo: '/frontpage', pathMatch: 'full'},
   {path: 'frontpage', component: FrontpageComponent},
-  {path: 'items', component: ItemsComponent },
+  {path: 'categories', component: CategoriesComponent },
   {path: 'favourites', component: FavouritesComponent},
   {path: 'login', component: LoginComponent},
   {path: 'map', component: MapComponent},
@@ -30,9 +30,9 @@ const routes: Routes = [
   {path: 'weather', component: WeatherComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'reset-password', component: ResetPasswordComponent},
-  {path: 'event', component: EventsComponent},
-  {path: 'places', component: PlacesComponent},
-  {path: 'activities', component: ActivitiesComponent}
+  {path: 'categories/events', component: EventsComponent},
+  {path: 'categories/places', component: PlacesComponent},
+  {path: 'categories/activities', component: ActivitiesComponent}
 ];
 
 @NgModule({
@@ -41,4 +41,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const routingComponents = [ FrontpageComponent, ItemsComponent, FavouritesComponent, LoginComponent, MapComponent, UserInfoComponent ]
+export const routingComponents = [ FrontpageComponent, CategoriesComponent, FavouritesComponent, LoginComponent, MapComponent, UserInfoComponent ]

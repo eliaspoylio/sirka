@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { IApiData } from '../_models/apidata';
-import { IActivity } from '../_models/activity';
-import { ActivityService } from '../_services/activity.service';
+import { IApiData } from '../../_models/apidata';
+import { IActivity } from '../../_models/activity';
+import { ActivityService } from '../../_services/activity.service';
 import { element } from 'protractor';
 import { Subscription } from 'rxjs';
 
