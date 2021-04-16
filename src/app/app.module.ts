@@ -21,7 +21,8 @@ import { PlacesComponent } from './categories/places/places.component';
 import { ActivitiesComponent } from './categories/activities/activities.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule, 
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     AgmCoreModule.forRoot({
       apiKey: 'YOUR_API_KEY',
     })
