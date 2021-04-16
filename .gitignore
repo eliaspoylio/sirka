@@ -47,4 +47,4 @@ Thumbs.db
 
 # environment variables 
 .env
-env-var.ts
+env-var.*

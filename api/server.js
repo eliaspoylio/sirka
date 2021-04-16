@@ -5,8 +5,9 @@ const authRoute = require('./routes/auth')
 const favRoute = require('./routes/addfav')
 //const env = require('../env-var');
 var cors = require('cors')
+require('dotenv').config();
 
-//const dbURL = 
+const dbURL = process.env.DB_URI
 
 app.use(cors())
 app.use(express.json())

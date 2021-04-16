@@ -3,10 +3,10 @@ const router = express.Router()
 const User = require('../models/user')
 const bcrypt = require('bcrypt')
 const rounds = 10
-//const env = require('./path to env variables');
+require('dotenv').config();
 
 const jwt = require('jsonwebtoken')
-//const tokenSecret = 
+const tokenSecret = process.env.TOKEN_SECRET
 
 const middleware = require('../middleware')
 
