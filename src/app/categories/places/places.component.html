@@ -1,25 +1,27 @@
 <section class="wrapper">
-  <div class="input-group-append">
-    <input type="search" class="form-control" placeholder="Etsi sivustolta.."/>
-    <button class="btn btn-sm btn-light" type="button"><i class="fas fa-search"></i></button>
-  </div>
-  <h1>Paikat</h1>
+  <section class="filter">
+    <div class="row">
+      <div class="col-4">
+        <h1>
+          Paikat
+        </h1>
+      </div>
+      <div class="col-8">
+        <nav class="navbar">
+          <a id="a1"><p>Ravintolat</p></a>
+          <a id="a2"><p>Ostokset</p></a>
+          <a id="a3"><p>Majoitus</p></a>
+          <a id="a4"><p>Tilat<br> & Tapahtumapaikat</p></a>
+        </nav>
+      </div>
+    </div>
+  </section>
 
-  <h2>Kategoriat</h2>
-  <nav class="navbar">
-    <a id="music">Ravintolat</a>
-    <a>Liikkeet</a>
-    <a>Majoitus</a>
-    <a>Tilat<br>& Tapahtumapaikat</a>
-  </nav>
 
   <section class="nearby">
-    <h2><span><i class="far fa-compass"></i></span>Lähistöllä</h2>
+    <h2>Lähistöllä</h2>
     <div class="map">
       <app-map></app-map>
-      <!--a routerLink="/map" routerLinkActive="active"
-        ><img src="../../assets/helsinki.png" alt=""
-      /></a-->
     </div>
   </section>
 

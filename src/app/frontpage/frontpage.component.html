@@ -7,14 +7,14 @@
           <input type="search" class="form-control" placeholder="Etsi sivustolta.."/>
           <button class="btn btn-sm btn-light" type="button"><i class="fas fa-search"></i></button>
         </div> -->
-          <h1>Henkilökohtainen<br> kaupunkioppaasi<br> Helsingissä!</h1>
+          <h1>Henkilökohtainen<br> kaupunkioppaasi<br> Helsingissä</h1>
       </div>
       <div class="col-lg-6">
         <div class="box">
-            <a class="box1" routerLink="/categories/events" routerLinkActive="active">Tapahtumat<p>Tapahtumat</p></a>
+            <a class="box1" routerLink="/categories/events" routerLinkActive="active"><p>Tapahtumat</p></a>
             <a class="box2" routerLink="/categories/activities" routerLinkActive="active"
-              >Aktiviteetit<p>Aktiviteetit</p></a>
-            <a class="box3" routerLink="/categories/places" routerLinkActive="active">Paikat<p>Paikat</p></a>
+              ><p>Aktiviteetit</p></a>
+            <a class="box3" routerLink="/categories/places" routerLinkActive="active"><p>Paikat</p></a>
         </div>
       </div>
     </div>
@@ -38,19 +38,18 @@
 
   <section class="nearby">
     <h2>Tutki ympäristöäsi kartan avulla</h2>
-    <div class="map">
-      <!-- <a routerLink="/map" routerLinkActive="active"></a> -->
       <app-map></app-map>
-      </div>
   </section>
 
 
   <section class="trending">
-    <h2 id="trend"><span><i class="fas fa-chart-line"></i></span>Suosituimmat</h2>
-    <ul class="column">
-      <li class="col-4"><img id="trend-img" src="../../assets/default_image.png" alt="" /><figcaption></figcaption></li>
-      <li class="col-4"><img id="trend-img" src="../../assets/default_image.png" alt="" /><figcaption></figcaption></li>
-      <li class="col-4"><img id="trend-img" src="../../assets/default_image.png" alt="" /><figcaption></figcaption></li>
-    </ul>
+    <div class="row">
+      <div class="col-6">
+
+      </div>
+      <div class="col-6">
+        <h2>Suosituinta<br> sisältöä <br> juuri nyt</h2>
+      </div>
+    </div>
   </section>
 </section>

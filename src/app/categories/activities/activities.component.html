@@ -1,34 +1,33 @@
 <section class="wrapper">
-  <div class="input-group-append">
-    <input type="search" class="form-control" placeholder="Etsi sivustolta.."/>
-    <button class="btn btn-sm btn-light" type="button"><i class="fas fa-search"></i></button>
-  </div>
-  <h1>Aktiviteetit</h1>
 
-  <h2>Kategoriat</h2>
-  <nav class="navbar">
-    <a id="music">Nähtävyydet<br />& Retket</a>
-    <a>Luonto<br />& Urheilu</a>
-    <a>Sauna<br />& Hyvinvointi</a>
-    <a>Museot<br />& Galleriat</a>
-  </nav>
+  <section class="filter">
+    <div class="row">
+      <div class="col-4">
+        <h1>
+          Aktiviteetit
+        </h1>
+      </div>
+      <div class="col-8">
+        <nav class="navbar">
+          <a id="a1"><p>Nähtävyydet</p></a>
+          <a id="a2"><p>Luonto<br> & liikunta</p></a>
+          <a id="a3"><p>Hyvinvointi</p></a>
+          <a id="a4"><p>Museot<br> & Galleriat</p></a>
+        </nav>
+      </div>
+    </div>
+  </section>
+
 
   <section class="nearby">
-    <h2>
-      <span><i class="far fa-compass"></i></span>Nearby
-    </h2>
+    <h2>Nearby</h2>
     <div class="map">
       <app-map></app-map>
-      <!--a routerLink="/map" routerLinkActive="active"
-        ><img src="../../assets/helsinki.png" alt=""
-      /></a-->
     </div>
   </section>
 
   <div class="list">
-    <h2>
-      <span><i class="far fa-calendar-alt"></i></span>All events
-    </h2>
+    <h2>All events</h2>
     <input
       type="date"
       id="calendar"
