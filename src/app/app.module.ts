@@ -47,7 +47,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyAmUDXq7KACnScdjhS8n-J5XdJ5KrgvwlY',
+      apiKey: 'YOUR_API_KEY',
     })
   ],
   providers: [],
