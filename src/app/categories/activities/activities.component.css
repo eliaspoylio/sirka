@@ -51,7 +51,7 @@ a:hover {
   background-color: rgba(157, 243, 191, 0.675);
 }
 
-p {
+.navbar p {
   padding-top: 45%;
   font-weight: bold;
 }
@@ -110,26 +110,26 @@ img {
   -moz-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
 }
 
-/* listed items */
-.list {
-  margin: auto;
+/* Category list */
+.card {
+  border: none;
+}
+.card-text {
+  display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.list input {
-  margin-top: 20px;
-  width: 20%;
+.col-md-8 {
+  display: flex;
+  align-items:center;
 }
 
-.list input {
-  margin-top: 0;
-  margin-left: 20px;
+.card-body h5{
+  font-weight: bolder !important;
 }
-
-.list p {
-  margin-left: 20px;
-  padding-top: 10px;
-}
-
 
 
 @media only screen and (max-width: 768px) {
@@ -167,7 +167,7 @@ img {
   }
 
   /* listed items */
-  .list {
+  /* .list {
     margin-top: 10px;
   }
 
@@ -180,7 +180,7 @@ img {
   .list p {
     margin-left: 20px;
     padding-top: 10px;
-  }
+  } */
 
 }
 
@@ -207,7 +207,7 @@ img {
     padding: 5px;
   }
 
-  .list input {
+  /* .list input {
     margin-top: 0;
     width: 50%;
     margin-left: 20px;
@@ -216,7 +216,7 @@ img {
   .list p {
     margin-left: 20px;
     padding-top: 10px;
-  }
+  } */
 
 }
 
@@ -245,7 +245,7 @@ img {
     padding: 0;
   }
 
-  .list input {
+  /* .list input {
     margin-top: 0;
     width: 50%;
     margin-left: 20px;
@@ -254,7 +254,7 @@ img {
   .list p {
     margin-left: 20px;
     padding-top: 10px;
-  }
+  } */
 
   }
 

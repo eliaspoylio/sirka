@@ -4,6 +4,7 @@ import { IActivity } from '../../_models/activity';
 import { ActivityService } from '../../_services/activity.service';
 import { element } from 'protractor';
 import { Subscription } from 'rxjs';
+import { StripPipe } from '../../_pipes/strip.pipe';
 
 @Component({
   selector: 'app-activities',
