@@ -101,34 +101,6 @@ h2 {
 }
 
 
-/* listed items */
-.list {
-  /* background: rgb(144, 100, 211);
-  background: linear-gradient(
-    0deg,
-    rgba(144, 100, 211, 1) 0%,
-    rgba(255, 112, 169, 0.6834532374100719) 100%
-  ); */
-  margin: auto;
-}
-
-.list input {
-  margin-top: 20px;
-  width: 20%;
-}
-
-.list input {
-  margin-top: 0;
-  margin-left: 20px;
-}
-
-.list p {
-  margin-left: 20px;
-  padding-top: 10px;
-}
-
-
-
 @media only screen and (max-width: 768px) {
 
   /* search input */

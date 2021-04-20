@@ -166,14 +166,14 @@ app-map {
 
 @media only screen and (min-width: 426px) and (max-width: 768px) {
 
-.wrapper {
-  margin: 2% 0;
+.top {
+  margin: 0;
 }
 
-
- h1 {
-  padding-top: 5px;
+h1 {
   font-size: 2rem;
+  margin: 0;
+  padding: 2%;
 }
 
 h2 {
@@ -181,21 +181,26 @@ h2 {
   font-size: 1.5rem;
 }
 
+.col-lg-6 {
+  padding: 0;
+}
+
 .box a {
   height: 150px;
   background-color: transparent;
 }
 
-:hover.box1 {
-  background-color: #F9907D;
-}
 
 p {
-  padding-top: 30%;
+  padding-top: 25%;
   font-size: 1rem;
 }
 
-.rotate {
+#desktop {
+  display: none;
+}
+
+#mobile {
   display: none;
 }
 }
@@ -206,6 +211,7 @@ p {
   h1 {
     font-size: 2rem;
     margin-top: 0;
+    padding: 3%;
   }
 
   .input-group-append {
@@ -232,13 +238,24 @@ p {
 
   p {
     font-size: 1rem;
-  }
-
-  .rotate {
-    display: none;
+    padding-top: 25%;
   }
 
   .nearby h1 {
     font-size: 1.5rem;
   }
+
+  #desktop {
+    display: none;
+  }
+
+  #mobile {
+    padding-top: 0;
+    display: none;
+  }
+
+  .trending h2 {
+    font-size: 1.5rem;
+  }
+
 }
