@@ -22,7 +22,7 @@ import { ActivitiesComponent } from './categories/activities/activities.componen
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { StripPipe } from '../app/_pipes/strip.pipe';
 
 @NgModule({
   declarations: [
@@ -40,7 +40,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ResetPasswordComponent,
     EventsComponent,
     PlacesComponent,
-    ActivitiesComponent
+    ActivitiesComponent,
+    StripPipe,
   ],
   imports: [
     BrowserModule,
