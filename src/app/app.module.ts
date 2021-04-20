@@ -23,6 +23,8 @@ import { ActivitiesComponent } from './categories/activities/activities.componen
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { ENV } from '../../env-var'
+
 
 @NgModule({
   declarations: [
@@ -49,7 +51,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
     AgmCoreModule.forRoot({
-      apiKey: 'YOUR_API_KEY',
+      apiKey: ENV.GOOGLEMAPS_API_KEY,
     }),
     ReactiveFormsModule
   ],
