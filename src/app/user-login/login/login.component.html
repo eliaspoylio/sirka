@@ -4,16 +4,22 @@
             <div class="form-group">
                 <h3>Kirjaudu sisään</h3>
                 <label for="email">Email</label>
-                <input type="text" formControlName="email" class="form-control"
-                    [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                <input type="text" 
+                formControlName="email" 
+                class="form-control" 
+                placeholder="Email"
+                [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
                 <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
                     <div *ngIf="f.email.errors.required">Email-osoite vaaditaan </div>
                 </div>
             </div>
             <div class="form-group">
                 <label for="password">Salasana</label>
-                <input type="password" formControlName="password" class="form-control"
-                    [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                <input type="password" 
+                formControlName="password" 
+                class="form-control" 
+                placeholder="Salasana"
+                [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
                 <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
                     <div *ngIf="f.password.errors.required">Salasana vaaditaan</div>
                 </div>
