@@ -51,11 +51,12 @@
       <div class="row g-0" *ngFor="let activity of activities.slice(0, 7)">
         <div class="col-md-4">
           <div class="card-img-wrapper">
-          <img
-            src={{activity.description.images[0].url}}
-            alt="activity-picture"
-            class="card-img-top"
-          />
+            <div *ngIf="activity.description.images.length > 0; else elseBlock">
+               <img src={{activity.description.images[0].url}} alt="activity-picture" class="card-img-top"/>
+              </div>
+              <ng-template #elseBlock>
+                <img src="" alt="">
+              </ng-template>
         </div>
         </div>
         <div class="col-md-8">

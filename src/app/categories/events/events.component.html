@@ -30,11 +30,12 @@
     <div class="row g-0" *ngFor="let event of events.slice(0,7)">
       <div class="col-md-4">
         <div class="card-img-wrapper">
-        <img
-          src={{event.description.images[0].url}}
-          alt="event-picture"
-          class="card-img-top"
-        />
+          <div *ngIf="event.description.images.length > 0; else elseBlock">
+              <img src={{event.description.images[0].url}} alt="event-picture" class="card-img-top"/>
+            </div>
+            <ng-template #elseBlock>
+              <img src="" alt="">
+            </ng-template>
       </div>
       </div>
       <div class="col-md-8">
