@@ -5,7 +5,7 @@
 /* filter */
 .filter {
   margin: 2%;
-  height: 300px;
+  height: 200px;
   background: transparent;
   background: rgb(144, 100, 211);
   background: linear-gradient(
@@ -40,7 +40,7 @@ h1 {
 a {
   background: transparent;
   width: 25%;
-  height: 300px;
+  height: 200px;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -51,7 +51,7 @@ a:hover {
 }
 
 p {
-  padding-top: 45%;
+  padding-top: 30%;
   font-weight: bold;
 }
 
@@ -101,13 +101,7 @@ h2 {
 }
 
 
-@media only screen and (max-width: 768px) {
-
-  /* search input */
-  .input-group-append {
-    width: 80%;
-    margin-left: 10%;
-  }
+@media only screen and (min-width: 426px) and (max-width: 768px) {
 
   /* all h2's */
   h2 {
@@ -115,43 +109,14 @@ h2 {
     font-size: 1.5rem;
   }
 
-  /* categories navbar */
-  .navbar{
-    width: 80%;
-  }
 
-  a {
-    padding: 5px;
-    height: 150px;
-  }
-
-  /* listed items */
-  .list {
-    margin-top: 10px;
-  }
-
-  .list input {
-    margin-top: 0;
-    width: 50%;
-    margin-left: 20px;
-  }
-
-  .list p {
-    margin-left: 20px;
-    padding-top: 10px;
+  h2 {
+    font-size: 1.5rem;
   }
 
 }
 
-@media only screen and (max-width: 376px) {
-
-  .input-group-append {
-    margin-bottom: 20px;
-  }
-
- span {
-    display: none;
-  }
+@media only screen and (max-width: 425px) {
 
   .navbar {
     display: flex;
@@ -166,56 +131,5 @@ h2 {
     padding: 5px;
   }
 
-  .list input {
-    margin-top: 0;
-    width: 50%;
-    margin-left: 20px;
-  }
-
-  .list p {
-    margin-left: 20px;
-    padding-top: 10px;
-  }
 
 }
-
-@media only screen and (max-width: 601px) {
-
-  .input-group-append {
-    margin-top: 40px;
-    width: 80%;
-    margin-left: 10%;
-  }
-
-  .navbar{
-    width: 90%;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  .map {
-    width: 85%;
-    padding-bottom: 50px;
-  }
-
-  .map a {
-    padding: 0;
-  }
-
-  .list input {
-    margin-top: 0;
-    width: 50%;
-    margin-left: 20px;
-  }
-
-  .list p {
-    margin-left: 20px;
-    padding-top: 10px;
-  }
-
-  }
-
-
-

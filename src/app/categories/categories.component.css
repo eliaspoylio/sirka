@@ -121,101 +121,8 @@ img {
 
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 426px) and (max-width: 768px) {
 
-  /* search input */
-  .input-group-append {
-    width: 80%;
-    margin-left: 10%;
-  }
-
-  /* all h2's */
-  h2 {
-    margin-top: 0;
-    font-size: 1.5rem;
-  }
-
-  /* categories navbar */
-  .navbar{
-    width: 80%;
-  }
-
-  a {
-    padding: 5px;
-    height: 150px;
-  }
-
-  /* nearby */
-  .map {
-    width: 85%;
-    padding-bottom: 50px;
-  }
-
-  .map a {
-    padding: 0;
-  }
-
-  /* listed items */
-  .list {
-    margin-top: 10px;
-  }
-
-  .list input {
-    margin-top: 0;
-    width: 50%;
-    margin-left: 20px;
-  }
-
-  .list p {
-    margin-left: 20px;
-    padding-top: 10px;
-  }
-
-}
-
-@media only screen and (max-width: 376px) {
-
-  .input-group-append {
-    margin-bottom: 20px;
-  }
-
- span {
-    display: none;
-  }
-
-  .navbar {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .navbar a {
-    height: 40px;
-    width: 100%;
-    text-align: center;
-    margin: 5px 0;
-    padding: 5px;
-  }
-
-  .list input {
-    margin-top: 0;
-    width: 50%;
-    margin-left: 20px;
-  }
-
-  .list p {
-    margin-left: 20px;
-    padding-top: 10px;
-  }
-
-}
-
-@media only screen and (max-width: 601px) {
-
-  .input-group-append {
-    margin-top: 40px;
-    width: 80%;
-    margin-left: 10%;
-  }
 
   .navbar{
     width: 90%;
@@ -225,25 +132,50 @@ img {
     font-size: 1.5rem;
   }
 
-  .map {
-    width: 85%;
-    padding-bottom: 50px;
+  a {
+    padding: 5px;
+    height: 150px;
   }
 
-  .map a {
-    padding: 0;
+  #desktop {
+    display: none;
   }
 
-  .list input {
-    margin-top: 0;
-    width: 50%;
-    margin-left: 20px;
-  }
+}
 
-  .list p {
-    margin-left: 20px;
-    padding-top: 10px;
-  }
+  @media only screen and (max-width: 425px) {
+
+    .input-group-append {
+      margin-bottom: 20px;
+    }
+
+   span {
+      display: none;
+    }
+
+    .navbar {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar a {
+      height: 40px;
+      width: 100%;
+      text-align: center;
+      margin: 5px 0;
+      padding: 5px;
+    }
+
+    .list input {
+      margin-top: 0;
+      width: 50%;
+      margin-left: 20px;
+    }
+
+    .list p {
+      margin-left: 20px;
+      padding-top: 10px;
+    }
 
   }
 

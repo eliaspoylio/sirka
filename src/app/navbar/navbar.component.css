@@ -1,9 +1,13 @@
 nav {
-  padding-left: 5%;
+  padding-left: 3%;
 
   box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.30);
   -webkit-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.30);
   -moz-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.30);
+}
+
+.input-group-append {
+  margin-left: 5%;
 }
 
 input[type=search] {
@@ -23,12 +27,7 @@ input[type=search]:focus {
 .navbar-nav {
   display: flex;
   flex-direction: row;
-  padding: 0px 5% 0;
   align-items: center;
-}
-
-li {
-  margin-right: 10%;
 }
 
 i {
@@ -64,6 +63,12 @@ a:hover {
 
 #logomobile {
   display: block;
+}
+
+
+ul {
+  align-items: flex-end;
+  justify-content:flex-end;
 }
 
 }

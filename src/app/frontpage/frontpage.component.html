@@ -1,21 +1,46 @@
 <section class="wrapper">
+  <!-- <div class="input-group-append">
+    <input type="search"
+    class="form-control"
+    placeholder="Etsi.."/>
+    <button class="btn btn-sm btn-light" type="button">
+    <i class="fas fa-search"></i>
+  </button>
+  </div> -->
 
   <section class="top">
     <div class="row">
       <div class="col-lg-6" id="first-col">
-          <h1>Henkilökohtainen<br> kaupunkioppaasi<br> Helsingissä</h1>
+        <h1>
+          Henkilökohtainen<br />
+          kaupunkioppaasi<br />
+          Helsingissä
+        </h1>
       </div>
       <div class="col-lg-6">
         <div class="box">
-            <a class="box1" routerLink="/categories/events" routerLinkActive="active"><p>Tapahtumat</p></a>
-            <a class="box2" routerLink="/categories/activities" routerLinkActive="active"
-              ><p>Aktiviteetit</p></a>
-            <a class="box3" routerLink="/categories/places" routerLinkActive="active"><p>Paikat</p></a>
+          <a
+            class="box1"
+            routerLink="/categories/events"
+            routerLinkActive="active"
+            ><p>Tapahtumat</p></a
+          >
+          <a
+            class="box2"
+            routerLink="/categories/activities"
+            routerLinkActive="active"
+            ><p>Aktiviteetit</p></a
+          >
+          <a
+            class="box3"
+            routerLink="/categories/places"
+            routerLinkActive="active"
+            ><p>Paikat</p></a
+          >
         </div>
       </div>
     </div>
   </section>
-
 
   <!-- <div class="row">
     <div class="events">
@@ -33,19 +58,20 @@
   </div> -->
 
   <section class="nearby">
-    <h2 id="desktop">Tutki ympäristöäsi kartan avulla</h2>
+    <label id="desktop">Tutki ympäristöäsi kartan avulla</label>
     <h2 id="mobile">Lähellä</h2>
-      <app-map></app-map>
+    <app-map></app-map>
   </section>
-
 
   <section class="trending">
     <div class="row">
+      <div class="col-6"></div>
       <div class="col-6">
-
-      </div>
-      <div class="col-6">
-        <h2>Suosituinta<br> sisältöä <br> juuri nyt</h2>
+        <h2>
+          Suosituinta<br />
+          sisältöä <br />
+          juuri nyt
+        </h2>
       </div>
     </div>
   </section>

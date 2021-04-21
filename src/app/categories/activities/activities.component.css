@@ -6,7 +6,7 @@
 .filter {
   margin: 2%;
   margin: 2%;
-  height: 300px;
+  height: 200px;
   background: transparent;
   background: rgb(93, 232, 148);
   background: linear-gradient(
@@ -26,13 +26,13 @@ h1 {
   text-align: center;
   padding: 30px;
   margin-top: 30px;
-  color: #ffffff;
+  color: #fff;
 }
 
 
 /* categories navbar */
 .navbar {
-  color: #ffffff;
+  color: #fff;
   display: flex;
   flex-direction: row;
   padding: 0;
@@ -41,7 +41,7 @@ h1 {
 a {
   background: transparent;
   width: 25%;
-  height: 300px;
+  height: 200px;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -52,7 +52,7 @@ a:hover {
 }
 
 p {
-  padding-top: 45%;
+  padding-top: 30%;
   font-weight: bold;
 }
 
