@@ -20,31 +20,58 @@
 
 
   <section class="nearby">
-    <h2>Nearby</h2>
+    <h2>Lähelläsi</h2>
     <div class="map">
       <app-map></app-map>
     </div>
   </section>
 
-  <div class="list">
-    <h2>All events</h2>
-    <input
+    <h2>Kaikki aktiviteetit</h2>
+    <!-- <input
       type="date"
       id="calendar"
       name="calendar"
       value="Pick a date"
       min="2021-01-04"
       max="2022-31-12"
-    />
+    /> -->
 
-    <div *ngFor="let activity of activities.slice(0, 7)">
+    <!-- <div *ngFor="let activity of activities.slice(0, 7)">
       <h2>{{ activity.name.fi }}</h2>
       <p>
         {{ activity.description.body }}
       </p>
       <p>{{ activity.location.address.street_address }}</p>
-      <!-- <p>{{ activity.location.lat }}</p>
-      <p>{{ activity.location.lon }}</p> -->
+      <p>{{ activity.location.lat }}</p>
+      <p>{{ activity.location.lon }}</p>
+    </div> -->
+
+
+    <div class="card mb-3" style="max-width: 900px; ">
+      <div class="row g-0" *ngFor="let activity of activities.slice(0, 7)">
+        <div class="col-md-4">
+          <div class="card-img-wrapper">
+            <div *ngIf="activity.description.images.length > 0; else elseBlock">
+               <img src={{activity.description.images[0].url}} alt="activity-picture" class="card-img-top"/>
+              </div>
+              <ng-template #elseBlock>
+                <img src="" alt="">
+              </ng-template>
+        </div>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title mb-0">{{activity.name.fi}}</h5>
+            <p class="card-text mb-0"  >
+              {{activity.description.body | stripHTML}}
+            </p>
+            <p class="card-text">
+              <small class="text-muted">{{activity.location.address.street_address}}</small>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+
+
 </section>

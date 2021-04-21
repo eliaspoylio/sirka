@@ -50,7 +50,7 @@ a:hover {
   background-color: rgba(233, 223, 139, 0.683);
 }
 
-p {
+.navbar p {
   padding-top: 45%;
   font-weight: bold;
 }
@@ -100,6 +100,21 @@ h2 {
   padding: 0;
 }
 
+/* Category list */
+.card {
+  border: none;
+.card-text {
+  display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+.col-md-8 {
+  display: flex;
+  align-items:center;
+.card-body h5{
+  font-weight: bolder !important;
+
 
 @media only screen and (max-width: 768px) {
 
@@ -126,7 +141,7 @@ h2 {
   }
 
   /* listed items */
-  .list {
+  /* .list {
     margin-top: 10px;
   }
 
@@ -139,7 +154,7 @@ h2 {
   .list p {
     margin-left: 20px;
     padding-top: 10px;
-  }
+  } */
 
 }
 
@@ -166,7 +181,7 @@ h2 {
     padding: 5px;
   }
 
-  .list input {
+  /* .list input {
     margin-top: 0;
     width: 50%;
     margin-left: 20px;
@@ -175,7 +190,7 @@ h2 {
   .list p {
     margin-left: 20px;
     padding-top: 10px;
-  }
+  } */
 
 }
 
@@ -204,7 +219,7 @@ h2 {
     padding: 0;
   }
 
-  .list input {
+  /* .list input {
     margin-top: 0;
     width: 50%;
     margin-left: 20px;
@@ -213,7 +228,7 @@ h2 {
   .list p {
     margin-left: 20px;
     padding-top: 10px;
-  }
+  } */
 
   }
 

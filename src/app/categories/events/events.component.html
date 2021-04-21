@@ -19,32 +19,40 @@
     </div>
   </section>
 
-  <section class="nearby">
+   <section class="nearby">
     <h2>Ympärilläsi</h2>
     <div class="map">
       <app-map></app-map>
     </div>
   </section>
 
-  <div class="list">
-    <h2>Kaikki tapahtumat</h2>
-    <input
-      type="date"
-      id="calendar"
-      name="calendar"
-      value="Pick a date"
-      min="2021-01-04"
-      max="2022-31-12"
-    />
-    <div *ngFor="let event of events.slice(0, 7)">
-      <h2>{{ event.name.fi }}</h2>
-      <p>
-        {{ event.description.body }}
-      </p>
-      <h5>Sijainti</h5>
-      <p>{{ event.location.address.street_address }}</p>
-      <!-- <p>{{event.location.lat}}</p>
-      <p>{{event.location.lon}}</p> -->
+  <div class="card mb-3" style="max-width: 900px; ">
+    <div class="row g-0" *ngFor="let event of events.slice(0,7)">
+      <div class="col-md-4">
+        <div class="card-img-wrapper">
+          <div *ngIf="event.description.images.length > 0; else elseBlock">
+              <img src={{event.description.images[0].url}} alt="event-picture" class="card-img-top"/>
+            </div>
+            <ng-template #elseBlock>
+              <img src="" alt="">
+            </ng-template>
+      </div>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <p class="card-text mb-0">
+            <small class="text-muted">{{event.event_dates.starting_day | date : 'dd/MM/yyyy HH:mm'}}</small>
+          </p>
+          <h5 class="card-title mb-0">{{event.name.fi}}</h5>
+          <p class="card-text mb-0"  >
+            {{event.description.body | stripHTML}}
+          </p>
+          <p class="card-text">
+            <small class="text-muted">{{event.location.address.street_address}}</small>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
+
 </section>
