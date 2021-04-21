@@ -4,6 +4,8 @@ import { IApiData } from '../../_models/apidata';
 import { element } from 'protractor';
 import { Subscription } from 'rxjs';
 import { EventService } from '../../_services/event.service';
+import { StripPipe } from '../../_pipes/strip.pipe';
+
 
 @Component({
   selector: 'app-events',

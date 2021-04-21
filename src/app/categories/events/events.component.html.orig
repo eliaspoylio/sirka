@@ -18,7 +18,7 @@
     </div>
   </section>
 
-  <section class="nearby">
+   <section class="nearby">
       <app-map></app-map>
   </section>
 

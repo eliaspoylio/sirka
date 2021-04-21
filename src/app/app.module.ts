@@ -22,6 +22,7 @@ import { ActivitiesComponent } from './categories/activities/activities.componen
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { StripPipe } from '../app/_pipes/strip.pipe';
 
 import { ENV } from '../../env-var'
 
@@ -42,7 +43,8 @@ import { ENV } from '../../env-var'
     ResetPasswordComponent,
     EventsComponent,
     PlacesComponent,
-    ActivitiesComponent
+    ActivitiesComponent,
+    StripPipe,
   ],
   imports: [
     BrowserModule,

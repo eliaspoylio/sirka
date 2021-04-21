@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { element } from 'protractor';
 import { IPlace } from '../../_models/place';
 import { IApiData } from '../../_models/apidata';
 import { PlaceService } from '../../_services/place.service';
 import { Subscription } from 'rxjs';
+import { StripPipe } from '../../_pipes/strip.pipe';
 
 @Component({
   selector: 'app-places',
