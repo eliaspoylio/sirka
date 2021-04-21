@@ -18,12 +18,12 @@
   </section>
 
 
-  <section class="nearby">
+  <!-- <section class="nearby">
     <h2>Lähistöllä</h2>
     <div class="map">
       <app-map></app-map>
     </div>
-  </section>
+  </section> -->
 
   <!-- <div class="list">
     <h2>Kaikki paikat</h2>
@@ -42,14 +42,15 @@
   </div> -->
 
   <div class="card mb-3" style="max-width: 900px; ">
-    <div class="row g-0" *ngFor="let place of places.slice(0,7)">
+    <div class="row g-0 ml-3" *ngFor="let place of places.slice(0,7)">
       <div class="col-md-4">
-        <div class="card-img-wrapper">
-        <!-- <img
-          src={{place.description.images[0].url}}
-          alt="place-picture"
-          class="card-img-top"
-        /> -->
+      <div class="card-img-wrapper">
+       <div *ngIf="place.description.images.length > 0; else elseBlock">
+        <img src={{place.description.images[0].url}} alt="">
+      </div>
+      <ng-template #elseBlock>
+        <img src="" alt="">
+      </ng-template>
       </div>
       </div>
       <div class="col-md-8">
