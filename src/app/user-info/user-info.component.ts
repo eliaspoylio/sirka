@@ -9,7 +9,7 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./user-info.component.css']
 })
 export class UserInfoComponent implements OnInit {
-  name = new FormControl('Ratatataa');
+  name = new FormControl('');
 
   UserInformation: any;
   constructor() { }
