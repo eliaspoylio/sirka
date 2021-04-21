@@ -18,16 +18,15 @@
 }
 
 .col-6 {
-  height: 300px;
+  height: 200px;
   text-align: center;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
+  padding-top: 20px;
   font-weight: 700;
   text-align: center;
-  padding: 30px;
-  margin-top: 30px;
   color: #ffffff;
 }
 
@@ -50,14 +49,9 @@ p {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  padding-top: 45%;
+  padding-top: 30%;
+  font-size: 1rem;
 }
-
-/* .rotate {
-  unicode-bidi: bidi-override;
-  transform: rotate(180deg);
-  margin-top: 40%
-} */
 
 .box {
   height: inherit;
@@ -69,7 +63,7 @@ p {
 }
 
 .box1 {
-  height: 300px;
+  height: 200px;
   width: 100%;
   background: transparent;
   /* background: rgb(144, 100, 211);
@@ -89,7 +83,7 @@ p {
 }
 
 .box2 {
-  height: 300px;
+  height: 200px;
   background: transparent;
   width: 100%;
 }
@@ -99,7 +93,7 @@ p {
 }
 
 .box3 {
-  height: 300px;
+  height: 200px;
   width: 100%;
   background: transparent;
    /* background: rgb(93, 232, 148);
@@ -140,8 +134,27 @@ p {
   margin-bottom: 0;
 }
 
+label {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: block;
+  padding-top: 15px;
+  position: absolute;
+  z-index: 1;
+  left: 38%;
+  background-color: #F9907D;
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+
+#mobile {
+  display: none;
+}
+
 app-map {
   padding: 20px;
+  position: relative;
 }
 
 /* trending right now */
@@ -212,10 +225,6 @@ p {
     font-size: 2rem;
     margin-top: 0;
     padding: 3%;
-  }
-
-  .input-group-append {
-    margin: 20px 0;
   }
 
   .top {

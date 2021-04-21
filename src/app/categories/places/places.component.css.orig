@@ -2,17 +2,15 @@
   font-family: "Open Sans", sans-serif;
 }
 
-/* filter */
 .filter {
-  margin: 2%;
   margin: 2%;
   height: 200px;
   background: transparent;
   background: rgb(93, 232, 148);
   background: linear-gradient(
-   185deg,
-   rgba(157, 243, 191, 0.675) 12%,
-   rgb(91, 235, 127) 79%
+    185deg,
+    rgba(190, 250, 247, 0.675) 12%,
+    rgb(40, 169, 172) 79%
   );
 
   box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
@@ -24,15 +22,14 @@ h1 {
   font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
-  padding: 30px;
-  margin-top: 30px;
-  color: #fff;
+  color: #ffffff;
+  padding-top: 15%;
 }
 
 
 /* categories navbar */
 .navbar {
-  color: #fff;
+  color: #ffffff;
   display: flex;
   flex-direction: row;
   padding: 0;
@@ -48,11 +45,16 @@ a {
 }
 
 a:hover {
-  background-color: rgba(157, 243, 191, 0.675);
+  background-color: rgba(154, 218, 218, 0.675);
 }
 
-.navbar p {
+<<<<<<< HEAD
+p {
   padding-top: 30%;
+=======
+.navbar p {
+  padding-top: 45%;
+>>>>>>> d6fe3517b0ef510642b04c6bebfc6d01f40e488a
   font-weight: bold;
 }
 
@@ -77,20 +79,10 @@ h2 {
   padding-bottom: 15px;
 }
 
-/* map section */
+/* map */
 .nearby {
   margin: 2% 5%;
   color: black;
-  /* background: rgb(93, 232, 148);
-  background: linear-gradient(
-    185deg,
-    rgba(129, 238, 115, 0.675) 12%,
-    rgb(74, 189, 101) 79%
-  );
-
-  box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
-  -webkit-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
-  -moz-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58); */
 }
 
 .nearby h2 {
@@ -100,14 +92,6 @@ h2 {
 
 app-map {
   padding: 20px;
-}
-
-img {
-  width: 100%;
-
-  box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
-  -webkit-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
-  -moz-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
 }
 
 /* Category list */
@@ -130,6 +114,11 @@ img {
 .card-body h5{
   font-weight: bolder !important;
 }
+
+.card-img-wrapper img{
+  max-width: 300px;
+}
+
 
 
 @media only screen and (max-width: 768px) {
