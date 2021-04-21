@@ -1,39 +1,42 @@
-<div class="mainWeather">
-    <div class="weatherNow">
-        <h1 class="item1">Helsinki</h1>
-        <h2 class="item2">Sää nyt</h2>
-        <div class=item3>
-            <p class="temperature">{{Weatherdata.current_temp}}°C</p>
-            <p>Tuntuu kuin {{Weatherdata.current_feelsLike}}°C</p>
-            <p> <i class="fas fa-wind"></i> {{Weatherdata.current_wind | number: '1.0-0'}} m/s</p>
+<section [ngStyle]="{'background-image':Weatherdata.currentHour_isDay ? 'url(../../assets/daysky.jpg)' : 'url(../../assets/nightsky.jpg)'}">
+    <div class="weather">
+        <div class="weatherNow">
+            <h1 class="item1">Helsinki</h1>
+            <h2 class="item2">Sää nyt</h2>
+            <div class=item3>
+                <p class="temperature">{{Weatherdata.current_temp}}°C</p>
+                <p>Tuntuu kuin {{Weatherdata.current_feelsLike}}°C</p>
+                <p> <i class="fas fa-wind"></i> {{Weatherdata.current_wind | number: '1.0-0'}} m/s</p>
+            </div>
+            <img src="https://openweathermap.org/img/wn/{{Weatherdata.currentIcon}}@2x.png" alt="weather icon"
+                class="item4">
+            <div class="item5">
+                <p>Aurinko nousee <br>{{Weatherdata.sunrise_time}}</p>
+                <p>Aurinko laskee <br>{{Weatherdata.sunset_time}}</p>
+            </div>
         </div>
-        <img src="https://openweathermap.org/img/wn/{{Weatherdata.currentIcon}}@2x.png" alt="firstIcon" class="item4">
-        <div class="item5">
-            <p>Aurinko nousee<br>{{Weatherdata.sunrise_time}}</p>
-            <p>Aurinko laskee <br>{{Weatherdata.sunset_time}}</p>
+    </div>
+    <div class="nextHoursWeather">
+        <div class="weatherDiv">
+            <h1 class="time">{{Weatherdata.secondHour_time}}</h1>
+            <img src="https://openweathermap.org/img/wn/{{Weatherdata.secondHourIcon}}@2x.png" alt="weather icon">
+            <p class="temperature">{{Weatherdata.secondHour_temp}}°C</p>
+            <p>Tuntuu kuin {{Weatherdata.secondHour_feelsLike}}°C</p>
+            <p><i class="fas fa-wind"></i> {{Weatherdata.secondHour_wind | number: '1.0-0'}} m/s</p>
+        </div>
+        <div class="weatherDiv">
+            <h1 class="time">{{Weatherdata.thirdHour_time}}</h1>
+            <img src="https://openweathermap.org/img/wn/{{Weatherdata.thirdHourIcon}}@2x.png" alt="weather icon">
+            <p class="temperature">{{Weatherdata.thirdHour_temp}}°C</p>
+            <p>Tuntuu kuin {{Weatherdata.thirdHour_feelsLike}}°C</p>
+            <p><i class="fas fa-wind"></i> {{Weatherdata.thirdHour_wind | number: '1.0-0'}} m/s</p>
+        </div>
+        <div class="weatherDiv">
+            <h1 class="time">{{Weatherdata.fourthHour_time}}</h1>
+            <img src="https://openweathermap.org/img/wn/{{Weatherdata.fourthHourIcon}}@2x.png" alt="weather icon">
+            <p class="temperature">{{Weatherdata.fourthHour_temp}}°C</p>
+            <p>Tuntuu kuin {{Weatherdata.fourthHour_feelsLike}}°C</p>
+            <p><i class="fas fa-wind"></i> {{Weatherdata.fourthHour_wind | number: '1.0-0'}} m/s</p>
         </div>
     </div>
-</div>
-<div class="nextHoursWeather">
-    <div class="weatherDiv">
-        <h1 class="time">{{Weatherdata.secondHour_dt * 1000 | date: 'HH.mm'}}</h1>
-        <img src="https://openweathermap.org/img/wn/{{Weatherdata.secondHourIcon}}@2x.png" alt="secondIcon">
-        <p class="temperature">{{Weatherdata.secondHour_temp}}°C</p>
-        <p>Tuntuu kuin {{Weatherdata.secondHour_feelsLike}}°C</p>
-        <p><i class="fas fa-wind"></i> {{Weatherdata.secondHour_wind | number: '1.0-0'}} m/s</p>
-    </div>
-    <div class="weatherDiv">
-        <h1 class="time">{{Weatherdata.thirdHour_dt * 1000 | date: 'HH.mm'}}</h1>
-        <img src="https://openweathermap.org/img/wn/{{Weatherdata.thirdHourIcon}}@2x.png" alt="thirdIcon">
-        <p class="temperature">{{Weatherdata.thirdHour_temp}}°C</p>
-        <p>Tuntuu kuin {{Weatherdata.thirdHour_feelsLike}}°C</p>
-        <p><i class="fas fa-wind"></i> {{Weatherdata.thirdHour_wind | number: '1.0-0'}} m/s</p>
-    </div>
-    <div class="weatherDiv">
-        <h1 class="time">{{Weatherdata.fourthHour_dt * 1000 | date: 'HH.mm'}}</h1>
-        <img src="https://openweathermap.org/img/wn/{{Weatherdata.fourthHourIcon}}@2x.png" alt="fourthIcon">
-        <p class="temperature">{{Weatherdata.fourthHour_temp}}°C</p>
-        <p>Tuntuu kuin {{Weatherdata.fourthHour_feelsLike}}°C</p>
-        <p><i class="fas fa-wind"></i> {{Weatherdata.fourthHour_wind | number: '1.0-0'}} m/s</p>
-    </div>
-</div>
+</section>

@@ -39,6 +39,10 @@ i:hover {
   color: rgba(59, 56, 56, 0.3);
 }
 
+#logomobile {
+  display: none;
+}
+
 a {
   padding: 0;
 }
@@ -51,19 +55,33 @@ a:hover {
   height: 40px;
 } */
 
-@media only screen and (max-width: 601px) {
+@media only screen and (min-width: 426px) and (max-width: 768px) {
 
-#logo {
-  order: 0;
+
+#logodesktop {
+  display: none;
 }
 
-#weather {
-  order: 1;
-}
-
-#login {
-  order: 2;
+#logomobile {
+  display: block;
 }
 
 }
 
+
+
+@media only screen and (max-width: 425px) {
+
+button {
+  display: none;
+}
+
+#logodesktop {
+  display: none;
+}
+
+#logomobile {
+  display: block;
+}
+
+}

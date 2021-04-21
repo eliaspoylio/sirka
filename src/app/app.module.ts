@@ -24,6 +24,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StripPipe } from '../app/_pipes/strip.pipe';
 
+import { ENV } from '../../env-var'
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +53,7 @@ import { StripPipe } from '../app/_pipes/strip.pipe';
     FormsModule,
     ReactiveFormsModule,
     AgmCoreModule.forRoot({
-      apiKey: 'YOUR_API_KEY',
+      apiKey: ENV.GOOGLEMAPS_API_KEY,
     }),
     ReactiveFormsModule
   ],
