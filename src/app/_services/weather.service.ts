@@ -12,8 +12,7 @@ export class WeatherService {
 
   constructor(private http: HttpClient) { }
 
-  getCurrentWeather() : Observable<any> {
+  getWeather() : Observable<any> {
     return this.http.get(this.URL + this.APIkey);
   }
-
 }
