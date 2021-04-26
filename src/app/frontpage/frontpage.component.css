@@ -1,8 +1,4 @@
-.wrapper {
-  font-family: 'Open Sans', sans-serif;
-}
-
-/* top-section rules */
+/* top-section */
 .top {
   margin: 2%;
   background: rgb(255, 220, 160);
@@ -36,6 +32,7 @@ h2 {
   margin: 20px 0;
   text-align: center;
   padding-top: 20px;
+  color: #fff;
 }
 
 a {
@@ -44,7 +41,6 @@ a {
 
 p {
   color: #ffffff;
-
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
@@ -54,7 +50,6 @@ p {
 }
 
 .box {
-  height: inherit;
   margin: auto;
   display: flex;
   flex-direction: row;
@@ -62,7 +57,7 @@ p {
   padding: 0;
 }
 
-.box1 {
+.box1, .box3 {
   height: 200px;
   width: 100%;
   background: transparent;
@@ -78,42 +73,18 @@ p {
   -moz-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
 }
 
-:hover.box1 {
-  background-color: #F9907D;
-}
-
 .box2 {
   height: 200px;
   background: transparent;
   width: 100%;
 }
 
-:hover.box2 {
-  background-color: #F9907D;
-}
-
-.box3 {
-  height: 200px;
-  width: 100%;
-  background: transparent;
-   /* background: rgb(93, 232, 148);
-  background: linear-gradient(
-    185deg,
-    rgba(93, 232, 148, 0.6746987951807228) 12%,
-    rgba(50, 229, 231, 1) 79%
-  ); */
-
-  box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
-  -webkit-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
-  -moz-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
-}
-
-:hover.box3 {
+:hover.box1, :hover.box2, :hover.box3 {
   background-color: #F9907D;
 }
 
 
-/* map section */
+/* map */
 .nearby {
   margin: 2% 5%;
   color: black;
@@ -122,16 +93,7 @@ p {
     185deg,
     rgba(129, 238, 115, 0.675) 12%,
     rgb(74, 189, 101) 79%
-  );
-
-  box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
-  -webkit-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
-  -moz-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58); */
-}
-
-.nearby h2 {
-  padding-top: 15px;
-  margin-bottom: 0;
+  ); */
 }
 
 label {
@@ -157,7 +119,7 @@ app-map {
   position: relative;
 }
 
-/* trending right now */
+/* trending */
 .trending {
   margin: 2%;
   background: rgb(255, 220, 160);
@@ -172,9 +134,6 @@ app-map {
   -moz-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
 }
 
-.trending h2 {
-  color: #ffffff;
-}
 
 
 @media only screen and (min-width: 426px) and (max-width: 768px) {
@@ -185,35 +144,22 @@ app-map {
 
 h1 {
   font-size: 2rem;
-  margin: 0;
   padding: 2%;
 }
 
 h2 {
-  margin-top: 0;
   font-size: 1.5rem;
-}
-
-.col-lg-6 {
-  padding: 0;
 }
 
 .box a {
   height: 150px;
-  background-color: transparent;
 }
-
 
 p {
   padding-top: 25%;
-  font-size: 1rem;
 }
 
 #desktop {
-  display: none;
-}
-
-#mobile {
   display: none;
 }
 }
@@ -221,7 +167,7 @@ p {
 
 @media only screen and (max-width: 425px) {
 
-  h1 {
+h1 {
     font-size: 2rem;
     margin-top: 0;
     padding: 3%;
