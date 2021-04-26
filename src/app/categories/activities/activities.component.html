@@ -9,10 +9,10 @@
       </div>
       <div class="col-8">
         <nav class="navbar">
-          <a id="a1"><p>Nähtävyydet</p></a>
-          <a id="a2"><p>Luonto<br> & liikunta</p></a>
-          <a id="a3"><p>Hyvinvointi</p></a>
-          <a id="a4"><p>Museot<br> & Galleriat</p></a>
+          <a id="koho"><p>Nähtävyydet</p></a>
+          <a><p>Luonto<br> & liikunta</p></a>
+          <a id="koho"><p>Hyvinvointi</p></a>
+          <a><p>Museot<br> & Galleriat</p></a>
         </nav>
       </div>
     </div>
@@ -24,26 +24,6 @@
   </section>
 
     <h2>Kaikki aktiviteetit</h2>
-    <!-- <input
-      type="date"
-      id="calendar"
-      name="calendar"
-      value="Pick a date"
-      min="2021-01-04"
-      max="2022-31-12"
-    /> -->
-
-    <!-- <div *ngFor="let activity of activities.slice(0, 7)">
-      <h2>{{ activity.name.fi }}</h2>
-      <p>
-        {{ activity.description.body }}
-      </p>
-      <p>{{ activity.location.address.street_address }}</p>
-      <p>{{ activity.location.lat }}</p>
-      <p>{{ activity.location.lon }}</p>
-    </div> -->
-
-
     <div class="card mb-3" style="max-width: 900px; ">
       <div class="row g-0" *ngFor="let activity of activities.slice(0, 7)">
         <div class="col-md-4">

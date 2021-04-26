@@ -46,13 +46,6 @@ a {
   padding: 0;
 }
 
-a:hover {
-  color: rgba(59, 56, 56, 0.3);
-}
-
-/* .weatherIcon {
-  height: 40px;
-} */
 
 @media only screen and (min-width: 426px) and (max-width: 768px) {
 
@@ -70,9 +63,7 @@ ul {
   align-items: flex-end;
   justify-content:flex-end;
 }
-
 }
-
 
 
 @media only screen and (max-width: 425px) {
@@ -88,5 +79,4 @@ button {
 #logomobile {
   display: block;
 }
-
 }
