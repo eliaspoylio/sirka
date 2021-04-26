@@ -1,23 +1,35 @@
 <div class="row">
-    <div class="col-md-4 offset-md-3 mt-4">
-        <form>
-          <h3>Register new user</h3>
-                <label for="registerName">Name</label>
-                <input type="name" class="form-control" id="registerName" placeholder="Your Name">
-                <label for="registerEmail">Email</label>
-                <input type="email"
-                       class="form-control"
-                       id="registerEmail"
-                       placeholder="Enter email">
-            <div class="form-group">
-                <label for="registerPassword">Password</label>
-                <input type="password"
-                       class="form-control"
-                       id="registerPassword"
-                       placeholder="Password">
-            </div>
-            <button type="submit"
-                    class="btn btn-outline">Register <i class="fas fa-sign-in-alt"></i></button>
-        </form>
-    </div>
+  <div class="col-md-4 offset-md-3 mt-4">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <h3>Rekisteröi uusi käyttäjä</h3>
+          <div class="form-group">
+              <label for="name">Nimi</label>
+              <input type="text" formControlName="name" class="form-control" placeholder="Nimi" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+              <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                  <div *ngIf="f.name.errors.required">First Name is required</div>
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="email">Last Name</label>
+              <input type="text" formControlName="email" class="form-control" placeholder="Email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+              <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                  <div *ngIf="f.email.errors.required">Last Name is required</div>
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" formControlName="password" class="form-control" placeholder="Salasana" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+              <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                  <div *ngIf="f.password.errors.required">Password is required</div>
+                  <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+              </div>
+          </div>
+          <div class="form-group">
+              <button type="submit"
+              class="btn btn-outline">Rekisteröi<i class="fas fa-sign-in-alt"></i></button>
+              <a class="nav-link" routerLink="/login" routerLinkActive="active">Olenkin käyttäjä! Kirjaudu sisään tästä
+              </a>
+          </div>
+      </form>
   </div>
+</div>
