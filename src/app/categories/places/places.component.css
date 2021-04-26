@@ -21,6 +21,14 @@ h1 {
   padding-top: 15%;
 }
 
+h2 {
+  font-weight: 700;
+  margin-top: 40px;
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 15px;
+}
+
 .navbar {
   color: #ffffff;
   display: flex;
@@ -52,17 +60,7 @@ a:hover {
   font-weight: bold;
 }
 
-
-/* all h2's */
-h2 {
-  font-weight: 700;
-  margin-top: 40px;
-  text-align: center;
-  margin-bottom: 0;
-  padding-bottom: 15px;
-}
-
-/* map */
+/* map section */
 .nearby {
   margin: 2% 5%;
   color: black;
@@ -100,7 +98,7 @@ h2 {
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 426px) and (max-width: 768px) {
 
   /* all h2's */
   h2 {
@@ -130,7 +128,7 @@ h2 {
 
 }
 
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 425px) {
 
   .navbar {
     display: flex;
@@ -146,27 +144,3 @@ h2 {
   }
 
 }
-
-@media only screen and (max-width: 601px) {
-
-  .navbar{
-    width: 90%;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  .map {
-    width: 85%;
-    padding-bottom: 50px;
-  }
-
-  .map a {
-    padding: 0;
-  }
-
-  }
-
-
-
