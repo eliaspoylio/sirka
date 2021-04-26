@@ -18,13 +18,9 @@ import { ResetPasswordComponent } from './user-login/reset-password/reset-passwo
 import { EventsComponent } from './categories/events/events.component';
 import { PlacesComponent } from './categories/places/places.component';
 import { ActivitiesComponent } from './categories/activities/activities.component';
-
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StripPipe } from '../app/_pipes/strip.pipe';
-
-import { ENV } from '../../env-var'
-
 import { JwtInterceptor} from './_helpers/jwt.interceptor';
 import { ErrorInterceptor } from './_helpers/error.interceptor';
 // used to create fake backend
