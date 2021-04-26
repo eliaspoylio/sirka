@@ -1,0 +1,67 @@
+<section class="wrapper">
+  <section class="filter">
+    <div class="row">
+      <div class="col-4">
+        <h1>
+          Paikat
+        </h1>
+      </div>
+      <div class="col-8">
+        <nav class="navbar">
+          <a id="a1"><p>Ravintolat</p></a>
+          <a id="a2"><p>Ostokset</p></a>
+          <a id="a3"><p>Majoitus</p></a>
+          <a id="a4"><p>Tilat<br> & Tapahtumapaikat</p></a>
+        </nav>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="nearby">
+      <app-map></app-map>
+  </section>
+
+  <!-- <div class="list">
+  <div class="list">
+    <h2>Kaikki paikat</h2>
+    <input type="date" id="calendar" name="calendar" value="Pick a date"
+    min="2021-01-04" max="2022-31-12">
+    <div *ngFor="let place of places.slice(0,7)">
+      <h2>{{place.name.fi}}</h2>
+      <p>
+        {{place.description.body}}
+      </p>
+      <p>{{place.location.address.street_address}}</p>
+      <p>{{place.location.lat}}</p>
+      <p>{{place.location.lon}}</p>
+
+    </div>
+  </div> -->
+
+  <div class="card mb-3" style="max-width: 900px; ">
+    <div class="row g-0 ml-3" *ngFor="let place of places.slice(0,7)">
+      <div class="col-md-4">
+      <div class="card-img-wrapper">
+       <div *ngIf="place.description.images.length > 0; else elseBlock">
+        <img src={{place.description.images[0].url}} alt="">
+      </div>
+      <ng-template #elseBlock>
+        <img src="" alt="">
+      </ng-template>
+      </div>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title mb-0">{{place.name.fi}}</h5>
+          <p class="card-text mb-0"  >
+            {{place.description.body | stripHTML}}
+          </p>
+          <p class="card-text">
+            <small class="text-muted">{{place.location.address.street_address}}</small>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

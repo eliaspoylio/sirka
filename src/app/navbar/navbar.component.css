@@ -1,26 +1,33 @@
 nav {
-  padding: 20 0;
+  padding-left: 3%;
 
   box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.30);
   -webkit-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.30);
   -moz-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.30);
 }
 
-#logo {
+.input-group-append {
   margin-left: 5%;
+}
+
+input[type=search] {
+  width: 60%;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+
+  box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
+  -webkit-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
+  -moz-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
+}
+
+input[type=search]:focus {
+  width: 100%;
 }
 
 .navbar-nav {
   display: flex;
   flex-direction: row;
-  padding: 0px 0 0;
-  text-transform: uppercase;
   align-items: center;
-  margin-right: 5%;
-}
-
-li {
-  margin-right: 10%;
 }
 
 i {
@@ -31,23 +38,45 @@ i:hover {
   color: rgba(59, 56, 56, 0.3);
 }
 
-/* .weatherIcon {
-  height: 40px;
-} */
-
-@media only screen and (max-width: 601px) {
-
-#logo {
-  order: 0;
+#logomobile {
+  display: none;
 }
 
-#weather {
-  order: 1;
+a {
+  padding: 0;
 }
 
-#login {
-  order: 2;
+
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+
+
+#logodesktop {
+  display: none;
 }
 
+#logomobile {
+  display: block;
 }
 
+
+ul {
+  align-items: flex-end;
+  justify-content:flex-end;
+}
+}
+
+
+@media only screen and (max-width: 425px) {
+
+button {
+  display: none;
+}
+
+#logodesktop {
+  display: none;
+}
+
+#logomobile {
+  display: block;
+}
+}

@@ -13,28 +13,28 @@ export class MapComponent implements OnInit {
   zoom: number;
   address: string;
   private geoCoder;
-  
+
   @ViewChild('search')
   public searchElementRef: ElementRef;
-  
+
   constructor(
     private mapsAPILoader: MapsAPILoader,
     private ngZone: NgZone
   ) { }
-  
+
   ngOnInit() {
     this.mapsAPILoader.load().then(() => {
       this.setCurrentLocation();
       this.geoCoder = new google.maps.Geocoder;
     });
   }
-  
+
   private setCurrentLocation() {
     if ('geolocation' in navigator) {
       navigator.geolocation.getCurrentPosition((position) => {
         this.latitude = position.coords.latitude;
         this.longitude = position.coords.longitude;
-        this.zoom = 14;
+        this.zoom = 16;
       });
     }
   }

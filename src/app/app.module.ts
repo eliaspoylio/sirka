@@ -21,6 +21,9 @@ import { ActivitiesComponent } from './categories/activities/activities.componen
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { StripPipe } from '../app/_pipes/strip.pipe';
+
+import { ENV } from '../../env-var'
 
 import { JwtInterceptor} from './_helpers/jwt.interceptor';
 import { ErrorInterceptor } from './_helpers/error.interceptor';
@@ -44,17 +47,18 @@ import { ENV } from '../../env-var'
     ResetPasswordComponent,
     EventsComponent,
     PlacesComponent,
-    ActivitiesComponent
+    ActivitiesComponent,
+    StripPipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule,
     AgmCoreModule.forRoot({
       apiKey: ENV.GOOGLEMAPS_API_KEY,
-    })
+    }),
+    ReactiveFormsModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

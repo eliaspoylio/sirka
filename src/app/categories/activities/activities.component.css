@@ -1,0 +1,134 @@
+.filter {
+  margin: 2%;
+  height: 200px;
+  background: rgb(93, 232, 148);
+  background: linear-gradient(
+   185deg,
+   rgba(157, 243, 191, 0.675) 12%,
+   rgb(91, 235, 127) 79%
+  );
+
+  box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
+  -webkit-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
+  -moz-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
+}
+
+.navbar {
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 30px;
+  margin-top: 30px;
+  color: #fff;
+}
+
+h2 {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 15px;
+}
+
+a {
+  background: transparent;
+  width: 25%;
+  height: 200px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: rgba(157, 243, 191, 0.675);
+}
+
+.navbar p {
+  padding-top: 30%;
+  font-weight: bold;
+}
+
+#a1, #a3 {
+  box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
+  -webkit-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
+  -moz-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
+}
+
+/* map section */
+.nearby {
+  margin: 2% 5%;
+  /* background: rgb(93, 232, 148);
+  background: linear-gradient(
+    185deg,
+    rgba(129, 238, 115, 0.675) 12%,
+    rgb(74, 189, 101) 79%
+  );
+
+  box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
+  -webkit-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
+  -moz-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58); */
+}
+
+app-map {
+  padding: 20px;
+}
+
+/* list section*/
+.card {
+  border: none;
+}
+
+.card-text {
+  display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.col-md-8 {
+  display: flex;
+  align-items:center;
+}
+
+.card-body h5{
+  font-weight: bolder !important;
+}
+
+
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+
+  /* categories navbar */
+  .navbar{
+    width: 90%;
+  }
+
+  a {
+    padding: 5px;
+    height: 150px;
+  }
+
+}
+
+@media only screen and (max-width: 425px) {
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar a {
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+    padding: 5px;
+  }
+
+}
