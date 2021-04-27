@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewChild, ElementRef, NgZone } from '@angular/core';
-import { MapsAPILoader } from '@agm/core';
+import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-map',
@@ -8,35 +8,22 @@ import { MapsAPILoader } from '@agm/core';
 })
 export class MapComponent implements OnInit {
 
-  latitude: number;
-  longitude: number;
+  lat: number;
+  lng: number;
   zoom: number;
-  address: string;
-  private geoCoder;
 
-  @ViewChild('search')
-  public searchElementRef: ElementRef;
-
-  constructor(
-    private mapsAPILoader: MapsAPILoader,
-    private ngZone: NgZone
-  ) { }
+  constructor() { }
 
   ngOnInit() {
-    this.mapsAPILoader.load().then(() => {
-      this.setCurrentLocation();
-      this.geoCoder = new google.maps.Geocoder;
-    });
+    this.getUserLocation()
   }
-
-  private setCurrentLocation() {
-    if ('geolocation' in navigator) {
-      navigator.geolocation.getCurrentPosition((position) => {
-        this.latitude = position.coords.latitude;
-        this.longitude = position.coords.longitude;
-        this.zoom = 16;
+  private getUserLocation(){
+    if (navigator.geolocation){
+      navigator.geolocation.getCurrentPosition(position => {
+        this.lat = position.coords.latitude;
+        this.lng = position.coords.longitude;
       });
     }
   }
 
-  }
+}
