@@ -15,6 +15,9 @@ import { WeatherComponent } from './weather/weather.component';
 import { EventsComponent } from './categories/events/events.component';
 import { PlacesComponent } from './categories/places/places.component';
 import { ActivitiesComponent } from './categories/activities/activities.component';
+import { ActivityDetailsComponent } from './categories/activities/activityDetails/activity-details/activity-details.component';
+import { EventDetailsComponent } from './categories/events/eventDetails/event-details/event-details.component';
+import { PlaceDetailsComponent } from './categories/places/placeDetails/place-details/place-details.component'
 
 
 const routes: Routes = [
@@ -32,7 +35,10 @@ const routes: Routes = [
   {path: 'reset-password', component: ResetPasswordComponent},
   {path: 'categories/events', component: EventsComponent},
   {path: 'categories/places', component: PlacesComponent},
-  {path: 'categories/activities', component: ActivitiesComponent}
+  {path: 'categories/activities', component: ActivitiesComponent},
+  {path: 'categories/events/event-details', component: EventDetailsComponent},
+  {path: 'categories/places/place-details', component: PlaceDetailsComponent},
+  {path: 'categories/activities/activity-details', component: ActivityDetailsComponent}
 ];
 
 @NgModule({
