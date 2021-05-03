@@ -19,7 +19,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
                 case url.endsWith('/auth/login') && method === 'POST':
                     console.log('login')
                     return authenticate();
-                case url.endsWith('/users/register') && method === 'POST':
+                case url.endsWith('/auth/signup') && method === 'POST':
                     return register();
                 case url.endsWith('/users') && method === 'GET':
                     return getUsers();
