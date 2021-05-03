@@ -33,10 +33,10 @@ const routes: Routes = [
   {path: 'weather', component: WeatherComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'reset-password', component: ResetPasswordComponent},
-  {path: 'categories/events', component: EventsComponent},
+  {path: 'events', component: EventsComponent},
   {path: 'categories/places', component: PlacesComponent},
   {path: 'categories/activities', component: ActivitiesComponent},
-  {path: 'categories/events/event-details', component: EventDetailsComponent},
+  {path: 'event-details', component: EventDetailsComponent},
   {path: 'categories/places/place-details', component: PlaceDetailsComponent},
   {path: 'categories/activities/activity-details', component: ActivityDetailsComponent}
 ];
