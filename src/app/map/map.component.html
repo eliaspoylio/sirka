@@ -1,4 +1,27 @@
-  <agm-map [zoom]="16" [latitude]="lat" [longitude]="lng">
-    <agm-marker [latitude]="lat" [longitude]="lng" [markerDraggable]="true">
+  <agm-map [zoom]="15" [latitude]="lat" [longitude]="lng">
+
+      <agm-marker 
+      [latitude]="lat" 
+      [longitude]="lng" 
+      [markerDraggable]="true"
+      [iconUrl]="'http://maps.google.com/mapfiles/ms/icons/red-dot.png'">
+      <agm-info-window>
+        <h3>Nykyinen sijaintisi</h3>
+        <p>Olet täällä!</p>
+      </agm-info-window>
     </agm-marker>
+
+    <agm-marker *ngFor="let place of places"
+    [latitude]="place.location.lat"
+    [longitude]="place.location.lon"
+    [iconUrl]="'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'">
+    <agm-info-window>
+      <h3>{{place.name.fi}}</h3>
+      <p>{{place.description.body}}</p>
+    </agm-info-window>
+    </agm-marker>
+
+
   </agm-map>
+
+
