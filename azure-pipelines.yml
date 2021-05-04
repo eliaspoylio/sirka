@@ -16,15 +16,15 @@ stages:
         steps:
           - task: NodeTool@0
             inputs:
-            versionSpec: '14.16.0'
+              versionSpec: '14.16.0'
             displayName: 'Install Node.js'
-          - scripts: |
+          - script: |
               npm install -g @angular/cli
               npm install
               npm run env
               ng build --prod
           - publish: dist
-          - artifact: dist
+            artifact: dist
 
   - stage: deploy_dev
     displayName: Deploy to development
