@@ -14,7 +14,17 @@ stages:
     jobs:
       - job:
         steps:
-          - script: echo build!
+          - task: NodeTool@0
+          inputs:
+            versionSpec: '14.16.0'
+          displayName: 'Install Node.js'
+          - scripts: |
+              npm install -g @angular/cli
+              npm install
+              npm run env
+              ng build --prod
+          - publish: dist
+          - artifact: dist
 
   - stage: deploy_dev
     displayName: Deploy to development
