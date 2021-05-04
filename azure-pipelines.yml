@@ -8,20 +8,6 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
-"""
-steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '14.16.0'
-  displayName: 'Install Node.js'
-
-- script: |
-    npm install -g @angular/cli
-    npm install
-    npm run env
-    ng build --prod
-  displayName: 'npm install and build'
-"""
 
 stages:
   - stage: build
