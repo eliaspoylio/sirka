@@ -15,9 +15,9 @@ stages:
       - job:
         steps:
           - task: NodeTool@0
-          inputs:
+            inputs:
             versionSpec: '14.16.0'
-          displayName: 'Install Node.js'
+            displayName: 'Install Node.js'
           - scripts: |
               npm install -g @angular/cli
               npm install
