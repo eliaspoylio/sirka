@@ -8,7 +8,7 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
-
+"""
 steps:
 - task: NodeTool@0
   inputs:
@@ -18,5 +18,28 @@ steps:
 - script: |
     npm install -g @angular/cli
     npm install
+    npm run env
     ng build --prod
   displayName: 'npm install and build'
+"""
+
+stages:
+  - stage: build
+    jobs:
+      - job:
+        steps:
+          - script: echo build!
+
+  - stage: deploy_dev
+    displayName: Deploy to development
+    jobs:
+      - job:
+        steps:
+          - script: echo deploy_dev!
+
+  - stage: deploy_prod
+    displayName: Deploy to production
+    jobs:
+      - job:
+        steps:
+          - script: echo deploy_prod!
