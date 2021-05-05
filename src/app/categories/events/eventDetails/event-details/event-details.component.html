@@ -1,7 +1,38 @@
 <section class="wrapper">
-    <p>WORKS</p>
+    <div *ngIf="currentEvent">
+      <div class="card-img-wrapper">
+        <div *ngIf="currentEvent.description.images.length > 0; else elseBlock">
+            <img src={{currentEvent.description.images[0].url}} alt="event-picture" class="card-img-top"/>
+          </div>
+          <ng-template #elseBlock>
+            <img src="" alt="">
+          </ng-template>
+
+          <h1>{{currentEvent.name.fi}}</h1>
+          <div class="col-md-8">
+            <div class="card-body">
+              <p class="card-text mb-0">
+                <small class="text-muted">{{currentEvent.event_dates.starting_day | date : 'dd/MM/yyyy HH:mm'}}</small>
+              </p>
+              <p class="card-text mb-0"  >
+                {{currentEvent.description.body | stripHTML}}
+              </p>
+              <p class="card-text">
+                <small class="text-muted">{{currentEvent.location.address.street_address}}</small>
+              </p>
+            </div>
+
+          </div>
+        </div>
+    </div>
+
+
+
+
 
  <section class="nearby">
       <!-- <app-map></app-map> -->
   </section>
-</section>
+
+
+

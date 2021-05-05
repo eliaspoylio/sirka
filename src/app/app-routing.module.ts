@@ -36,7 +36,7 @@ const routes: Routes = [
   {path: 'events', component: EventsComponent},
   {path: 'categories/places', component: PlacesComponent},
   {path: 'categories/activities', component: ActivitiesComponent},
-  {path: 'event-details', component: EventDetailsComponent},
+  {path: 'event-details/:id', component: EventDetailsComponent},
   {path: 'categories/places/place-details', component: PlaceDetailsComponent},
   {path: 'categories/activities/activity-details', component: ActivityDetailsComponent}
 ];

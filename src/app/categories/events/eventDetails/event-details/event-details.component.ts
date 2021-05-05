@@ -1,8 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { IEvent } from '../../../../_models/event';
 import { IApiData } from '../../../../_models/apidata';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { EventService } from '../../../../_services/event.service';
+import { ActionSequence } from 'selenium-webdriver';
+import { ActivatedRoute, Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-event-details',
@@ -10,24 +14,50 @@ import { EventService } from '../../../../_services/event.service';
   styleUrls: ['./event-details.component.css']
 })
 export class EventDetailsComponent implements OnInit {
-  eventSubscription: Subscription;
-  events: IEvent[] = [];
+  public eventId: string;
 
-  constructor(private eventService: EventService) { }
+  currentEvent =null;
+  message = '';
+
+  constructor(
+    private eventService: EventService,
+    private activatedRoute: ActivatedRoute,
+    private route: Router,
+    private httpClient: HttpClient) { }
 
   ngOnInit(): void {
-    this.eventSubscription = this.eventService.getEvents().subscribe((data) => {
-      let eventData = data as IApiData;
-
-      eventData.data.forEach(element => {
-        this.events.push(element);
-      });
-      this.events.forEach(element => {
-
-      });
-    }, error => {
-      console.log(error);
-    });
+   this.subscribeToEvent( this.activatedRoute.snapshot.paramMap.get('id'));
   }
+
+  subscribeToEvent(id): void {
+    this.eventService.getOneEvent(id).subscribe(
+        data => {
+          this.currentEvent = data;
+          // console.log(data)
+        },
+        error => {
+          console.log(error);
+        }
+    )
+  }
+
+  // updatePublished(status): void {
+  //   const data =
+  // }
+
+
+  // updateEvent(): void {
+  //   this.eventService.updateEvent(this.currentEvent.id, this.currentEvent)
+  //   .subscribe(
+  //     response => {
+  //       console.log(response);
+  //       this.message ='The Event was updated successfully!';
+  //     },
+  //     error => {
+  //       console.log(error);
+  //     });
+  // }
+
+
 
 }
