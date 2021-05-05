@@ -41,22 +41,18 @@ export class EventDetailsComponent implements OnInit {
     )
   }
 
-  // updatePublished(status): void {
-  //   const data =
-  // }
-
-
-  // updateEvent(): void {
-  //   this.eventService.updateEvent(this.currentEvent.id, this.currentEvent)
-  //   .subscribe(
-  //     response => {
-  //       console.log(response);
-  //       this.message ='The Event was updated successfully!';
-  //     },
-  //     error => {
-  //       console.log(error);
-  //     });
-  // }
+  updateEvent(): void {
+    this.eventService.updateEvent(this.currentEvent.id, this.currentEvent)
+    .subscribe(
+      response => {
+        console.log(response);
+        this.message ='The Event was updated successfully!';
+      },
+      error => {
+        console.log(error);
+      });
+      console.log('Workkii')
+  }
 
 
 

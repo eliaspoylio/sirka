@@ -22,9 +22,9 @@ export class EventService {
     return this.httpClient.get('https://sirka-proxy.herokuapp.com/' + this.apiURL + '/event/' + id);
   }
 
-  // public updateEvent(id, data): Observable<any> {
-  //   return this.httpClient.put('https://sirka-proxy.herokuapp.com/' + this.apiURL + id, data);
-  // }
+  public updateEvent(id, data): Observable<any> {
+    return this.httpClient.put('https://sirka-proxy.herokuapp.com/' + this.apiURL + id, data);
+  }
 
     // public createEvent(data): Observable<any> {
   //   return this.httpClient.post(this.apiURL, data);

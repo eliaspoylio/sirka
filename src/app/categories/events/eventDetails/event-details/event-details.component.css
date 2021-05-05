@@ -1,0 +1,15 @@
+.card-img-wrapper {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+}
+
+.wrapper {
+  padding: 1rem;
+}
+
+
+
+
