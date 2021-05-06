@@ -30,6 +30,7 @@ import { ENV } from '../../env-var'
 @NgModule({
   declarations: [
     AppComponent,
+    HttpClientModule,
     MapComponent,
     LoginComponent,
     NavbarComponent,
@@ -45,6 +46,7 @@ import { ENV } from '../../env-var'
     PlacesComponent,
     ActivitiesComponent,
     StripPipe,
+    
   ],
   imports: [
     BrowserModule,
