@@ -22,7 +22,7 @@
       <app-map></app-map>
   </section>
 
-
+<div class="container">
   <div class="card mb-3" style="max-width: 900px; ">
     <div class="row g-0" *ngFor="let event of events.slice(0,7)">
       <div class="col-md-4">
@@ -36,7 +36,7 @@
       </div>
       </div>
       <div class="col-md-8">
-        <div class="card-body">
+        <a class="card-body" routerLink="/event-details/{{event.id}}">
           <p class="card-text mb-0">
             <small class="text-muted">{{event.event_dates.starting_day | date : 'dd/MM/yyyy HH:mm'}}</small>
           </p>
@@ -47,11 +47,11 @@
           <p class="card-text">
             <small class="text-muted">{{event.location.address.street_address}}</small>
           </p>
-        </div>
+        </a>
         <!-- VÄLIAIKAINEN NAPPULA -->
-        <button routerLink="/event-details/{{event.id}}">Tutustu lisää!</button>
+        <!-- <button routerLink="/event-details/{{event.id}}">Tutustu lisää!</button> -->
       </div>
     </div>
   </div>
-
+</div>
 </section>
