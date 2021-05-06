@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MapComponent } from '../map/map.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { FrontpageComponent } from './frontpage.component';
 
@@ -9,8 +10,8 @@ describe('FrontpageComponent', () => {
   let fixture: ComponentFixture<FrontpageComponent>;
 
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ FrontpageComponent, MapComponent]
+    await TestBed.configureTestingModule({ 
+      imports: [ HttpClientTestingModule  ]
      
     })
     .compileComponents();
