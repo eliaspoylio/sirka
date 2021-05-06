@@ -4,12 +4,8 @@ import { IEvent } from '../_models/event';
 import { IActivity } from '../_models/activity';
 import { IApiData } from '../_models/apidata';
 import { Subscription } from 'rxjs';
-import { PlaceService } from '../_services/place.service';
-import { EventService } from '../_services/event.service';
-import { ActivityService } from '../_services/activity.service';
 import { StripPipe } from '../_pipes/strip.pipe';
 import { HttpClient } from '@angular/common/http';
-//import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-map',
@@ -26,53 +22,74 @@ export class MapComponent implements OnInit {
   lat: number;
   lng: number;
   zoom: number;
-  //nearbyPlaces: any;
 
-  constructor(private placeService: PlaceService,
-    private eventService: EventService,
-    private activityService: ActivityService, 
-    //private httpClient: HttpClient
-    ) { }
+  constructor(private httpClient: HttpClient) { }
 
-   //apiURL = "http://open-api.myhelsinki.fi/v1";
+  public customStyle = [
+    {
+      "featureType":"poi",
+      "elemenType": "all",
+      "stylers":[{
+        visibility: "off",
+      }]
+    }
+  ]
+
+  apiURL = "http://open-api.myhelsinki.fi/v1";
 
   ngOnInit() {
 
-    this.setCurrentLocation();
-    this.placeSubscription = this.placeService.getPlaces().subscribe((data) => {
-      let placeData = data as IApiData;
-      placeData.data.forEach(element => {
-        this.places.push(element);
-      });
-      this.places.forEach(element => {
-      });
-    }, error => {
-      console.log(error);
-    });
-    this.eventSubscription = this.eventService.getEvents().subscribe((data) => {
-      let eventData = data as IApiData;
+    this.setCurrentLocation()
 
-      eventData.data.forEach(element => {
-        this.events.push(element);
-      });
-      this.events.forEach(element => {
+    //Alla oleva hakee lähimmät paikat:
+    this.getLocation()
+      .then((loc: any) => {
+        this.httpClient
+          .get('http://sirka-proxy.herokuapp.com/' + this.apiURL + '/places/?distance_filter=' + loc.lat + '%2C' + loc.lng + '%2C4')
+          .toPromise()
+          .then(res => {
+            let placeData = res as IApiData;
+            placeData.data.forEach(element => {
+              this.places.push(element);
+            });
+            this.places.forEach(elemens => {
+            });
+          })
+      })
+      
+      //Alla oleva hakee lähimmät tapahtumat:
+      this.getLocation()
+      .then((loc: any) => {
+        this.httpClient
+          .get('http://sirka-proxy.herokuapp.com/' + this.apiURL + '/events/?distance_filter=' + loc.lat + '%2C' + loc.lng + '%2C4')
+          .toPromise()
+          .then(res => {
+            let eventData = res as IApiData;
+            eventData.data.forEach(element => {
+              this.events.push(element);
+            });
+            this.events.forEach(elemens => {
+            });
+          })
+      })
 
-      });
-    }, error => {
-      console.log(error);
-    });
-    this.activitySubscription = this.activityService.getActivities().subscribe((data) => {
-      let activityData = data as IApiData;
+      //Alla oleva hakee lähimmät aktiviteetit:
+      this.getLocation()
+      .then((loc: any) => {
+        this.httpClient
+          .get('http://sirka-proxy.herokuapp.com/' + this.apiURL + '/activities/?distance_filter=' + loc.lat + '%2C' + loc.lng + '%2C4')
+          .toPromise()
+          .then(res => {
+            let activityData = res as IApiData;
+            activityData.data.forEach(element => {
+              this.activities.push(element);
+            });
+            this.activities.forEach(elemens => {
+            });
+          })
+      })
 
-      activityData.data.forEach(element => {
-        this.activities.push(element);
-      });
-      this.activities.forEach(element => {
-
-      });
-    }, error => {
-      console.log(error);
-    });
+      
   }
 
   private setCurrentLocation() {
@@ -84,30 +101,7 @@ export class MapComponent implements OnInit {
     }
   }
 
-
-
-
-//Alla oleva filtteröi karttaan vain lähellä olevat paikat:
-    /*this.setCurrentLocation()
-    this.getLocation()
-      .then((loc: any) => {
-        this.httpClient
-          .get('http://sirka-proxy.herokuapp.com/' + this.apiURL + '/places/?distance_filter=' + loc.lat + '%2C%20%20' + loc.lng + '%2C%201')
-          .toPromise()
-          .then(res => {
-            let placeData = res as IApiData;
-            placeData.data.forEach(element => {
-              this.places.push(element);
-            });
-            this.places.forEach(elemens => {
-            });
-            console.log(placeData)
-          })
-      })
-  }*/
-
-  //Alla oleva liittyy lähellä olevien paikkojen hakuun:
-  /*getLocation(): Promise<any> {
+  getLocation(): Promise<any> {
     return new Promise((resolve, reject) => {
       navigator.geolocation.getCurrentPosition(resp => {
         resolve({ lat: resp.coords.latitude, lng: resp.coords.longitude });
@@ -116,6 +110,7 @@ export class MapComponent implements OnInit {
           reject(err);
         });
     });
-  }*/
-
+  }
+  
 }
+

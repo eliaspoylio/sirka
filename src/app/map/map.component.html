@@ -1,9 +1,9 @@
-  <agm-map [zoom]="15" [latitude]="lat" [longitude]="lng">
+  <agm-map [zoom]="15" [latitude]="lat" [longitude]="lng" [styles]="customStyle">
 
       <agm-marker 
       [latitude]="lat" 
       [longitude]="lng" 
-      [markerDraggable]="true"
+      [markerDraggable]="false"
       [iconUrl]="'http://maps.google.com/mapfiles/ms/icons/red-dot.png'">
       <agm-info-window>
         <h3>Nykyinen sijaintisi</h3>
