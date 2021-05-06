@@ -22,7 +22,7 @@ describe('PlacesComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create places component', () => {
     expect(component).toBeTruthy();
   });
 });
