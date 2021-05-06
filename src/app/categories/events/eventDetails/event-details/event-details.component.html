@@ -16,9 +16,10 @@
       <div class="row align-items-center h-100">
         <div class="col">
           <h1 class="display-3">{{currentEvent.name.fi}}</h1>
-          <p><strong>Missä: </strong> {{currentEvent.location.address.street_address}}</p>
+          <p><strong>Missä: </strong> {{currentEvent.location.address.street_address}}, {{currentEvent.location.address.locality}}</p>
           <p><strong>Milloin: </strong> {{currentEvent.event_dates.starting_day | date : 'dd/MM/yyyy'}}</p>
           <a href="{{currentEvent.info_url}}" class="btn btn-outline-primary" role="button" aria-pressed="true">Lue lisää</a>
+          <i class="bi bi-heart"></i>
         </div>
         </div>
 
