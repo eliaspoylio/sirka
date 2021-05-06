@@ -1,9 +1,9 @@
-  <agm-map [zoom]="15" [latitude]="lat" [longitude]="lng">
+  <agm-map [zoom]="15" [latitude]="lat" [longitude]="lng" [styles]="customStyle">
 
       <agm-marker 
       [latitude]="lat" 
       [longitude]="lng" 
-      [markerDraggable]="true"
+      [markerDraggable]="false"
       [iconUrl]="'http://maps.google.com/mapfiles/ms/icons/red-dot.png'">
       <agm-info-window>
         <h3>Nykyinen sijaintisi</h3>
@@ -18,6 +18,26 @@
     <agm-info-window>
       <h3>{{place.name.fi}}</h3>
       <p>{{place.description.body}}</p>
+    </agm-info-window>
+    </agm-marker>
+
+    <agm-marker *ngFor="let event of events"
+    [latitude]="event.location.lat"
+    [longitude]="event.location.lon"
+    [iconUrl]="'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png'">
+    <agm-info-window>
+      <h3>{{event.name.fi}}</h3>
+      <p>{{event.description.body | stripHTML}}</p>
+    </agm-info-window>
+    </agm-marker>
+
+    <agm-marker *ngFor="let activity of activities"
+    [latitude]="activity.location.lat"
+    [longitude]="activity.location.lon"
+    [iconUrl]="'http://maps.google.com/mapfiles/ms/icons/green-dot.png'">
+    <agm-info-window>
+      <h3>{{activity.name.fi}}</h3>
+      <p>{{activity.description.body | stripHTML}}</p>
     </agm-info-window>
     </agm-marker>
 
