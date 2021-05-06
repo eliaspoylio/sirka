@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { WeatherComponent } from './weather.component';
 
@@ -8,7 +9,8 @@ describe('WeatherComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WeatherComponent ]
+      declarations: [ WeatherComponent ], 
+      imports: [ HttpClientTestingModule ]
     })
     .compileComponents();
   });
@@ -22,4 +24,13 @@ describe('WeatherComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render weather details in a p tag', () => {
+    const fixture = TestBed.createComponent(WeatherComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('p').textContent).toContain('°C');
+  });
+  
+
 });

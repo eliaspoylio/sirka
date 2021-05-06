@@ -1,4 +1,6 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { PlacesComponent } from './places.component';
 
@@ -8,6 +10,7 @@ describe('PlacesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
       declarations: [ PlacesComponent ]
     })
     .compileComponents();
@@ -19,7 +22,7 @@ describe('PlacesComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create places component', () => {
     expect(component).toBeTruthy();
   });
 });

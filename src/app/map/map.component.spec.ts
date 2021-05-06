@@ -19,7 +19,10 @@ describe('MapComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should create the map', () => {
+    const fixture = TestBed.createComponent(MapComponent);
+    const AgmMap = fixture.debugElement.componentInstance;
+    expect(AgmMap).toBeTruthy();
   });
+ 
 });

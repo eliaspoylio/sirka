@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core'; 
 
 import { NavbarComponent } from './navbar.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('NavbarComponent', () => {
   let component: NavbarComponent;
@@ -8,7 +10,9 @@ describe('NavbarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NavbarComponent ]
+      declarations: [ NavbarComponent,  ],
+      imports: [ HttpClientTestingModule ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
   });
@@ -19,7 +23,7 @@ describe('NavbarComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should create a navigation bar', () => {
+    expect(NavbarComponent).toBeTruthy();
   });
 });
