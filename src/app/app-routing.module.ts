@@ -33,12 +33,12 @@ const routes: Routes = [
   {path: 'weather', component: WeatherComponent},
   {path: 'register', component: RegisterComponent},
   {path: 'reset-password', component: ResetPasswordComponent},
-  {path: 'events', component: EventsComponent},
+  {path: 'categories/events', component: EventsComponent},
   {path: 'categories/places', component: PlacesComponent},
   {path: 'categories/activities', component: ActivitiesComponent},
   {path: 'event-details/:id', component: EventDetailsComponent},
-  {path: 'categories/places/place-details', component: PlaceDetailsComponent},
-  {path: 'categories/activities/activity-details', component: ActivityDetailsComponent}
+  {path: 'place-details/:id', component: PlaceDetailsComponent},
+  {path: 'activity-details/:id', component: ActivityDetailsComponent}
 ];
 
 @NgModule({

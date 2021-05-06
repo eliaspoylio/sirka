@@ -1,1 +1,25 @@
-<p>activity-details works!</p>
+<div class="container">
+  <div *ngIf="currentActivity">
+    <div class="row">
+      <div class="col-md-6">
+        <div *ngIf="currentActivity.description.images.length > 0; else elseBlock">
+          <img src={{currentActivity.description.images[0].url}} alt="place-picture" class="w-100" />
+        </div>
+        <ng-template #elseBlock>
+          <img src="" alt="">
+        </ng-template>
+      </div>
+      <div class="col-md-6">
+        <div class="row align-items-center h-100">
+            <div class="col">
+                <h1 class="display-3">{{currentActivity.name.fi}}</h1>
+                <p><strong>Missä: </strong> {{currentActivity.location.address.street_address}}, {{currentActivity.location.address.locality}}</p>
+                <a href="{{currentActivity.info_url}}" class="btn btn-outline-primary" role="button" aria-pressed="true">Verkkosivu</a>
+            </div>
+        </div>
+      </div>
+      <p class="mt-3"> {{currentActivity.description.body | stripHTML}} </p>
+      <a type="button" class="btn btn-danger"><i class="bi bi-heart"></i> Lisää suosikkeihin</a>
+    </div>
+  </div>
+</div>

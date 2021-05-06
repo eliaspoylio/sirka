@@ -22,6 +22,7 @@
     <app-map></app-map>
   </section>
 
+  <div class="container">
   <div class="card mb-3" style="max-width: 900px; ">
     <div class="row g-0 ml-3" *ngFor="let place of places.slice(0,7)">
       <div class="col-md-4">
@@ -43,8 +44,10 @@
           <p class="card-text">
             <small class="text-muted">{{place.location.address.street_address}}</small>
           </p>
+           <button routerLink="/place-details/{{place.id}}">Tutustu lisää!</button>
         </div>
       </div>
     </div>
+  </div>
   </div>
 </section>
