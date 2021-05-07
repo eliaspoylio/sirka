@@ -21,11 +21,4 @@ describe('FrontpageComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-
-  it('should render title in a h1 tag', () => {
-    const fixture = TestBed.createComponent(FrontpageComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Henkilökohtainen kaupunkioppaasi Helsingissä');
-  });
 });
