@@ -22,10 +22,8 @@
     <app-map></app-map>
   </section>
 
-  <div class="container">
-    <h2>Kaikki paikat</h2>
   <div class="card mb-3" style="max-width: 900px; ">
-    <div class="row g-0" *ngFor="let place of places.slice(0,7)">
+    <div class="row g-0 ml-3" *ngFor="let place of places.slice(0,7)">
       <div class="col-md-4">
       <div class="card-img-wrapper">
        <div *ngIf="place.description.images.length > 0; else elseBlock">
@@ -37,7 +35,7 @@
       </div>
       </div>
       <div class="col-md-8">
-        <a class="card-body" routerLink="/place-details/{{place.id}}" >
+        <div class="card-body">
           <h5 class="card-title mb-0">{{place.name.fi}}</h5>
           <p class="card-text mb-0"  >
             {{place.description.body | stripHTML}}
@@ -45,10 +43,8 @@
           <p class="card-text">
             <small class="text-muted">{{place.location.address.street_address}}</small>
           </p>
-           <!-- <button routerLink="/place-details/{{place.id}}">Tutustu lisää!</button> -->
-        </a>
+        </div>
       </div>
     </div>
-  </div>
   </div>
 </section>

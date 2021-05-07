@@ -25,11 +25,7 @@ import { JwtInterceptor} from './_helpers/jwt.interceptor';
 import { ErrorInterceptor } from './_helpers/error.interceptor';
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers/fake_backend';
-import { ENV } from '../../env-var';
-import { ActivityDetailsComponent } from './categories/activities/activityDetails/activity-details/activity-details.component';
-import { EventDetailsComponent } from './categories/events/eventDetails/event-details/event-details.component';
-import { PlaceDetailsComponent } from './categories/places/placeDetails/place-details/place-details.component';
-
+import { ENV } from '../../env-var'
 
 @NgModule({
   declarations: [
@@ -49,9 +45,6 @@ import { PlaceDetailsComponent } from './categories/places/placeDetails/place-de
     PlacesComponent,
     ActivitiesComponent,
     StripPipe,
-    ActivityDetailsComponent,
-    EventDetailsComponent,
-    PlaceDetailsComponent,
   ],
   imports: [
     BrowserModule,
