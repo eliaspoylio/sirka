@@ -1,0 +1,31 @@
+<a routerLink="/categories/events" type="button" class="btn btn-outline-secondary">Takaisin</a>
+<div class="container">
+  <!--  image left  -->
+  <div *ngIf="currentEvent">
+  <div class="row">
+    <div class="col-md-6">
+        <div *ngIf="currentEvent.description.images.length > 0; else elseBlock">
+          <img src={{currentEvent.description.images[0].url}} alt="event-picture" class="w-100" />
+        </div>
+        <ng-template #elseBlock>
+          <img src="" alt="">
+        </ng-template>
+      </div>
+      <div class="col-md-6">
+          <div class="row align-items-center h-100">
+                <div class="col">
+                  <h1 class="display-4">{{currentEvent.name.fi}}</h1>
+                  <p><strong>Missä: </strong> {{currentEvent.location.address.street_address}}, {{currentEvent.location.address.locality}}</p>
+                  <p><strong>Milloin: </strong> {{currentEvent.event_dates.starting_day | date : 'dd/MM/yyyy'}}</p>
+                  <a href="{{currentEvent.info_url}}" class="btn btn-outline-primary" role="button" aria-pressed="true">Verkkosivu</a>
+                </div>
+          </div>
+      </div>
+        <p class="mt-3 lead"> {{currentEvent.description.body | stripHTML}} </p>
+        <a type="button" class="btn btn-danger"><i class="bi bi-heart"></i> Lisää suosikkeihin</a>
+
+    <section class="nearby">
+      <!-- <app-map></app-map> -->
+    </section>
+
+  </div>
