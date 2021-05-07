@@ -23,6 +23,7 @@
       <app-map></app-map>
   </section>
 
+  <div class="container">
     <h2>Kaikki aktiviteetit</h2>
     <div class="card mb-3" style="max-width: 900px; ">
       <div class="row g-0" *ngFor="let activity of activities.slice(0, 7)">
@@ -37,7 +38,7 @@
         </div>
         </div>
         <div class="col-md-8">
-          <div class="card-body">
+          <a class="card-body" routerLink="/activity-details/{{activity.id}}">
             <h5 class="card-title mb-0">{{activity.name.fi}}</h5>
             <p class="card-text mb-0"  >
               {{activity.description.body | stripHTML}}
@@ -45,10 +46,14 @@
             <p class="card-text">
               <small class="text-muted">{{activity.location.address.street_address}}</small>
             </p>
-          </div>
+            <!-- <button routerLink="/activity-details/{{activity.id}}">Tutustu lisää!</button> -->
+          </a>
         </div>
       </div>
     </div>
+    </div>
+
+
 
 
 </section>
