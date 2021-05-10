@@ -26,6 +26,10 @@ h2 {
   padding-bottom: 1rem;
 }
 
+.otsikko {
+  padding-bottom: 1vw;
+}
+
 .navbar {
   color: #ffffff;
   display: flex;

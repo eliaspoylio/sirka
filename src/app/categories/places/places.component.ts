@@ -12,9 +12,10 @@ import { StripPipe } from '../../_pipes/strip.pipe';
   styleUrls: ['./places.component.css']
 })
 export class PlacesComponent implements OnInit {
-
   placeSubscription: Subscription;
   places: IPlace[] = [];
+  searchText;
+
   constructor(private placeService: PlaceService) { }
 
   ngOnInit(): void {
