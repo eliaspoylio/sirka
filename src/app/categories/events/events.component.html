@@ -28,7 +28,7 @@
     <div class="searchEvent">
       <input type="text" class="form-control mb-8" name="search"[(ngModel)]="searchText" autocomplete="off" placeholder="Search Event">
     </div>
-    <div class="row g-0" *ngFor="let event of events | filter: searchText">
+    <div class="row g-0" *ngFor="let event of events | filter: searchText | slice: 0:100">
       <div class="col-md-4">
         <div class="card-img-wrapper">
           <div *ngIf="event.description.images.length > 0; else elseBlock">
