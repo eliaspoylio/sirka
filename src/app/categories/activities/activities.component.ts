@@ -14,6 +14,7 @@ import { StripPipe } from '../../_pipes/strip.pipe';
 export class ActivitiesComponent implements OnInit {
   activitySubscription: Subscription
   activities: IActivity[] = [];
+  searchText;
 
   constructor(private activityService: ActivityService) { }
 
