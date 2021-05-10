@@ -22,6 +22,14 @@ h1 {
   color: #ffffff;
 }
 
+h2 {
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.otsikko {
+  padding-bottom: 1vw;
+}
 /* categories navbar */
 .navbar {
   color: #ffffff;
@@ -30,7 +38,7 @@ h1 {
   padding: 0;
 }
 
-a {
+.navbar a {
   background: transparent;
   width: 25%;
   height: 200px;
@@ -39,7 +47,7 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+.navbar a:hover {
   background-color: rgba(233, 223, 139, 0.683);
 }
 
@@ -86,6 +94,11 @@ a:hover {
 }
 .card-body h5{
   font-weight: bolder !important;
+}
+
+.card-body {
+  /* text-decoration: none; */
+  color: black;
 }
 
 @media only screen and (min-width: 426px) and (max-width: 768px) {

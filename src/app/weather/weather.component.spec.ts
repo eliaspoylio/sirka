@@ -22,4 +22,13 @@ describe('WeatherComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render weather details in a p tag', () => {
+    const fixture = TestBed.createComponent(WeatherComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('p').textContent).toContain('°C');
+  });
+  
+
 });

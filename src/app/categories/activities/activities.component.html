@@ -3,9 +3,7 @@
   <section class="filter">
     <div class="row">
       <div class="col-4">
-        <h1>
-          Aktiviteetit
-        </h1>
+        <h1>Aktiviteetit</h1>
       </div>
       <div class="col-8">
         <nav class="navbar">
@@ -23,9 +21,13 @@
       <app-map></app-map>
   </section>
 
-    <h2>Kaikki aktiviteetit</h2>
+  <div class="container">
+    <h2 class="otsikko">Kaikki aktiviteetit</h2>
     <div class="card mb-3" style="max-width: 900px; ">
-      <div class="row g-0" *ngFor="let activity of activities.slice(0, 7)">
+      <div class="searchEvent mb-3">
+        <input type="text" class="form-control" name="search"[(ngModel)]="searchText" autocomplete="off" placeholder="Etsi aktiviteetteja">
+      </div>
+      <div class="row g-0" *ngFor="let activity of activities | filter: searchText | slice: 0:100">
         <div class="col-md-4">
           <div class="card-img-wrapper">
             <div *ngIf="activity.description.images.length > 0; else elseBlock">
@@ -37,7 +39,7 @@
         </div>
         </div>
         <div class="col-md-8">
-          <div class="card-body">
+          <a class="card-body" routerLink="/activity-details/{{activity.id}}">
             <h5 class="card-title mb-0">{{activity.name.fi}}</h5>
             <p class="card-text mb-0"  >
               {{activity.description.body | stripHTML}}
@@ -45,10 +47,14 @@
             <p class="card-text">
               <small class="text-muted">{{activity.location.address.street_address}}</small>
             </p>
-          </div>
+            <!-- <button routerLink="/activity-details/{{activity.id}}">Tutustu lisää!</button> -->
+          </a>
         </div>
       </div>
     </div>
+    </div>
+
+
 
 
 </section>
