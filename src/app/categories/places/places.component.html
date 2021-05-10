@@ -23,9 +23,12 @@
   </section>
 
   <div class="container">
-    <h2>Kaikki paikat</h2>
+    <h2 class="otsikko">Kaikki paikat</h2>
   <div class="card mb-3" style="max-width: 900px; ">
-    <div class="row g-0" *ngFor="let place of places.slice(0,7)">
+    <div class="searchEvent mb-3">
+      <input type="text" class="form-control" name="search"[(ngModel)]="searchText" autocomplete="off" placeholder="Etsi paikkoja">
+    </div>
+    <div class="row g-0" *ngFor="let place of places | filter: searchText | slice: 0:100">
       <div class="col-md-4">
       <div class="card-img-wrapper">
        <div *ngIf="place.description.images.length > 0; else elseBlock">
