@@ -27,4 +27,9 @@ export class FavouriteService {
         return this.userSubject.value;
     }
 
+    addFav(user: User, itemid) {
+        console.log(user, itemid)
+        return this.http.post(`${environment.apiUrl}/fav/fav`, user, itemid);
+    }
+
 }
