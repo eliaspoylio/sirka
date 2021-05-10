@@ -5,24 +5,6 @@ nav {
   -moz-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.30);
 }
 
-.input-group-append {
-  margin-left: 5%;
-}
-
-input[type=search] {
-  width: 60%;
-  -webkit-transition: width 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out;
-
-  box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
-  -webkit-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
-  -moz-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
-}
-
-input[type=search]:focus {
-  width: 100%;
-}
-
 .navbar-nav {
   display: flex;
   flex-direction: row;
@@ -35,6 +17,10 @@ i {
 
 i:hover {
   color: rgba(59, 56, 56, 0.3);
+}
+
+#login {
+  margin-right: 5%;
 }
 
 #logomobile {
