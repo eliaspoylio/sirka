@@ -4,40 +4,42 @@
       [latitude]="lat" 
       [longitude]="lng" 
       [markerDraggable]="false"
-      [iconUrl]="'http://maps.google.com/mapfiles/ms/icons/red-dot.png'">
-      <agm-info-window>
-        <h3>Nykyinen sijaintisi</h3>
-        <p>Olet täällä!</p>
+      [iconUrl]="'http://maps.google.com/mapfiles/ms/icons/pink-dot.png'">
+      <agm-info-window >
+        <h3 class="currentLocation">Olet täällä!</h3>
       </agm-info-window>
     </agm-marker>
 
     <agm-marker *ngFor="let place of places"
     [latitude]="place.location.lat"
     [longitude]="place.location.lon"
-    [iconUrl]="'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'">
-    <agm-info-window>
+    [iconUrl]="'http://maps.google.com/mapfiles/ms/icons/lightblue.png'">
+    <agm-info-window class="places">
       <h3>{{place.name.fi}}</h3>
       <p>{{place.description.body}}</p>
+      <button class="btn btn-info btn-sm" routerLink="/place-details/{{place.id}}">Tutustu lisää!</button>
     </agm-info-window>
     </agm-marker>
 
     <agm-marker *ngFor="let event of events"
     [latitude]="event.location.lat"
     [longitude]="event.location.lon"
-    [iconUrl]="'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png'">
-    <agm-info-window>
+    [iconUrl]="'http://maps.google.com/mapfiles/ms/icons/orange.png'">
+    <agm-info-window  class="events">
       <h3>{{event.name.fi}}</h3>
       <p>{{event.description.body | stripHTML}}</p>
+      <button class="btn btn-info btn-sm" routerLink="/event-details/{{event.id}}">Tutustu lisää!</button>
     </agm-info-window>
     </agm-marker>
 
     <agm-marker *ngFor="let activity of activities"
     [latitude]="activity.location.lat"
     [longitude]="activity.location.lon"
-    [iconUrl]="'http://maps.google.com/mapfiles/ms/icons/green-dot.png'">
-    <agm-info-window>
+    [iconUrl]="'http://maps.google.com/mapfiles/ms/icons/green.png'">
+    <agm-info-window class="activities">
       <h3>{{activity.name.fi}}</h3>
       <p>{{activity.description.body | stripHTML}}</p>
+      <button class="btn btn-info btn-sm" routerLink="/activity-details/{{activity.id}}">Tutustu lisää!</button>
     </agm-info-window>
     </agm-marker>
 
