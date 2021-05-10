@@ -30,7 +30,7 @@ import { ActivityDetailsComponent } from './categories/activities/activityDetail
 import { EventDetailsComponent } from './categories/events/eventDetails/event-details/event-details.component';
 import { PlaceDetailsComponent } from './categories/places/placeDetails/place-details/place-details.component';
 
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,7 +61,8 @@ import { PlaceDetailsComponent } from './categories/places/placeDetails/place-de
     AgmCoreModule.forRoot({
       apiKey: ENV.GOOGLEMAPS_API_KEY,
     }),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

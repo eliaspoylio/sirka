@@ -24,8 +24,11 @@
 
 <div class="container">
   <h2>Kaikki tapahtumat</h2>
-  <div class="card mb-3" style="max-width: 900px; ">
-    <div class="row g-0" *ngFor="let event of events.slice(0,7)">
+  <div class="card mb-1" style="max-width: 900px; ">
+    <div class="searchEvent">
+      <input type="text" class="form-control mb-8" name="search"[(ngModel)]="searchText" autocomplete="off" placeholder="Search Event">
+    </div>
+    <div class="row g-0" *ngFor="let event of events | filter: searchText">
       <div class="col-md-4">
         <div class="card-img-wrapper">
           <div *ngIf="event.description.images.length > 0; else elseBlock">

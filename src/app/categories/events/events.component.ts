@@ -15,6 +15,7 @@ import { StripPipe } from '../../_pipes/strip.pipe';
 export class EventsComponent implements OnInit {
   eventSubscription: Subscription;
   events: IEvent[] = [];
+  searchText;
 
   constructor(private eventService: EventService) { }
 
