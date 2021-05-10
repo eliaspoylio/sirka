@@ -2,18 +2,32 @@
 
   <section class="filter">
     <div class="row">
-      <div class="col-4">
+      <div class="col-lg-6">
         <h1>
-          Aktiviteetit
+          Löydä aktiviteetteja läheltäsi
         </h1>
       </div>
-      <div class="col-8">
-        <nav class="navbar">
-          <a id="koho"><p>Nähtävyydet</p></a>
-          <a><p>Luonto<br> & liikunta</p></a>
-          <a id="koho"><p>Hyvinvointi</p></a>
-          <a><p>Museot<br> & Galleriat</p></a>
-        </nav>
+      <div class="col-lg-6">
+        <div class="box">
+          <a
+            class="box1"
+            routerLink="/categories/events"
+            routerLinkActive="active"
+            ><p>Tapahtumat</p></a
+          >
+          <a
+            class="box2"
+            routerLink="/categories/activities"
+            routerLinkActive="active"
+            ><p>Aktiviteetit</p></a
+          >
+          <a
+            class="box3"
+            routerLink="/categories/places"
+            routerLinkActive="active"
+            ><p>Paikat</p></a
+          >
+        </div>
       </div>
     </div>
   </section>
@@ -52,8 +66,4 @@
       </div>
     </div>
     </div>
-
-
-
-
 </section>

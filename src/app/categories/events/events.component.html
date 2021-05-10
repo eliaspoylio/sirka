@@ -1,19 +1,32 @@
 <section class="wrapper">
-
   <section class="filter">
     <div class="row">
-      <div class="col-4">
+      <div class="col-lg-6">
         <h1>
           Tutustu lähiympäristösi tapahtumiin
         </h1>
       </div>
-      <div class="col-8">
-        <nav class="navbar">
-          <a id="a1"><p>Musiikki</p></a>
-          <a id="a2"><p>Kulttuuri</p></a>
-          <a id="a3"><p>Urheilu</p></a>
-          <a id="a4"><p>Lapset</p></a>
-        </nav>
+      <div class="col-lg-6">
+        <div class="box">
+          <a
+            class="box1"
+            routerLink="/categories/events"
+            routerLinkActive="active"
+            ><p>Tapahtumat</p></a
+          >
+          <a
+            class="box2"
+            routerLink="/categories/activities"
+            routerLinkActive="active"
+            ><p>Aktiviteetit</p></a
+          >
+          <a
+            class="box3"
+            routerLink="/categories/places"
+            routerLinkActive="active"
+            ><p>Paikat</p></a
+          >
+        </div>
       </div>
     </div>
   </section>

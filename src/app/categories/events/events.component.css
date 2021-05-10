@@ -13,6 +13,54 @@
   -moz-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
 }
 
+a {
+  text-decoration: none;
+}
+
+.box p {
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-top: 35%;
+  font-size: 1rem;
+}
+
+.box {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 0;
+}
+
+.box1, .box3 {
+  height: 200px;
+  width: 100%;
+  background: transparent;
+  /* background: rgb(144, 100, 211);
+  background: linear-gradient(
+    0deg,
+    rgba(144, 100, 211, 1) 0%,
+    rgba(255, 112, 169, 0.6834532374100719) 100%
+  ); */
+
+  box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
+  -webkit-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
+  -moz-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
+}
+
+.box2 {
+  height: 200px;
+  background: transparent;
+  width: 100%;
+}
+
+:hover.box1, :hover.box2, :hover.box3 {
+  background-color: #e9e77f;
+}
+
 h1 {
   font-size: 2.5rem;
   font-weight: 700;
@@ -27,51 +75,15 @@ h2 {
   padding-bottom: 1rem;
 }
 
-/* categories navbar */
-.navbar {
-  color: #ffffff;
-  display: flex;
-  flex-direction: row;
-  padding: 0;
-}
-
-.navbar a {
-  background: transparent;
-  width: 25%;
-  height: 200px;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-
-.navbar a:hover {
-  background-color: rgba(233, 223, 139, 0.683);
-}
-
-.navbar p {
-  padding-top: 30%;
-  font-weight: bold;
-}
-
-#a1, #a3 {
-  box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
-  -webkit-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
-  -moz-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
-}
-
 /* map */
 .nearby {
   margin: 2% 5%;
-  /* background: rgb(93, 232, 148);
+  /*background: rgb(93, 232, 148);
   background: linear-gradient(
   185deg,
   rgba(129, 238, 115, 0.675) 12%,
   rgb(74, 189, 101) 79%
   ); */
-}
-
-.nearby a {
-  padding: 0;
 }
 
 /*list section */
@@ -99,18 +111,24 @@ h2 {
 }
 
 @media only screen and (min-width: 426px) and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    padding: 2%;
+  }
 
+  .box a {
+    height: 150px;
+  }
 
 }
 
 @media only screen and (max-width: 425px) {
-
-  .navbar {
-    display: flex;
-    flex-direction: column;
+  h1 {
+    font-size: 2rem;
+    padding: 2%;
   }
 
-  .navbar a {
+  a {
     height: 40px;
     width: 100%;
     text-align: center;

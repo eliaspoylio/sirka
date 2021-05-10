@@ -56,7 +56,7 @@ export class MapComponent implements OnInit {
             });
           })
       })
-      
+
       //Alla oleva hakee lähimmät tapahtumat:
       this.getLocation()
       .then((loc: any) => {
@@ -89,7 +89,7 @@ export class MapComponent implements OnInit {
           })
       })
 
-      
+
   }
 
   private setCurrentLocation() {
@@ -111,6 +111,6 @@ export class MapComponent implements OnInit {
         });
     });
   }
-  
+
 }
 
