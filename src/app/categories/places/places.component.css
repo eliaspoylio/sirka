@@ -87,6 +87,11 @@ h2 {
 }
 
 /*list section */
+.card-img-wrapper {
+  width: 255px;
+  height: 200px;
+}
+
 .card {
   border: none;
 }
@@ -119,26 +124,63 @@ h2 {
 
 @media only screen and (min-width: 426px) and (max-width: 768px) {
 
+  .top {
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 2rem;
+    padding: 2%;
+  }
+
   h2 {
-    margin-top: 0;
     font-size: 1.5rem;
   }
 
-  a {
-    padding: 5px;
+  .box a {
     height: 150px;
   }
 
-}
-
-@media only screen and (max-width: 425px) {
-
-  a {
-    height: 40px;
-    width: 100%;
-    text-align: center;
-    margin: 5px 0;
-    padding: 5px;
+  p {
+    padding-top: 35%;
   }
 
-}
+  }
+
+
+  @media only screen and (max-width: 425px) {
+
+  h1 {
+      font-size: 2rem;
+      margin-top: 0;
+      padding: 3%;
+    }
+
+    .top {
+      margin: 0;
+    }
+
+    .col-lg-6 {
+      padding: 0;
+    }
+
+    .box a {
+      height: 100px;
+    }
+
+    a {
+      width: 30%;
+      background-color: transparent;
+      padding: 0;
+    }
+
+    p {
+      font-size: 1rem;
+      padding-top: 25%;
+    }
+
+    .trending h2 {
+      font-size: 1.5rem;
+    }
+
+  }
