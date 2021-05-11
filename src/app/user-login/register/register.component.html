@@ -3,31 +3,31 @@
       <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <h3>Rekisteröi uusi käyttäjä</h3>
           <div class="form-group">
-              <label for="name">Nimi</label>
+              <label for="name">Etunimi</label>
               <input type="text" formControlName="name" class="form-control" placeholder="Nimi" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
               <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
-                  <div *ngIf="f.name.errors.required">First Name is required</div>
+                  <div *ngIf="f.name.errors.required">Etunimi vaaditaan</div>
               </div>
           </div>
           <div class="form-group">
-              <label for="email">Last Name</label>
+              <label for="email">Sukunimi</label>
               <input type="text" formControlName="email" class="form-control" placeholder="Email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
               <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-                  <div *ngIf="f.email.errors.required">Last Name is required</div>
+                  <div *ngIf="f.email.errors.required">Sukunimi vaaditaan</div>
               </div>
           </div>
           <div class="form-group">
-              <label for="password">Password</label>
+              <label for="password">Salasana</label>
               <input type="password" formControlName="password" class="form-control" placeholder="Salasana" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
               <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-                  <div *ngIf="f.password.errors.required">Password is required</div>
-                  <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                  <div *ngIf="f.password.errors.required">Salasana vaaditaan</div>
+                  <div *ngIf="f.password.errors.minlength">Salasanan tulee olla vähintään 6 merkkiä</div>
               </div>
           </div>
           <div class="form-group">
               <button type="submit"
-              class="btn btn-outline">Rekisteröi<i class="fas fa-sign-in-alt"></i></button>
-              <a class="nav-link" routerLink="/login" routerLinkActive="active">Olenkin käyttäjä! Kirjaudu sisään tästä
+              class="btn btn-outline">Rekisteröidy<i class="fas fa-sign-in-alt"></i></button>
+              <a class="nav-link" routerLink="/login" routerLinkActive="active">Olenkin jo käyttäjä! Kirjaudu sisään tästä
               </a>
           </div>
       </form>

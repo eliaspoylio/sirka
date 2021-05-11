@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PlacesComponent } from './places.component';
@@ -19,7 +20,7 @@ describe('PlacesComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create places component', () => {
     expect(component).toBeTruthy();
   });
 });

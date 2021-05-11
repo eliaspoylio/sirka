@@ -1,51 +1,79 @@
+<<<<<<< HEAD
+<section class="filter">
+  <div class="row">
+    <div class="col-lg-6">
+      <h1>Löydä aktiviteetteja läheltäsi</h1>
+    </div>
+    <div class="col-lg-6">
+      <div class="box">
+        <a
+          class="box1"
+          routerLink="/categories/events"
+          routerLinkActive="active"
+          ><p>Tapahtumat</p></a
+        >
+        <a
+          class="box2"
+          routerLink="/categories/activities"
+          routerLinkActive="active"
+          ><p>Aktiviteetit</p></a
+        >
+        <a
+          class="box3"
+          routerLink="/categories/places"
+          routerLinkActive="active"
+          ><p>Paikat</p></a
+        >
+=======
 <section class="wrapper">
 
   <section class="filter">
     <div class="row">
       <div class="col-4">
-        <h1>
-          Aktiviteetit
-        </h1>
+        <h1>Aktiviteetit</h1>
       </div>
       <div class="col-8">
         <nav class="navbar">
-          <a id="a1"><p>Nähtävyydet</p></a>
-          <a id="a2"><p>Luonto<br> & liikunta</p></a>
-          <a id="a3"><p>Hyvinvointi</p></a>
-          <a id="a4"><p>Museot<br> & Galleriat</p></a>
+          <a id="koho"><p>Nähtävyydet</p></a>
+          <a><p>Luonto<br> & liikunta</p></a>
+          <a id="koho"><p>Hyvinvointi</p></a>
+          <a><p>Museot<br> & Galleriat</p></a>
         </nav>
+>>>>>>> 5509ce7a59a92c82bb1d9d749aee4bf30d6cc85f
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
+<section class="nearby">
+  <app-map></app-map>
+</section>
 
-  <section class="nearby">
-      <app-map></app-map>
-  </section>
-
-    <h2>Kaikki aktiviteetit</h2>
-    <!-- <input
-      type="date"
-      id="calendar"
-      name="calendar"
-      value="Pick a date"
-      min="2021-01-04"
-      max="2022-31-12"
-    /> -->
-
-    <!-- <div *ngFor="let activity of activities.slice(0, 7)">
-      <h2>{{ activity.name.fi }}</h2>
-      <p>
-        {{ activity.description.body }}
-      </p>
-      <p>{{ activity.location.address.street_address }}</p>
-      <p>{{ activity.location.lat }}</p>
-      <p>{{ activity.location.lon }}</p>
-    </div> -->
-
-
+<<<<<<< HEAD
+<div class="container">
+  <h2>Kaikki aktiviteetit</h2>
+  <div class="card mb-3" style="max-width: 900px">
+    <div class="row g-0" *ngFor="let activity of activities.slice(0, 7)">
+      <div class="col-md-4">
+        <div class="card-img-wrapper">
+          <div *ngIf="activity.description.images.length > 0; else elseBlock">
+            <img
+              src="{{ activity.description.images[0].url }}"
+              alt="activity-picture"
+              class="card-img-top"
+            />
+          </div>
+          <ng-template #elseBlock>
+            <img src="" alt="" />
+          </ng-template>
+=======
+  <div class="container">
+    <h2 class="otsikko">Kaikki aktiviteetit</h2>
     <div class="card mb-3" style="max-width: 900px; ">
-      <div class="row g-0" *ngFor="let activity of activities.slice(0, 7)">
+      <div class="searchEvent mb-3">
+        <input type="text" class="form-control" name="search"[(ngModel)]="searchText" autocomplete="off" placeholder="Etsi aktiviteetteja">
+      </div>
+      <div class="row g-0" *ngFor="let activity of activities | filter: searchText | slice: 0:100">
         <div class="col-md-4">
           <div class="card-img-wrapper">
             <div *ngIf="activity.description.images.length > 0; else elseBlock">
@@ -57,7 +85,7 @@
         </div>
         </div>
         <div class="col-md-8">
-          <div class="card-body">
+          <a class="card-body" routerLink="/activity-details/{{activity.id}}">
             <h5 class="card-title mb-0">{{activity.name.fi}}</h5>
             <p class="card-text mb-0"  >
               {{activity.description.body | stripHTML}}
@@ -65,10 +93,25 @@
             <p class="card-text">
               <small class="text-muted">{{activity.location.address.street_address}}</small>
             </p>
-          </div>
+            <!-- <button routerLink="/activity-details/{{activity.id}}">Tutustu lisää!</button> -->
+          </a>
+>>>>>>> 5509ce7a59a92c82bb1d9d749aee4bf30d6cc85f
         </div>
       </div>
+      <div class="col-md-8">
+        <a class="card-body" routerLink="/activity-details/{{ activity.id }}">
+          <h5 class="card-title mb-0">{{ activity.name.fi }}</h5>
+          <p class="card-text mb-0">
+            {{ activity.description.body | stripHTML }}
+          </p>
+          <p class="card-text">
+            <small class="text-muted">{{
+              activity.location.address.street_address
+            }}</small>
+          </p>
+          <!-- <button routerLink="/activity-details/{{activity.id}}">Tutustu lisää!</button> -->
+        </a>
+      </div>
     </div>
-
-
-</section>
+  </div>
+</div>

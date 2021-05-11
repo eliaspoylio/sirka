@@ -1,0 +1,12 @@
+agm-map {
+<<<<<<< HEAD
+  height: 400px;
+}
+=======
+    height: 400px;
+  }
+
+.currentLocation {
+  padding: 1rem 0.5rem 0 0.5rem;
+}
+>>>>>>> 5509ce7a59a92c82bb1d9d749aee4bf30d6cc85f
