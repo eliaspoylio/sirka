@@ -55,8 +55,16 @@ export class MapComponent implements OnInit {
             this.places.forEach(elemens => {
             });
           })
+<<<<<<< HEAD
+      })
 
+      //Alla oleva hakee lähimmät tapahtumat:
+      this.getLocation()
+      .then((loc: any) => {
+        this.httpClient
+=======
           this.httpClient
+>>>>>>> 5509ce7a59a92c82bb1d9d749aee4bf30d6cc85f
           .get('http://sirka-proxy.herokuapp.com/' + this.apiURL + '/events/?distance_filter=' + loc.lat + '%2C' + loc.lng + '%2C4')
           .toPromise()
           .then(res => {
@@ -79,7 +87,11 @@ export class MapComponent implements OnInit {
             });
           })
       })
+<<<<<<< HEAD
 
+
+=======
+>>>>>>> 5509ce7a59a92c82bb1d9d749aee4bf30d6cc85f
   }
 
   private setCurrentLocation() {

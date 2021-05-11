@@ -75,6 +75,10 @@ h2 {
   padding-bottom: 1rem;
 }
 
+.otsikko {
+  padding-bottom: 1vw;
+}
+
 /* map section */
 .nearby {
   margin: 2% 5%;

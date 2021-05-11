@@ -29,6 +29,8 @@ a {
 
 .box {
   margin: auto;
+}
+
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;

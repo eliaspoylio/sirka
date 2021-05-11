@@ -29,6 +29,9 @@ a {
 
 .box {
   margin: auto;
+.otsikko {
+  padding-bottom: 1vw;
+}
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;

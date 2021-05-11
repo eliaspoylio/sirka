@@ -1,41 +1,47 @@
-# Node.js with Angular
-# Build a Node.js project that uses Angular.
-# Add steps that analyze code, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
-
-trigger:
-- master
-
 pool:
+  name: Azure Pipelines
   vmImage: ubuntu-latest
 
-stages:
-  - stage: build
-    jobs:
-      - job:
-        steps:
-          - task: NodeTool@0
-            inputs:
-              versionSpec: '14.16.0'
-            displayName: 'Install Node.js'
-          - script: |
-              npm install -g @angular/cli
-              npm install
-              npm run env
-              ng build --prod
-          - publish: dist
-            artifact: dist
+steps:
+- task: NodeTool@0
+  displayName: 'Install Node.js'
+  inputs:
+    versionSpec: 14.16.0
 
-  - stage: deploy_dev
-    displayName: Deploy to development
-    jobs:
-      - job:
-        steps:
-          - script: echo deploy_dev!
+- task: DownloadSecureFile@1
+  displayName: 'Download secure file for frontend'
+  inputs:
+    secureFile: 'env-var.ts'
 
-  - stage: deploy_prod
-    displayName: Deploy to production
-    jobs:
-      - job:
-        steps:
-          - script: echo deploy_prod!
+- task: DownloadSecureFile@1
+  displayName: 'Download secure file for api'
+  inputs:
+    secureFile: .env
+
+- task: CopyFiles@2
+  displayName: 'Copy secure files'
+  inputs:
+    SourceFolder: '$(Agent.TempDirectory)'
+    Contents: |
+     env-var.ts
+     .env
+    TargetFolder: '$(Build.Repository.LocalPath)'
+
+- script: |
+   ls -l
+   pwd
+   npm install -g @angular/cli
+   npm install
+   ng build --prod
+  displayName: 'Command Line Script'
+
+- task: ArchiveFiles@2
+  displayName: 'Archive files'
+  inputs:
+    rootFolderOrFile: dist
+
+- task: PublishPipelineArtifact@1
+  displayName: 'Publish Pipeline Artifact'
+  inputs:
+    targetPath: '$(Build.ArtifactStagingDirectory)'
+    artifact: drop

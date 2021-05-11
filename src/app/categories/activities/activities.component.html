@@ -33,9 +33,12 @@
 </section>
 
 <div class="container">
-  <h2>Kaikki aktiviteetit</h2>
+    <h2 class="otsikko">Kaikki aktiviteetit</h2>
   <div class="card mb-3" style="max-width: 900px">
-    <div class="row g-0" *ngFor="let activity of activities.slice(0, 7)">
+      <div class="searchEvent mb-3">
+        <input type="text" class="form-control" name="search"[(ngModel)]="searchText" autocomplete="off" placeholder="Etsi aktiviteetteja">
+      </div>
+      <div class="row g-0" *ngFor="let activity of activities | filter: searchText | slice: 0:100">
       <div class="col-md-4">
         <div class="card-img-wrapper">
           <div *ngIf="activity.description.images.length > 0; else elseBlock">
