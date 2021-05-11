@@ -28,10 +28,10 @@
     <div class="searchEvent mb-3">
       <input type="text" class="form-control" name="search"[(ngModel)]="searchText" autocomplete="off" placeholder="Etsi paikkoja">
     </div>
-    <div class="row g-0" *ngFor="let place of places | filter: searchText | slice: 0:100">
+    <div class="row g-0" *ngFor="let place of places.slice(0,100) | filter: searchText">
       <div class="col-md-4">
       <div class="card-img-wrapper">
-       <div *ngIf="place.description.images.length > 0; else elseBlock">
+       <div *ngIf="place.description.images?.length > 0; else elseBlock">
         <img src={{place.description.images[0].url}} alt="">
       </div>
       <ng-template #elseBlock>

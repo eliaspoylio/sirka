@@ -30,7 +30,7 @@
       <div class="row g-0" *ngFor="let activity of activities | filter: searchText | slice: 0:100">
         <div class="col-md-4">
           <div class="card-img-wrapper">
-            <div *ngIf="activity.description.images.length > 0; else elseBlock">
+            <div *ngIf="activity.description.images?.length > 0; else elseBlock">
                <img src={{activity.description.images[0].url}} alt="activity-picture" class="card-img-top"/>
               </div>
               <ng-template #elseBlock>

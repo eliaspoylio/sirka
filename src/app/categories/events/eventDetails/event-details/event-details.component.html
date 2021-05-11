@@ -4,7 +4,7 @@
   <div *ngIf="currentEvent">
   <div class="row">
     <div class="col-md-6">
-        <div *ngIf="currentEvent.description.images.length > 0; else elseBlock">
+        <div *ngIf="currentEvent.description.images?.length > 0; else elseBlock">
           <img src={{currentEvent.description.images[0].url}} alt="event-picture" class="w-100" />
         </div>
         <ng-template #elseBlock>
