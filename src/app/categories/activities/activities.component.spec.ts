@@ -1,5 +1,6 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 import { ActivitiesComponent } from './activities.component';
 
@@ -10,7 +11,8 @@ describe('ActivitiesComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ ActivitiesComponent ],
-      imports: [ HttpClientTestingModule]
+      imports: [ HttpClientTestingModule, 
+      Ng2SearchPipeModule]
     })
     .compileComponents();
   });
@@ -25,7 +27,7 @@ describe('ActivitiesComponent', () => {
     const fixture = TestBed.createComponent(ActivitiesComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('p').textContent).toContain('Nähtävyydet', 'Hyvinvointi');
+    expect(compiled.querySelector('p').textContent).toContain('Tapahtumat', 'Aktiviteetit');
   });
 
   it('should create the activities data', () => {
