@@ -1,69 +1,69 @@
-<section class="wrapper">
-
-  <section class="filter">
-    <div class="row">
-      <div class="col-lg-6">
-        <h1>
-          Löydä aktiviteetteja läheltäsi
-        </h1>
-      </div>
-      <div class="col-lg-6">
-        <div class="box">
-          <a
-            class="box1"
-            routerLink="/categories/events"
-            routerLinkActive="active"
-            ><p>Tapahtumat</p></a
-          >
-          <a
-            class="box2"
-            routerLink="/categories/activities"
-            routerLinkActive="active"
-            ><p>Aktiviteetit</p></a
-          >
-          <a
-            class="box3"
-            routerLink="/categories/places"
-            routerLinkActive="active"
-            ><p>Paikat</p></a
-          >
-        </div>
+<section class="filter">
+  <div class="row">
+    <div class="col-lg-6">
+      <h1>Löydä aktiviteetteja läheltäsi</h1>
+    </div>
+    <div class="col-lg-6">
+      <div class="box">
+        <a
+          class="box1"
+          routerLink="/categories/events"
+          routerLinkActive="active"
+          ><p>Tapahtumat</p></a
+        >
+        <a
+          class="box2"
+          routerLink="/categories/activities"
+          routerLinkActive="active"
+          ><p>Aktiviteetit</p></a
+        >
+        <a
+          class="box3"
+          routerLink="/categories/places"
+          routerLinkActive="active"
+          ><p>Paikat</p></a
+        >
       </div>
     </div>
-  </section>
-
-
-  <section class="nearby">
-      <app-map></app-map>
-  </section>
-
-  <div class="container">
-    <h2>Kaikki aktiviteetit</h2>
-    <div class="card mb-3" style="max-width: 900px; ">
-      <div class="row g-0" *ngFor="let activity of activities.slice(0, 7)">
-        <div class="col-md-4">
-          <div class="card-img-wrapper">
-            <div *ngIf="activity.description.images.length > 0; else elseBlock">
-               <img src={{activity.description.images[0].url}} alt="activity-picture" class="card-img-top"/>
-              </div>
-              <ng-template #elseBlock>
-                <img src="" alt="">
-              </ng-template>
-        </div>
-        </div>
-        <div class="col-md-8">
-          <a class="card-body" routerLink="/activity-details/{{activity.id}}">
-            <h5 class="card-title mb-0">{{activity.name.fi}}</h5>
-            <p class="card-text mb-0"  >
-              {{activity.description.body | stripHTML}}
-            </p>
-            <p class="card-text">
-              <small class="text-muted">{{activity.location.address.street_address}}</small>
-            </p>
-            <!-- <button routerLink="/activity-details/{{activity.id}}">Tutustu lisää!</button> -->
-          </a>
-        </div>
-      </div>
-    </div>
-    </div>
+  </div>
 </section>
+
+<section class="nearby">
+  <app-map></app-map>
+</section>
+
+<div class="container">
+  <h2>Kaikki aktiviteetit</h2>
+  <div class="card mb-3" style="max-width: 900px">
+    <div class="row g-0" *ngFor="let activity of activities.slice(0, 7)">
+      <div class="col-md-4">
+        <div class="card-img-wrapper">
+          <div *ngIf="activity.description.images.length > 0; else elseBlock">
+            <img
+              src="{{ activity.description.images[0].url }}"
+              alt="activity-picture"
+              class="card-img-top"
+            />
+          </div>
+          <ng-template #elseBlock>
+            <img src="" alt="" />
+          </ng-template>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <a class="card-body" routerLink="/activity-details/{{ activity.id }}">
+          <h5 class="card-title mb-0">{{ activity.name.fi }}</h5>
+          <p class="card-text mb-0">
+            {{ activity.description.body | stripHTML }}
+          </p>
+          <p class="card-text">
+            <small class="text-muted">{{
+              activity.location.address.street_address
+            }}</small>
+          </p>
+          <!-- <button routerLink="/activity-details/{{activity.id}}">Tutustu lisää!</button> -->
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
