@@ -31,6 +31,7 @@ import { EventDetailsComponent } from './categories/events/eventDetails/event-de
 import { PlaceDetailsComponent } from './categories/places/placeDetails/place-details/place-details.component';
 
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { NgxHideOnScrollModule } from 'ngx-hide-on-scroll';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,13 +52,14 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     StripPipe,
     ActivityDetailsComponent,
     EventDetailsComponent,
-    PlaceDetailsComponent,
+    PlaceDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    NgxHideOnScrollModule,
     AgmCoreModule.forRoot({
       apiKey: ENV.GOOGLEMAPS_API_KEY,
     }),
