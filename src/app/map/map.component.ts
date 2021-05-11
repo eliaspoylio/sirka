@@ -6,6 +6,8 @@ import { IApiData } from '../_models/apidata';
 import { Subscription } from 'rxjs';
 import { StripPipe } from '../_pipes/strip.pipe';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-map',
@@ -23,7 +25,10 @@ export class MapComponent implements OnInit {
   lng: number;
   zoom: number;
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient,
+    public router: Router) {
+      this.router = router;
+     }
 
   public customStyle = [
     {
