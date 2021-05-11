@@ -19,6 +19,20 @@ i:hover {
   color: rgba(59, 56, 56, 0.3);
 }
 
+#temperature {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+}
+
+.weatherIcon {
+  height: 80px;
+}
+
 #login {
   margin-right: 5%;
 }
