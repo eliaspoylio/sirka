@@ -1,26 +1,36 @@
-<section class="wrapper">
-
-  <section class="filter">
-    <div class="row">
-      <div class="col-4">
-        <h1>
-          Tutustu lähiympäristösi tapahtumiin
-        </h1>
-      </div>
-      <div class="col-8">
-        <nav class="navbar">
-          <a id="a1"><p>Musiikki</p></a>
-          <a id="a2"><p>Kulttuuri</p></a>
-          <a id="a3"><p>Urheilu</p></a>
-          <a id="a4"><p>Lapset</p></a>
-        </nav>
+<section class="filter">
+  <div class="row">
+    <div class="col-lg-6">
+      <h1>Tutustu lähiympäristösi tapahtumiin</h1>
+    </div>
+    <div class="col-lg-6">
+      <div class="box">
+        <a
+          class="box1"
+          routerLink="/categories/events"
+          routerLinkActive="active"
+          ><p>Tapahtumat</p></a
+        >
+        <a
+          class="box2"
+          routerLink="/categories/activities"
+          routerLinkActive="active"
+          ><p>Aktiviteetit</p></a
+        >
+        <a
+          class="box3"
+          routerLink="/categories/places"
+          routerLinkActive="active"
+          ><p>Paikat</p></a
+        >
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="nearby">
-      <app-map></app-map>
-  </section>
+<section class="nearby">
+  <app-map></app-map>
+</section>
 
 <div class="container">
   <h2 class="otsikko">Kaikki tapahtumat</h2>
@@ -32,24 +42,32 @@
       <div class="col-md-4">
         <div class="card-img-wrapper">
           <div *ngIf="event.description.images.length > 0; else elseBlock">
-              <img src={{event.description.images[0].url}} alt="event-picture" class="card-img-top"/>
-            </div>
-            <ng-template #elseBlock>
-              <img src="" alt="">
-            </ng-template>
-      </div>
+            <img
+              src="{{ event.description.images[0].url }}"
+              alt="event-picture"
+              class="card-img-top"
+            />
+          </div>
+          <ng-template #elseBlock>
+            <img src="" alt="" />
+          </ng-template>
+        </div>
       </div>
       <div class="col-md-8">
-        <a class="card-body" routerLink="/event-details/{{event.id}}">
+        <a class="card-body" routerLink="/event-details/{{ event.id }}">
           <p class="card-text mb-0">
-            <small class="text-muted">{{event.event_dates.starting_day | date : 'dd/MM/yyyy HH:mm'}}</small>
+            <small class="text-muted">{{
+              event.event_dates.starting_day | date: "dd/MM/yyyy HH:mm"
+            }}</small>
           </p>
-          <h5 class="card-title mb-0">{{event.name.fi}}</h5>
-          <p class="card-text mb-0"  >
-            {{event.description.body | stripHTML}}
+          <h5 class="card-title mb-0">{{ event.name.fi }}</h5>
+          <p class="card-text mb-0">
+            {{ event.description.body | stripHTML }}
           </p>
           <p class="card-text">
-            <small class="text-muted">{{event.location.address.street_address}}</small>
+            <small class="text-muted">{{
+              event.location.address.street_address
+            }}</small>
           </p>
         </a>
         <!-- VÄLIAIKAINEN NAPPULA -->
@@ -58,4 +76,3 @@
     </div>
   </div>
 </div>
-</section>
