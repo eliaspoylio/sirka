@@ -1,5 +1,6 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 import { EventsComponent } from './events.component';
 
@@ -10,7 +11,8 @@ describe('EventsComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ EventsComponent ], 
-      imports: [ HttpClientTestingModule ]
+      imports: [ HttpClientTestingModule, 
+      Ng2SearchPipeModule ]
     })
     .compileComponents();
   });
