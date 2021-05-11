@@ -23,7 +23,7 @@ a {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  padding-top: 35%;
+  padding-top: 40%;
   font-size: 1rem;
 }
 
@@ -124,7 +124,7 @@ h2 {
 
 @media only screen and (min-width: 426px) and (max-width: 768px) {
 
-  .top {
+  .filter {
     margin: 0;
   }
 

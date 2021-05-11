@@ -45,7 +45,7 @@ p {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  padding-top: 35%;
+  padding-top: 40%;
   font-size: 1rem;
 }
 
@@ -122,6 +122,10 @@ app-map {
 
 .top {
   margin: 0;
+
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
 }
 
 h1 {
