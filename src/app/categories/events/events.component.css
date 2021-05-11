@@ -29,13 +29,14 @@ a {
 
 .box {
   margin: auto;
-.otsikko {
-  padding-bottom: 1vw;
-}
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   padding: 0;
+}
+
+.otsikko {
+  padding-bottom: 1vw;
 }
 
 .box1, .box3 {
