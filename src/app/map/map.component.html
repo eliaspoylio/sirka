@@ -1,4 +1,4 @@
-<agm-map [zoom]="15" [latitude]="lat" [longitude]="lng" [styles]="customStyle">
+<agm-map [zoom]="13" [latitude]="lat" [longitude]="lng" [styles]="customStyle">
 
   <agm-marker [latitude]="lat" [longitude]="lng" [markerDraggable]="false"
     [iconUrl]="'http://maps.google.com/mapfiles/ms/icons/pink-dot.png'">
@@ -20,7 +20,7 @@
 
   <div *ngIf="router.url.includes('events') || router.url.includes('frontpage') ">
     <agm-marker *ngFor="let event of events" [latitude]="event.location.lat" [longitude]="event.location.lon"
-      [iconUrl]="'http://maps.google.com/mapfiles/ms/icons/orange.png'">
+      [iconUrl]="'http://maps.google.com/mapfiles/ms/icons/yellow.png'">
       <agm-info-window class="events">
         <h3>{{event.name.fi}}</h3>
         <p>{{event.description.body | stripHTML}}</p>
