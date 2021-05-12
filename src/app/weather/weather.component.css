@@ -1,6 +1,5 @@
 section {
-    background-image: url(../../assets/daysky.jpg);
-    background-size: cover;
+    background: cover;
     padding: 30px;
 }
 
@@ -18,14 +17,14 @@ section {
     border-radius: 10px;
     width: 620px;
     height: auto;
-    background-color: rgba(0, 0, 0, 0.15);  
+    background-color: rgba(206, 202, 202, 0.15);  
     backdrop-filter: blur(5px);
     color: white;
     padding: 10px;
     font-size: 1rem;
     box-shadow: 9px 8px 42px -14px rgba(0,0,0,0.58);
     -webkit-box-shadow: 9px 8px 42px -14px rgba(0,0,0,0.58);
-    -moz-box-shadow: 9px 8px 42px -14px rgba(0,0,0,0.58)
+    -moz-box-shadow: 9px 8px 42px -14px rgba(0,0,0,0.58);
 }
 
 .item1 {
@@ -70,7 +69,7 @@ section {
     border-radius: 10px;
     width: 200px;
     height: auto;
-    background-color: rgba(0, 0, 0, 0.15);  
+    background-color: rgba(250, 246, 246, 0.15);  
     backdrop-filter: blur(5px);
     color: white;
     margin: 5px;
