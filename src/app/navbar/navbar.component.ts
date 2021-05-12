@@ -39,6 +39,6 @@ export class NavbarComponent implements OnInit {
     //Get current weather from API:
     this.Weatherdata.current_temp = (this.Weatherdata.current.temp -273.15).toFixed(0);
     //Get current weather icon from API:
-    this.Weatherdata.current_icon = (this.Weatherdata.current.weather[0].icon);
+    this.Weatherdata.current_icon  =('http://openweathermap.org/img/wn/' + this.Weatherdata.current.weather[0].icon + '@2x.png');
   }
 }
