@@ -8,8 +8,7 @@
                 <p>Tuntuu kuin {{Weatherdata.current_feelsLike}}°C</p>
                 <p> <i class="fas fa-wind"></i> {{Weatherdata.current_wind | number: '1.0-0'}} m/s</p>
             </div>
-            <img src="https://openweathermap.org/img/wn/{{Weatherdata.currentIcon}}@2x.png" alt="weather icon"
-                class="item4">
+            <img src="{{Weatherdata.currentIcon}}" alt="weather icon" class="item4">
             <div class="item5">
                 <p>Aurinko nousee <br>{{Weatherdata.sunrise_time}}</p>
                 <p>Aurinko laskee <br>{{Weatherdata.sunset_time}}</p>
@@ -19,21 +18,21 @@
     <div class="nextHoursWeather">
         <div class="weatherDiv">
             <h1 class="time">{{Weatherdata.secondHour_time}}</h1>
-            <img src="https://openweathermap.org/img/wn/{{Weatherdata.secondHourIcon}}@2x.png" alt="weather icon">
+            <img src="{{Weatherdata.secondIcon}}" alt="weather icon">
             <p class="temperature">{{Weatherdata.secondHour_temp}}°C</p>
             <p>Tuntuu kuin {{Weatherdata.secondHour_feelsLike}}°C</p>
             <p><i class="fas fa-wind"></i> {{Weatherdata.secondHour_wind | number: '1.0-0'}} m/s</p>
         </div>
         <div class="weatherDiv">
             <h1 class="time">{{Weatherdata.thirdHour_time}}</h1>
-            <img src="https://openweathermap.org/img/wn/{{Weatherdata.thirdHourIcon}}@2x.png" alt="weather icon">
+            <img src="{{Weatherdata.thirdIcon}}" alt="weather icon">
             <p class="temperature">{{Weatherdata.thirdHour_temp}}°C</p>
             <p>Tuntuu kuin {{Weatherdata.thirdHour_feelsLike}}°C</p>
             <p><i class="fas fa-wind"></i> {{Weatherdata.thirdHour_wind | number: '1.0-0'}} m/s</p>
         </div>
         <div class="weatherDiv">
             <h1 class="time">{{Weatherdata.fourthHour_time}}</h1>
-            <img src="https://openweathermap.org/img/wn/{{Weatherdata.fourthHourIcon}}@2x.png" alt="weather icon">
+            <img src="{{Weatherdata.fourthIcon}}" alt="weather icon">
             <p class="temperature">{{Weatherdata.fourthHour_temp}}°C</p>
             <p>Tuntuu kuin {{Weatherdata.fourthHour_feelsLike}}°C</p>
             <p><i class="fas fa-wind"></i> {{Weatherdata.fourthHour_wind | number: '1.0-0'}} m/s</p>

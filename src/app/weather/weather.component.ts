@@ -63,10 +63,10 @@ export class WeatherComponent implements OnInit {
     */
 
     //Get Icons from API:
-    this.Weatherdata.currentIcon = (this.Weatherdata.current.weather[0].icon);
-    this.Weatherdata.secondHourIcon = (this.Weatherdata.hourly[1].weather[0].icon);
-    this.Weatherdata.thirdHourIcon = (this.Weatherdata.hourly[2].weather[0].icon);
-    this.Weatherdata.fourthHourIcon = (this.Weatherdata.hourly[3].weather[0].icon);
+    this.Weatherdata.currentIcon =('http://openweathermap.org/img/wn/' + this.Weatherdata.current.weather[0].icon + '@2x.png');
+    this.Weatherdata.secondIcon =('http://openweathermap.org/img/wn/' + this.Weatherdata.hourly[1].weather[0].icon + '@2x.png');
+    this.Weatherdata.thirdIcon =('http://openweathermap.org/img/wn/' + this.Weatherdata.hourly[2].weather[0].icon + '@2x.png');
+    this.Weatherdata.fourthIcon = ('http://openweathermap.org/img/wn/' + this.Weatherdata.hourly[3].weather[0].icon + '@2x.png');
 
     //Get temperatures from API:
     this.Weatherdata.current_temp = (this.Weatherdata.current.temp - 273.15).toFixed(0);
