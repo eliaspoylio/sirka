@@ -19,4 +19,7 @@ describe('RegisterComponent', () => {
     fixture.detectChanges();
   });
 
+  it('should create a registration component', () => {
+    expect(RegisterComponent).toBeTruthy();
+  });
 });
