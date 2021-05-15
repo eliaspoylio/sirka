@@ -3,7 +3,7 @@
   <div *ngIf="currentPlace">
     <div class="row">
       <div class="col-md-6">
-        <div *ngIf="currentPlace.description.images.length > 0; else elseBlock">
+        <div *ngIf="currentPlace.description.images?.length > 0; else elseBlock">
           <img src={{currentPlace.description.images[0].url}} alt="place-picture" class="w-100" />
         </div>
         <ng-template #elseBlock>

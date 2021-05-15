@@ -6,8 +6,6 @@ import { IApiData } from '../_models/apidata';
 import { Subscription } from 'rxjs';
 import { StripPipe } from '../_pipes/strip.pipe';
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
-
 
 @Component({
   selector: 'app-map',
@@ -25,10 +23,7 @@ export class MapComponent implements OnInit {
   lng: number;
   zoom: number;
 
-  constructor(private httpClient: HttpClient,
-    public router: Router) {
-      this.router = router;
-     }
+  constructor(private httpClient: HttpClient) { }
 
   public customStyle = [
     {
@@ -60,8 +55,16 @@ export class MapComponent implements OnInit {
             this.places.forEach(elemens => {
             });
           })
+<<<<<<< HEAD
+      })
 
+      //Alla oleva hakee lähimmät tapahtumat:
+      this.getLocation()
+      .then((loc: any) => {
+        this.httpClient
+=======
           this.httpClient
+>>>>>>> 5509ce7a59a92c82bb1d9d749aee4bf30d6cc85f
           .get('http://sirka-proxy.herokuapp.com/' + this.apiURL + '/events/?distance_filter=' + loc.lat + '%2C' + loc.lng + '%2C4')
           .toPromise()
           .then(res => {
@@ -84,7 +87,11 @@ export class MapComponent implements OnInit {
             });
           })
       })
+<<<<<<< HEAD
 
+
+=======
+>>>>>>> 5509ce7a59a92c82bb1d9d749aee4bf30d6cc85f
   }
 
   private setCurrentLocation() {

@@ -1,57 +1,68 @@
-<section class="wrapper">
-
-  <section class="filter">
-    <div class="row">
-      <div class="col-4">
-        <h1>
-          Paikat
-        </h1>
-      </div>
-      <div class="col-8">
-        <nav class="navbar">
-          <a id="koho"><p>Ravintolat</p></a>
-          <a><p>Ostokset</p></a>
-          <a id="koho"><p>Majoitus</p></a>
-          <a><p>Tilat<br> & Tapahtumapaikat</p></a>
-        </nav>
+<section class="filter">
+  <div class="row">
+    <div class="col-lg-6">
+      <h1>Tutki paikkoja ympärilläsi</h1>
+    </div>
+    <div class="col-lg-6">
+      <div class="box">
+        <a
+          class="box1"
+          routerLink="/categories/events"
+          routerLinkActive="active"
+          ><p>Tapahtumat</p></a
+        >
+        <a
+          class="box2"
+          routerLink="/categories/activities"
+          routerLinkActive="active"
+          ><p>Aktiviteetit</p></a
+        >
+        <a
+          class="box3"
+          routerLink="/categories/places"
+          routerLinkActive="active"
+          ><p>Paikat</p></a
+        >
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="nearby">
-    <app-map></app-map>
-  </section>
+<section class="nearby">
+  <app-map></app-map>
+</section>
 
-  <div class="container">
+<div class="container">
     <h2 class="otsikko">Kaikki paikat</h2>
-  <div class="card mb-3" style="max-width: 900px; ">
+  <div class="card mb-3" style="max-width: 900px">
     <div class="searchEvent mb-3">
       <input type="text" class="form-control" name="search"[(ngModel)]="searchText" autocomplete="off" placeholder="Etsi paikkoja">
     </div>
-    <div class="row g-0" *ngFor="let place of places | filter: searchText | slice: 0:100">
+    <div class="row g-0" *ngFor="let place of places.slice(0,100) | filter: searchText">
       <div class="col-md-4">
-      <div class="card-img-wrapper">
-       <div *ngIf="place.description.images.length > 0; else elseBlock">
-        <img src={{place.description.images[0].url}} alt="">
-      </div>
-      <ng-template #elseBlock>
-        <img src="" alt="">
-      </ng-template>
-      </div>
+        <div class="card-img-wrapper">
+       <div *ngIf="place.description.images?.length > 0; else elseBlock">
+            <img src="{{ place.description.images[0].url }}" alt="" />
+          </div>
+          <ng-template #elseBlock>
+            <img src="" alt="" />
+          </ng-template>
+        </div>
       </div>
       <div class="col-md-8">
-        <a class="card-body" routerLink="/place-details/{{place.id}}" >
-          <h5 class="card-title mb-0">{{place.name.fi}}</h5>
-          <p class="card-text mb-0"  >
-            {{place.description.body | stripHTML}}
+        <a class="card-body" routerLink="/place-details/{{ place.id }}">
+          <h5 class="card-title mb-0">{{ place.name.fi }}</h5>
+          <p class="card-text mb-0">
+            {{ place.description.body | stripHTML }}
           </p>
           <p class="card-text">
-            <small class="text-muted">{{place.location.address.street_address}}</small>
+            <small class="text-muted">{{
+              place.location.address.street_address
+            }}</small>
           </p>
-           <!-- <button routerLink="/place-details/{{place.id}}">Tutustu lisää!</button> -->
+          <!-- <button routerLink="/place-details/{{place.id}}">Tutustu lisää!</button> -->
         </a>
       </div>
     </div>
   </div>
-  </div>
-</section>
+</div>
