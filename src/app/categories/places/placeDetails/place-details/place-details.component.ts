@@ -4,6 +4,7 @@ import { IApiData } from '../../../../_models/apidata';
 import { PlaceService } from '../../../../_services/place.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { AccountService } from '../../../../_services/account.service';
 
 @Component({
   selector: 'app-place-details',
@@ -19,7 +20,8 @@ export class PlaceDetailsComponent implements OnInit {
     private placeService: PlaceService,
     private activatedRoute: ActivatedRoute,
     private route: Router,
-    private httpClient: HttpClient
+    private httpClient: HttpClient,
+    private accountService: AccountService,
   ) { }
 
   ngOnInit(): void {
@@ -49,6 +51,11 @@ export class PlaceDetailsComponent implements OnInit {
         console.log(error);
       });
       console.log('Workkii')
+  }
+
+  addFavourite(): void {
+    console.log(this.currentPlace.id)
+    console.log(this.accountService.userValue)
   }
 
 }
