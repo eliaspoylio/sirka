@@ -41,7 +41,7 @@
     <div class="row g-0" *ngFor="let event of events | filter: searchText | slice: 0:100">
       <div class="col-md-4">
         <div class="card-img-wrapper">
-          <div *ngIf="event.description.images.length > 0; else elseBlock">
+          <div *ngIf="event.description.images?.length > 0; else elseBlock">
             <img
               src="{{ event.description.images[0].url }}"
               alt="event-picture"

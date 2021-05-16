@@ -19,7 +19,10 @@ describe('ResetPasswordComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should render a button with change password', () => {
+    const fixture = TestBed.createComponent(ResetPasswordComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('button').textContent).toContain('Muuta salasana');
   });
 });
