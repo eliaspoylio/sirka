@@ -12,6 +12,7 @@ exports.verify = (req, res, next) => {
                 return
             }
             req.user = value.data
+            console.debug(req.user)
             next()
         })
     }

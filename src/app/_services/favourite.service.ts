@@ -19,7 +19,7 @@ export class FavouriteService {
         private router: Router,
         private http: HttpClient
     ) {
-        this.userSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('user')));
+        this.userSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
         this.user = this.userSubject.asObservable();
     }
 
@@ -27,9 +27,9 @@ export class FavouriteService {
         return this.userSubject.value;
     }
 
-    addFav(user: User, itemid) {
-        console.log(user, itemid)
-        return this.http.post(`${environment.apiUrl}/fav/fav`, user, itemid);
+    public addFav(favId): Observable<any> {
+        console.log(favId)
+        return this.http.post<Favourite>(`${environment.apiUrl}/fav/fav`, { favId });
     }
 
 }
