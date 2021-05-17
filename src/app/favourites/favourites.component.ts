@@ -2,14 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { PlaceService } from '../_services/place.service'
 import { EventService } from '../_services/event.service'
 import { ActivityService } from '../_services/activity.service'
-import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { FavouriteService } from '../_services/favourite.service';
-import { IPlace } from '../_models/place';
-import { IApiData } from '../_models/apidata';
 import { Subscription } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Favourite } from '../_models/favourite';
 
 
 @Component({
@@ -23,7 +18,6 @@ export class FavouritesComponent implements OnInit {
 
 
   constructor(
-    private favouriteService: FavouriteService,
     private httpClient: HttpClient,
     private placeService: PlaceService,
     private eventService: EventService,
