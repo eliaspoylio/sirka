@@ -71,7 +71,7 @@ h1 {
   text-align: center;
   padding: 30px;
   margin-top: 25px;
-  color: #ffffff;
+  color: #fff;
 }
 
 h2 {
@@ -88,6 +88,11 @@ h2 {
   rgba(129, 238, 115, 0.675) 12%,
   rgb(74, 189, 101) 79%
   ); */
+}
+
+app-map {
+  padding: 20px;
+  position: relative;
 }
 
 /*list section */
@@ -125,6 +130,18 @@ h2 {
   text-decoration: underline;
 }
 
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  
+  .filter {
+    margin: 0;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    height: auto;
+  }
+
+}
+
 @media only screen and (min-width: 426px) and (max-width: 768px) {
 
   .filter {
@@ -132,6 +149,7 @@ h2 {
     box-shadow: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
+    height: auto;
   }
 
   h1 {
@@ -147,7 +165,8 @@ h2 {
     height: 150px;
   }
 
-  .box p {
+  p {
+    height: 100px;
     padding-top: 35%;
   }
 
@@ -164,6 +183,7 @@ h2 {
 
     .filter {
       margin: 0;
+      height: auto;
     }
 
     .col-lg-6 {
