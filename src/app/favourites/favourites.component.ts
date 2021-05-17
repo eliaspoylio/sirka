@@ -6,6 +6,8 @@ import { FavouriteService } from '../_services/favourite.service';
 import { IPlace } from '../_models/place';
 import { IApiData } from '../_models/apidata';
 import { Subscription } from 'rxjs';
+import { environment } from 'src/environments/environment';
+import { Favourite } from '../_models/favourite';
 
 @Component({
   selector: 'app-favourites',
@@ -17,18 +19,49 @@ export class FavouritesComponent implements OnInit {
 
   constructor(
     private favouriteService: FavouriteService,
+    private httpClient: HttpClient
   ) { }
 
   ngOnInit(): void {
-    this.favouriteService.getFavourites()
-    .subscribe(
-      response => {
-        this.favourites = response
-        console.log(response);
-      },
-      error => {
-        console.log(error);
+
+    console.log("Angular 10 Promises");
+    this.fetchDataAsPromise()
+      .then((data) => {
+        
+        console.log(JSON.stringify(data));
+        console.log(Object.values(data))
+        Object.values(data).forEach(element => {
+          this.favourites.push(element);
+        });
+        console.log(this.favourites)
+        
+        Object.values(data).forEach(element => {
+          if (element.category == "places") {
+            console.log(element.category)
+          }
+          else if (element.category == "events") {
+            console.log(element.category)
+          }
+          else if (element.category == "activities") {
+            console.log(element.category)
+          }
+          
+
+        });
+      })
+      .catch((error) => {
+        console.log("Promise rejected with " + JSON.stringify(error));
       });
+
+
+  }
+
+  fetchDataAsPromise() {
+    return this.httpClient
+      .get(
+        `${environment.apiUrl}/fav/favourites`
+      )
+      .toPromise();
   }
 
 }

@@ -18,7 +18,7 @@ router.get('/favourites', middleware.verify, function (req, res) {
     const currentUser = User(req.user)
     const email = currentUser.email
     console.debug(email)
-    Fav.find({email}).then(function (favourites) {
+    Fav.find({email}, 'favId category -_id').then(function (favourites) {
         res.send(favourites);
     });
 });
