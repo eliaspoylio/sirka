@@ -32,7 +32,6 @@ export class FavouritesComponent implements OnInit {
 
   ngOnInit(): void {
 
-    console.log("Angular 10 Promises");
     this.fetchDataAsPromise()
       .then((data) => {
 
@@ -40,7 +39,6 @@ export class FavouritesComponent implements OnInit {
           if (element.category == "places") {
             this.favouriteSubscription = this.placeService.getOnePlace(element.favId).subscribe((data) => {
               this.favourites.push(data)
-              console.log("pushed", data)
             }, error => {
               console.log(error);
             });
@@ -48,7 +46,6 @@ export class FavouritesComponent implements OnInit {
           else if (element.category == "events") {
             this.favouriteSubscription = this.eventService.getOneEvent(element.favId).subscribe((data) => {
               this.favourites.push(data)
-              console.log("pushed", data)
             }, error => {
               console.log(error);
             });
@@ -56,7 +53,6 @@ export class FavouritesComponent implements OnInit {
           else if (element.category == "activities") {
             this.favouriteSubscription = this.activityService.getOneActivity(element.favId).subscribe((data) => {
               this.favourites.push(data)
-              console.log("pushed", data)
             }, error => {
               console.log(error);
             });
