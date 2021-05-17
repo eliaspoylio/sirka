@@ -1,6 +1,5 @@
 .filter {
   margin: 2%;
-  height: 200px;
   background: rgb(93, 232, 148);
   background: linear-gradient(
     185deg,
@@ -81,9 +80,14 @@ h2 {
   color: black;
 }
 
-.nearby h2 {
+/*.nearby h2 {
   padding-top: 15px;
   margin-bottom: 0;
+}*/
+
+app-map {
+  padding: 20px;
+  position: relative;
 }
 
 /*list section */

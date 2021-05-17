@@ -1,6 +1,5 @@
 .filter {
   margin: 2%;
-  height: 200px;
   background: rgb(144, 100, 211);
   background: linear-gradient(
     0deg,
@@ -88,6 +87,11 @@ h2 {
   rgba(129, 238, 115, 0.675) 12%,
   rgb(74, 189, 101) 79%
   ); */
+}
+
+app-map {
+  padding: 20px;
+  position: relative;
 }
 
 /*list section */
