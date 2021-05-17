@@ -54,15 +54,9 @@ export class PlaceDetailsComponent implements OnInit {
       });
       console.log('Workkii')
   }
-/*
+
   addFavourite(): void {
-    console.log(this.currentPlace.id)
-    this.favouriteService.addFav(this.currentPlace.id)
-  }
-*/
-  addFavourite(): void {
-    console.log(this.currentPlace.id)
-    this.favouriteService.addFav(this.currentPlace.id)
+    this.favouriteService.addFav(this.currentPlace.id, "places")
     .subscribe(
       response => {
         console.log(response);

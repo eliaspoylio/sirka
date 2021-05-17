@@ -27,9 +27,12 @@ export class FavouriteService {
         return this.userSubject.value;
     }
 
-    public addFav(favId): Observable<any> {
-        console.log(favId)
-        return this.http.post<Favourite>(`${environment.apiUrl}/fav/fav`, { favId });
+    public addFav(favId, category): Observable<any> {
+        return this.http.post<Favourite>(`${environment.apiUrl}/fav/fav`, { favId , category });
+    }
+
+    public getFavourites(): Observable<any> {
+        return this.http.get<Favourite>(`${environment.apiUrl}/fav/favourites`);
     }
 
 }
