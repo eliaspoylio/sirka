@@ -5,24 +5,15 @@
     </div>
     <div class="col-lg-6">
       <div class="box">
-        <a
-          class="box1"
-          routerLink="/categories/favourites"
-          routerLinkActive="active"
-          ><p>Tapahtumat</p></a
-        >
-        <a
-          class="box2"
-          routerLink="/categories/activities"
-          routerLinkActive="active"
-          ><p>Aktiviteetit</p></a
-        >
-        <a
-          class="box3"
-          routerLink="/categories/places"
-          routerLinkActive="active"
-          ><p>Paikat</p></a
-        >
+        <a class="box1" routerLink="/categories/favourites" routerLinkActive="active">
+          <p>Tapahtumat</p>
+        </a>
+        <a class="box2" routerLink="/categories/activities" routerLinkActive="active">
+          <p>Aktiviteetit</p>
+        </a>
+        <a class="box3" routerLink="/categories/places" routerLinkActive="active">
+          <p>Paikat</p>
+        </a>
       </div>
     </div>
   </div>
@@ -31,18 +22,11 @@
 <div class="container">
   <h2 class="otsikko">Suosikit</h2>
   <div class="card" style="max-width: 900px; ">
-    <div class="searchfavourite mb-3">
-      <input type="text" class="form-control" name="search"[(ngModel)]="searchText" autocomplete="off" placeholder="Etsi suosikeista">
-    </div>
-    <div class="row g-0" *ngFor="let favourite of favourites | filter: searchText | slice: 0:100">
+    <div class="row g-0" *ngFor="let favourite of favourites | slice: 0:100">
       <div class="col-md-4">
         <div class="card-img-wrapper">
           <div *ngIf="favourite.description.images?.length > 0; else elseBlock">
-            <img
-              src="{{ favourite.description.images[0].url }}"
-              alt="favourite-picture"
-              class="card-img-top"
-            />
+            <img src="{{ favourite.description.images[0].url }}" alt="favourite-picture" class="card-img-top" />
           </div>
           <ng-template #elseBlock>
             <img src="" alt="" />
@@ -50,11 +34,11 @@
         </div>
       </div>
       <div class="col-md-8">
-          <h5 class="card-title mb-0">{{ favourite.name.fi }}</h5>
-          <p class="card-text mb-0">
-            {{ favourite.description.body | stripHTML }}
-          </p>
-          <!-- <button routerLink="/place-details/{{place.id}}">Tutustu lisää!</button> -->
+        <h5 class="card-title mb-0">{{ favourite.name.fi }}</h5>
+        <p class="card-text mb-0">
+          {{ favourite.description.body | stripHTML }}
+        </p>
+        <!-- <button routerLink="/place-details/{{place.id}}">Tutustu lisää!</button> -->
       </div>
     </div>
   </div>
