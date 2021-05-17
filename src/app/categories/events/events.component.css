@@ -1,5 +1,6 @@
 .filter {
   margin: 2%;
+  height: 200px;
   background: rgb(144, 100, 211);
   background: linear-gradient(
     0deg,
@@ -70,7 +71,7 @@ h1 {
   text-align: center;
   padding: 30px;
   margin-top: 25px;
-  color: #ffffff;
+  color: #fff;
 }
 
 h2 {
@@ -129,6 +130,18 @@ app-map {
   text-decoration: underline;
 }
 
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  
+  .filter {
+    margin: 0;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    height: auto;
+  }
+
+}
+
 @media only screen and (min-width: 426px) and (max-width: 768px) {
 
   .filter {
@@ -136,6 +149,7 @@ app-map {
     box-shadow: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
+    height: auto;
   }
 
   h1 {
@@ -151,7 +165,8 @@ app-map {
     height: 150px;
   }
 
-  .box p {
+  p {
+    height: 100px;
     padding-top: 35%;
   }
 
@@ -168,6 +183,7 @@ app-map {
 
     .filter {
       margin: 0;
+      height: auto;
     }
 
     .col-lg-6 {

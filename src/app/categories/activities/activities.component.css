@@ -65,7 +65,7 @@ h1 {
   font-weight: 700;
   text-align: center;
   padding: 30px;
-  margin-top: 40px;
+  margin-top: 25px;
   color: #fff;
 }
 
@@ -169,7 +169,7 @@ app-map {
       padding: 3%;
     }
 
-    .top {
+    .filter {
       margin: 0;
     }
 
