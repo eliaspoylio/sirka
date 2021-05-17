@@ -1,45 +1,23 @@
-<section class="filter">
-  <div class="row">
-    <div class="col-lg-6">
-      <h1>Tutustu lähiympäristösi tapahtumiin</h1>
+<div class="container">
+  <h2 class="otsikko">Sinun suosikkisi <i class="bi bi-heart"></i></h2>
+<div class="card-columns">
+  <div class="card" *ngFor="let fav of favourites">
+    <!-- <img class="card-img-top"> -->
+    <div class="card-img-top" *ngIf="fav.description.images?.length > 0; else elseBlock">
+      <img
+        src="{{ fav.description.images[0].url }}"
+        alt="event-picture"
+        class="card-img-top"
+      />
     </div>
-    <div class="col-lg-6">
-      <div class="box">
-        <a class="box1" routerLink="/categories/favourites" routerLinkActive="active">
-          <p>Tapahtumat</p>
-        </a>
-        <a class="box2" routerLink="/categories/activities" routerLinkActive="active">
-          <p>Aktiviteetit</p>
-        </a>
-        <a class="box3" routerLink="/categories/places" routerLinkActive="active">
-          <p>Paikat</p>
-        </a>
-      </div>
+    <ng-template #elseBlock>
+      <img src="" alt="" />
+    </ng-template>
+    <div class="card-body">
+      <h5 class="card-title">{{fav.name.fi }}</h5>
+      <p class="card-text"> {{ fav.description.body | stripHTML }}</p>
+      <button class="btn btn-outline-primary" role="button" aria-pressed="true" routerLink="/event-details/{{ fav.id }}">Lue lisää!</button>
     </div>
   </div>
-</section>
-
-<div class="container">
-  <h2 class="otsikko">Suosikit</h2>
-  <div class="card" style="max-width: 900px; ">
-    <div class="row g-0" *ngFor="let favourite of favourites | slice: 0:100">
-      <div class="col-md-4">
-        <div class="card-img-wrapper">
-          <div *ngIf="favourite.description.images?.length > 0; else elseBlock">
-            <img src="{{ favourite.description.images[0].url }}" alt="favourite-picture" class="card-img-top" />
-          </div>
-          <ng-template #elseBlock>
-            <img src="" alt="" />
-          </ng-template>
-        </div>
-      </div>
-      <div class="col-md-8">
-        <h5 class="card-title mb-0">{{ favourite.name.fi }}</h5>
-        <p class="card-text mb-0">
-          {{ favourite.description.body | stripHTML }}
-        </p>
-        <!-- <button routerLink="/place-details/{{place.id}}">Tutustu lisää!</button> -->
-      </div>
-    </div>
   </div>
 </div>
