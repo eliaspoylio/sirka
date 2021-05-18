@@ -97,8 +97,8 @@ app-map {
 
 /*list section */
 .card-img-wrapper {
-  width: 205px;
-  height: 200px;
+  /* width: 205px;
+  height: 200px; */
   margin: 2%;
 }
 
@@ -113,6 +113,7 @@ app-map {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 .col-md-8 {
   display: flex;
   align-items:center;
@@ -131,7 +132,7 @@ app-map {
 }
 
 @media only screen and (min-width: 769px) and (max-width: 991px) {
-  
+
   .filter {
     margin: 0;
     box-shadow: none;
@@ -139,6 +140,8 @@ app-map {
     -moz-box-shadow: none;
     height: auto;
   }
+
+
 
 }
 
@@ -165,10 +168,15 @@ app-map {
     height: 150px;
   }
 
-  p {
+  .navText p {
     height: 100px;
     padding-top: 35%;
   }
+
+  .col-md-8  {
+    border-bottom: 1px solid lightgray;
+  }
+
 
   }
 
@@ -191,19 +199,21 @@ app-map {
     }
 
     .box a {
-      height: 100px;
-    }
-
-    a {
       width: 30%;
       background-color: transparent;
       padding: 0;
+      height: 100px;
     }
 
-    p {
+    .navText p {
       font-size: 1rem;
       padding-top: 25%;
     }
+
+    .col-md-8  {
+      border-bottom: 1px solid lightgray;
+    }
+
 
   }
 
