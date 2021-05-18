@@ -19,7 +19,7 @@ describe('UserInfoComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create user-info component', () => {
     expect(component).toBeTruthy();
   });
 });
