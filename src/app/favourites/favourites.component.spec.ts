@@ -19,5 +19,8 @@ describe('FavouritesComponent', () => {
     fixture.detectChanges();
   });
 
+  it('should create favourites component', () => {
+    expect(component).toBeTruthy();
+  });
 
 });
