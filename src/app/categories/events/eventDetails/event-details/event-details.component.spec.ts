@@ -22,7 +22,7 @@ describe('EventDetailsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create event details component', () => {
     expect(component).toBeTruthy();
   });
 });
