@@ -18,10 +18,17 @@ app.use('/api/fav', favRoute)
 mongoose.connect(dbURL , {useNewUrlParser: true, useUnifiedTopology: true})
 const db = mongoose.connection
 
+app.use(express.static(process.cwd()+"/dist/sirka/"));
+
+app.get('/', (req,res) => {
+    res.sendFile(process.cwd()+"/dist/sirka/index.html")
+  });
+
 //default
 app.get('*', (req, res) => {
     res.status(200).json({ status: "Server up" })
 });
+
 
 db.on("error", (err)=>{console.error(err)})
 db.once("open", () => {console.log("Connected to DB")})
