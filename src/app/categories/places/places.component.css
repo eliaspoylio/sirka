@@ -38,12 +38,6 @@
   height: 200px;
   width: 100%;
   background: transparent;
-  /* background: rgb(144, 100, 211);
-  background: linear-gradient(
-    0deg,
-    rgba(144, 100, 211, 1) 0%,
-    rgba(255, 112, 169, 0.6834532374100719) 100%
-  ); */
 
   box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
   -webkit-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
@@ -77,23 +71,15 @@ h2 {
 /* map section */
 .nearby {
   margin: 2% 5%;
-  /* color: black; */
 }
 
-/*.nearby h2 {
-  padding-top: 15px;
-  margin-bottom: 0;
-}*/
-
-app-map {
+.app-map {
   padding: 20px;
   position: relative;
 }
 
 /*list section */
 .card-img-wrapper {
-  /* width: 255px;
-  height: 200px; */
   margin: 2%;
 }
 
@@ -119,7 +105,6 @@ app-map {
 }
 
 .card-body {
-  /* text-decoration: none; */
   color: black;
 }
 
