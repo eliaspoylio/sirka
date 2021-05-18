@@ -20,9 +20,10 @@
 
 h1 {
   font-size: 2.5rem;
-  padding-top: 20px;
   font-weight: 700;
   text-align: center;
+  padding: 30px;
+  margin-top: 40px;
   color: #ffffff;
 }
 
@@ -61,12 +62,6 @@ p {
   height: 200px;
   width: 100%;
   background: transparent;
-  /* background: rgb(144, 100, 211);
-  background: linear-gradient(
-    0deg,
-    rgba(144, 100, 211, 1) 0%,
-    rgba(255, 112, 169, 0.6834532374100719) 100%
-  ); */
 
   box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
   -webkit-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
@@ -87,36 +82,7 @@ p {
 /* map */
 .nearby {
   margin: 2% 5%;
-  color: black;
-  /* background: rgb(93, 232, 148);
-  background: linear-gradient(
-    185deg,
-    rgba(129, 238, 115, 0.675) 12%,
-    rgb(74, 189, 101) 79%
-  ); */
 }
-
-app-map {
-  padding: 20px;
-  position: relative;
-}
-
-/* trending */
-.trending {
-  margin: 2%;
-  background: rgb(255, 220, 160);
-  background: linear-gradient(
-    185deg,
-    rgba(255, 220, 160, 1) 15%,
-    rgba(246, 108, 108, 0.8337349397590361) 83%
-  );
-
-  box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
-  -webkit-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
-  -moz-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
-}
-
-
 
 @media only screen and (min-width: 426px) and (max-width: 768px) {
 
@@ -131,6 +97,7 @@ app-map {
 h1 {
   font-size: 2rem;
   padding: 2%;
+  margin-top: 10px;
 }
 
 h2 {
@@ -138,11 +105,11 @@ h2 {
 }
 
 .box a {
-  height: 150px;
+  height: 100px;
 }
 
-p {
-  padding-top: 35%;
+.box p {
+  padding-top: 25%;
 }
 
 }
@@ -178,9 +145,4 @@ h1 {
     font-size: 1rem;
     padding-top: 25%;
   }
-
-  .trending h2 {
-    font-size: 1.5rem;
-  }
-
 }
