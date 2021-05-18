@@ -6,6 +6,7 @@ import { EventService } from '../../../../_services/event.service';
 import { ActionSequence } from 'selenium-webdriver';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { FavouriteService } from '../../../../_services/favourite.service';
 
 
 @Component({
@@ -23,7 +24,8 @@ export class EventDetailsComponent implements OnInit {
     private eventService: EventService,
     private activatedRoute: ActivatedRoute,
     private route: Router,
-    private httpClient: HttpClient) { }
+    private httpClient: HttpClient,
+    private favouriteService: FavouriteService,) { }
 
   ngOnInit(): void {
    this.subscribeToEvent( this.activatedRoute.snapshot.paramMap.get('id'));
@@ -54,7 +56,16 @@ export class EventDetailsComponent implements OnInit {
       console.log('Workkii')
   }
 
-
+  addFavourite(): void {
+    this.favouriteService.addFav(this.currentEvent.id, "events")
+    .subscribe(
+      response => {
+        console.log(response);
+      },
+      error => {
+        console.log(error);
+      });
+  }
 
 
 

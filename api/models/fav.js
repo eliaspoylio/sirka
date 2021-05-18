@@ -6,9 +6,13 @@ const model = mongoose.Schema({
         required: true
     },
     favId: {
-        type: Number,
+        type: String,
         required: true
       },
+    category: {
+        type: String,
+        required: true
+    },
 });
 
 module.exports = new mongoose.model("Fav", model)

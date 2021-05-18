@@ -4,6 +4,7 @@ import { IApiData } from '../../../../_models/apidata';
 import { ActivityService } from '../../../../_services/activity.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { FavouriteService } from '../../../../_services/favourite.service';
 
 @Component({
   selector: 'app-activity-details',
@@ -19,7 +20,8 @@ export class ActivityDetailsComponent implements OnInit {
     private activityService: ActivityService,
     private activatedRoute: ActivatedRoute,
     private route: Router,
-    private httpClient: HttpClient
+    private httpClient: HttpClient,
+    private favouriteService: FavouriteService,
   ) { }
 
   ngOnInit(): void {
@@ -36,6 +38,17 @@ export class ActivityDetailsComponent implements OnInit {
         console.log(error)
       }
     )
+  }
+
+  addFavourite(): void {
+    this.favouriteService.addFav(this.currentActivity.id, "activities")
+    .subscribe(
+      response => {
+        console.log(response);
+      },
+      error => {
+        console.log(error);
+      });
   }
 
 }

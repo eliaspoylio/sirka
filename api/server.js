@@ -7,7 +7,7 @@ const favRoute = require('./routes/addfav')
 var cors = require('cors')
 require('dotenv').config();
 
-const dbURL = process.env.DB_URI
+dbURL =  process.env.DB_URI
 
 app.use(cors())
 app.use(express.json())
