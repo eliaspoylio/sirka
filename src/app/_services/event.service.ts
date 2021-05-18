@@ -26,21 +26,5 @@ export class EventService {
     return this.httpClient.put('https://sirka-proxy.herokuapp.com/' + this.apiURL + id, data);
   }
 
-    // public createEvent(data): Observable<any> {
-  //   return this.httpClient.post(this.apiURL, data);
-  // }
-
-  // public deleteEvent(id): Observable<any> {
-  //   return this.httpClient.delete('https://sirka-proxy.herokuapp.com/' + this.apiURL + '/event/' + id);
-  // }
-
-  // public deleteAllEvents(): Observable<any> {
-  //   return this.httpClient.delete('https://sirka-proxy.herokuapp.com/' + this.apiURL + "/events/");
-  // }
-
-  // public limitByNumber(number): Observable<any> {
-  //   return this.httpClient.get('https://sirka-proxy.herokuapp.com/' + this.apiURL + "/events/" + this.limit + number);
-  // }
-
 
 }
