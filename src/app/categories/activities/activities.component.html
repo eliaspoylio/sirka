@@ -9,19 +9,19 @@
           class="box1"
           routerLink="/categories/events"
           routerLinkActive="active"
-          ><p>Tapahtumat</p></a
+          ><p class="navText">Tapahtumat</p></a
         >
         <a
           class="box2"
           routerLink="/categories/activities"
           routerLinkActive="active"
-          ><p>Aktiviteetit</p></a
+          ><p class="navText">Aktiviteetit</p></a
         >
         <a
           class="box3"
           routerLink="/categories/places"
           routerLinkActive="active"
-          ><p>Paikat</p></a
+          ><p class="navText">Paikat</p></a
         >
       </div>
     </div>
@@ -34,7 +34,7 @@
 
 <div class="container">
     <h2 class="otsikko">Kaikki aktiviteetit</h2>
-  <div class="card mb-3" style="max-width: 900px">
+  <div class="card" style="max-width: 900px">
       <div class="searchEvent mb-3">
         <input type="text" class="form-control" name="search"[(ngModel)]="searchText" autocomplete="off" placeholder="Etsi aktiviteetteja">
       </div>
@@ -43,10 +43,7 @@
         <div class="card-img-wrapper">
             <div *ngIf="activity.description.images?.length > 0; else elseBlock">
             <img
-              src="{{ activity.description.images[0].url }}"
-              alt="activity-picture"
-              class="card-img-top"
-            />
+              src="{{ activity.description.images[0].url }}" alt="activity-picture" class="card-img-top" />
           </div>
           <ng-template #elseBlock>
             <img src="" alt="" />
@@ -64,7 +61,6 @@
               activity.location.address.street_address
             }}</small>
           </p>
-          <!-- <button routerLink="/activity-details/{{activity.id}}">Tutustu lisää!</button> -->
         </a>
       </div>
     </div>
