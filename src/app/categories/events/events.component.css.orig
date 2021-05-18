@@ -13,7 +13,7 @@
   -moz-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
 }
 
-a {
+.box a {
   text-decoration: none;
 }
 
@@ -23,25 +23,20 @@ a {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  padding-top: 35%;
+  padding-top: 40%;
   font-size: 1rem;
 }
 
-<<<<<<< HEAD
 .box {
   margin: auto;
-=======
-.otsikko {
-  padding-bottom: 1vw;
-}
-/* categories navbar */
-.navbar {
-  color: #ffffff;
->>>>>>> 5509ce7a59a92c82bb1d9d749aee4bf30d6cc85f
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   padding: 0;
+}
+
+.otsikko {
+  padding-bottom: 1vw;
 }
 
 .box1, .box3 {
@@ -75,8 +70,8 @@ h1 {
   font-weight: 700;
   text-align: center;
   padding: 30px;
-  margin-top: 30px;
-  color: #ffffff;
+  margin-top: 25px;
+  color: #fff;
 }
 
 h2 {
@@ -87,18 +82,19 @@ h2 {
 /* map */
 .nearby {
   margin: 2% 5%;
-  /*background: rgb(93, 232, 148);
-  background: linear-gradient(
-  185deg,
-  rgba(129, 238, 115, 0.675) 12%,
-  rgb(74, 189, 101) 79%
-  ); */
+
 }
 
+<<<<<<< HEAD
+=======
+.app-map {
+  padding: 20px;
+  position: relative;
+}
+
+>>>>>>> 2e8b5be6ea5bb579540bc895516c15d02efeffb7
 /*list section */
 .card-img-wrapper {
-  width: 155px;
-  height: 150px;
   margin: 2%;
 }
 
@@ -113,6 +109,7 @@ h2 {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 .col-md-8 {
   display: flex;
   align-items:center;
@@ -122,14 +119,32 @@ h2 {
 }
 
 .card-body {
-  /* text-decoration: none; */
   color: black;
+}
+
+.card-body a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+
+  .filter {
+    margin: 0;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    height: auto;
+  }
 }
 
 @media only screen and (min-width: 426px) and (max-width: 768px) {
 
-  .top {
+  .filter {
     margin: 0;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    height: auto;
   }
 
   h1 {
@@ -145,14 +160,18 @@ h2 {
     height: 150px;
   }
 
-  p {
+  .navText p {
+    height: 100px;
     padding-top: 35%;
   }
 
+  .col-md-8  {
+    border-bottom: 1px solid lightgray;
   }
 
+  }
 
-  @media only screen and (max-width: 425px) {
+@media only screen and (max-width: 425px) {
 
   h1 {
       font-size: 2rem;
@@ -160,8 +179,9 @@ h2 {
       padding: 3%;
     }
 
-    .top {
+    .filter {
       margin: 0;
+      height: auto;
     }
 
     .col-lg-6 {
@@ -169,19 +189,21 @@ h2 {
     }
 
     .box a {
-      height: 100px;
-    }
-
-    a {
       width: 30%;
       background-color: transparent;
       padding: 0;
+      height: 100px;
     }
 
-    p {
+    .navText p {
       font-size: 1rem;
       padding-top: 25%;
     }
+
+    .col-md-8  {
+      border-bottom: 1px solid lightgray;
+    }
+
 
   }
 

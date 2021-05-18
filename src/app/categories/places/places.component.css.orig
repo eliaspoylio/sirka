@@ -1,6 +1,5 @@
 .filter {
   margin: 2%;
-  height: 200px;
   background: rgb(93, 232, 148);
   background: linear-gradient(
     185deg,
@@ -13,7 +12,7 @@
   -moz-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
 }
 
-a {
+.box a {
   text-decoration: none;
 }
 
@@ -23,21 +22,12 @@ a {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  padding-top: 35%;
+  padding-top: 40%;
   font-size: 1rem;
 }
 
-<<<<<<< HEAD
 .box {
   margin: auto;
-=======
-.otsikko {
-  padding-bottom: 1vw;
-}
-
-.navbar {
-  color: #ffffff;
->>>>>>> 5509ce7a59a92c82bb1d9d749aee4bf30d6cc85f
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -48,12 +38,6 @@ a {
   height: 200px;
   width: 100%;
   background: transparent;
-  /* background: rgb(144, 100, 211);
-  background: linear-gradient(
-    0deg,
-    rgba(144, 100, 211, 1) 0%,
-    rgba(255, 112, 169, 0.6834532374100719) 100%
-  ); */
 
   box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
   -webkit-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
@@ -75,7 +59,7 @@ h1 {
   font-weight: 700;
   text-align: center;
   padding: 30px;
-  margin-top: 30px;
+  margin-top: 25px;
   color: #fff;
 }
 
@@ -87,18 +71,19 @@ h2 {
 /* map section */
 .nearby {
   margin: 2% 5%;
-  color: black;
 }
 
-.nearby h2 {
-  padding-top: 15px;
-  margin-bottom: 0;
+<<<<<<< HEAD
+=======
+.app-map {
+  padding: 20px;
+  position: relative;
 }
 
+>>>>>>> 2e8b5be6ea5bb579540bc895516c15d02efeffb7
 /*list section */
 .card-img-wrapper {
-  width: 255px;
-  height: 200px;
+  margin: 2%;
 }
 
 .card {
@@ -122,18 +107,17 @@ h2 {
   font-weight: bolder !important;
 }
 
-.card-img-wrapper img{
-  max-width: 300px;
+.card-body {
+  color: black;
 }
 
-.card-body {
-  /* text-decoration: none; */
-  color: black;
+.card-body a:hover {
+  text-decoration: underline;
 }
 
 @media only screen and (min-width: 426px) and (max-width: 768px) {
 
-  .top {
+  .filter {
     margin: 0;
   }
 
@@ -150,8 +134,12 @@ h2 {
     height: 150px;
   }
 
-  p {
+  .navText p {
     padding-top: 35%;
+  }
+
+  .col-md-8  {
+    border-bottom: 1px solid lightgray;
   }
 
   }
@@ -174,22 +162,22 @@ h2 {
     }
 
     .box a {
-      height: 100px;
-    }
-
-    a {
       width: 30%;
       background-color: transparent;
       padding: 0;
+      height: 100px;
     }
 
-    p {
+    .navText p {
       font-size: 1rem;
       padding-top: 25%;
     }
+<<<<<<< HEAD
+=======
 
-    .trending h2 {
-      font-size: 1.5rem;
+    .col-md-8  {
+      border-bottom: 1px solid lightgray;
     }
 
+>>>>>>> 2e8b5be6ea5bb579540bc895516c15d02efeffb7
   }

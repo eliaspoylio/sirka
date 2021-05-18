@@ -82,18 +82,11 @@ h2 {
 /* map */
 .nearby {
   margin: 2% 5%;
-  /*background: rgb(93, 232, 148);
-  background: linear-gradient(
-  185deg,
-  rgba(129, 238, 115, 0.675) 12%,
-  rgb(74, 189, 101) 79%
-  ); */
+
 }
 
 /*list section */
 .card-img-wrapper {
-  width: 205px;
-  height: 200px;
   margin: 2%;
 }
 
@@ -108,6 +101,7 @@ h2 {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 .col-md-8 {
   display: flex;
   align-items:center;
@@ -117,7 +111,6 @@ h2 {
 }
 
 .card-body {
-  /* text-decoration: none; */
   color: black;
 }
 
@@ -134,7 +127,6 @@ h2 {
     -moz-box-shadow: none;
     height: auto;
   }
-
 }
 
 @media only screen and (min-width: 426px) and (max-width: 768px) {
@@ -160,13 +152,16 @@ h2 {
     height: 150px;
   }
 
-  p {
+  .navText p {
     height: 100px;
     padding-top: 35%;
   }
 
+  .col-md-8  {
+    border-bottom: 1px solid lightgray;
   }
 
+  }
 
 @media only screen and (max-width: 425px) {
 
@@ -186,19 +181,21 @@ h2 {
     }
 
     .box a {
-      height: 100px;
-    }
-
-    a {
       width: 30%;
       background-color: transparent;
       padding: 0;
+      height: 100px;
     }
 
-    p {
+    .navText p {
       font-size: 1rem;
       padding-top: 25%;
     }
+
+    .col-md-8  {
+      border-bottom: 1px solid lightgray;
+    }
+
 
   }
 

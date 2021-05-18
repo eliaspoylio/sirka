@@ -1,6 +1,5 @@
 .filter {
   margin: 2%;
-  height: 200px;
   background: rgb(93, 232, 148);
   background: linear-gradient(
    185deg,
@@ -13,7 +12,7 @@
   -moz-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
 }
 
-a {
+.box a {
   text-decoration: none;
 }
 
@@ -23,7 +22,7 @@ a {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  padding-top: 35%;
+  padding-top: 40%;
   font-size: 1rem;
 }
 
@@ -35,17 +34,14 @@ a {
   padding: 0;
 }
 
+.otsikko {
+  padding-bottom: 1vw;
+}
+
 .box1, .box3 {
   height: 200px;
   width: 100%;
   background: transparent;
-  /* background: rgb(144, 100, 211);
-  background: linear-gradient(
-    0deg,
-    rgba(144, 100, 211, 1) 0%,
-    rgba(255, 112, 169, 0.6834532374100719) 100%
-  ); */
-
   box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
   -webkit-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
   -moz-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
@@ -66,7 +62,7 @@ h1 {
   font-weight: 700;
   text-align: center;
   padding: 30px;
-  margin-top: 35px;
+  margin-top: 25px;
   color: #fff;
 }
 
@@ -75,60 +71,22 @@ h2 {
   padding-bottom: 1rem;
 }
 
-<<<<<<< HEAD
-=======
-.otsikko {
-  padding-bottom: 1vw;
-}
-
-.navbar a {
-  background: transparent;
-  width: 25%;
-  height: 200px;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-
-.navbar a:hover {
-  background-color: rgba(157, 243, 191, 0.675);
-}
-
-.navbar p {
-  padding-top: 30%;
-  font-weight: bold;
-}
-
-#a1, #a3 {
-  box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
-  -webkit-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
-  -moz-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
-}
-
->>>>>>> 5509ce7a59a92c82bb1d9d749aee4bf30d6cc85f
 /* map section */
 .nearby {
   margin: 2% 5%;
-  /* background: rgb(93, 232, 148);
-  background: linear-gradient(
-    185deg,
-    rgba(129, 238, 115, 0.675) 12%,
-    rgb(74, 189, 101) 79%
-  );
-
-  box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
-  -webkit-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58);
-  -moz-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58); */
 }
 
+<<<<<<< HEAD
+=======
 .app-map {
   padding: 20px;
+  position: relative;
 }
 
+>>>>>>> 2e8b5be6ea5bb579540bc895516c15d02efeffb7
 /* list section*/
 .card-img-wrapper {
-  width: 255px;
-  height: 200px;
+  margin: 2%;
 }
 
 .card {
@@ -153,13 +111,16 @@ h2 {
 }
 
 .card-body {
-  /* text-decoration: none; */
   color: black;
+}
+
+.card-body a:hover {
+  text-decoration: underline;
 }
 
 @media only screen and (min-width: 426px) and (max-width: 768px) {
 
-  .top {
+  .filter {
     margin: 0;
   }
 
@@ -176,12 +137,16 @@ h2 {
     height: 150px;
   }
 
-  p {
+  .navTex p {
+    height: 100px;
     padding-top: 35%;
   }
 
+  .col-md-8  {
+    border-bottom: 1px solid lightgray;
   }
 
+  }
 
   @media only screen and (max-width: 425px) {
 
@@ -191,8 +156,9 @@ h2 {
       padding: 3%;
     }
 
-    .top {
+    .filter {
       margin: 0;
+      height: auto;
     }
 
     .col-lg-6 {
@@ -200,23 +166,23 @@ h2 {
     }
 
     .box a {
-      height: 100px;
-    }
-
-    a {
       width: 30%;
       background-color: transparent;
       padding: 0;
+      height: 100px;
     }
 
-    p {
+    .navTex p {
       font-size: 1rem;
       padding-top: 25%;
     }
+<<<<<<< HEAD
+=======
 
-    .trending h2 {
-      font-size: 1.5rem;
+    .col-md-8  {
+      border-bottom: 1px solid lightgray;
     }
 
+>>>>>>> 2e8b5be6ea5bb579540bc895516c15d02efeffb7
   }
 
