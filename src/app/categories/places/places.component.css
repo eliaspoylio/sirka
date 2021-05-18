@@ -80,16 +80,6 @@ h2 {
   color: black;
 }
 
-/*.nearby h2 {
-  padding-top: 15px;
-  margin-bottom: 0;
-}*/
-
-app-map {
-  padding: 20px;
-  position: relative;
-}
-
 /*list section */
 .card-img-wrapper {
   width: 255px;
@@ -186,9 +176,4 @@ app-map {
       font-size: 1rem;
       padding-top: 25%;
     }
-
-    .trending h2 {
-      font-size: 1.5rem;
-    }
-
   }

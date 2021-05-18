@@ -93,11 +93,6 @@ h2 {
   -moz-box-shadow: 9px 8px 42px -14px rgba(0, 0, 0, 0.58); */
 }
 
-app-map {
-  padding: 20px;
-  position: relative;
-}
-
 /* list section*/
 .card-img-wrapper {
   width: 255px;
@@ -191,10 +186,5 @@ app-map {
       font-size: 1rem;
       padding-top: 25%;
     }
-
-    .trending h2 {
-      font-size: 1.5rem;
-    }
-
   }
 
