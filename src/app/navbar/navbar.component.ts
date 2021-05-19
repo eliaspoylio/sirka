@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherService } from '../_services/weather.service';
+import { AlertService } from '../_services/alert.service';
+
 
 @Component({
   selector: 'app-navbar',
@@ -8,19 +10,21 @@ import { WeatherService } from '../_services/weather.service';
 })
 export class NavbarComponent implements OnInit {
 
+  loggedinUser: string;
   Weatherdata: any;
 
-  constructor(private _weatherService: WeatherService) { }
+  constructor(private _weatherService: WeatherService,
+    private alertService: AlertService) { }
 
   ngOnInit(): void {
 
    //Don't show this when using testdata:
-    
+
     this._weatherService.getWeather().subscribe((res) => { this.setWeatherData(res) });
      this.Weatherdata = {
        main: {}
      }
-     
+
 
     //Show this when using testdata:
     //this.getTestData();
@@ -40,5 +44,15 @@ export class NavbarComponent implements OnInit {
     this.Weatherdata.current_temp = (this.Weatherdata.current.temp -273.15).toFixed(0);
     //Get current weather icon from API:
     this.Weatherdata.current_icon  =('http://openweathermap.org/img/wn/' + this.Weatherdata.current.weather[0].icon + '@2x.png');
+  }
+
+  loggedin() {
+    this.loggedinUser = localStorage.getItem('token');
+    return this.loggedinUser;
+  }
+
+  onLogout() {
+    localStorage.removeItem('token');
+    this.alertService.success('You are logged out!');
   }
 }
