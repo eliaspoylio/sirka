@@ -59,7 +59,7 @@ h1 {
   font-weight: 700;
   text-align: center;
   padding: 30px;
-  margin-top: 25px;
+  margin-top: 40px;
   color: #fff;
 }
 
@@ -116,6 +116,7 @@ h2 {
   h1 {
     font-size: 2rem;
     padding: 2%;
+    margin-top: 10px;
   }
 
   h2 {
@@ -123,11 +124,11 @@ h2 {
   }
 
   .box a {
-    height: 150px;
+    height: 100px;
   }
 
-  .navText p {
-    padding-top: 35%;
+  .box p {
+    padding-top: 25%;
   }
 
   .col-md-8  {
@@ -137,7 +138,7 @@ h2 {
   }
 
 
-  @media only screen and (max-width: 425px) {
+  /* @media only screen and (max-width: 425px) {
 
   h1 {
       font-size: 2rem;
@@ -145,7 +146,7 @@ h2 {
       padding: 3%;
     }
 
-    .top {
+    .filter {
       margin: 0;
     }
 
@@ -154,17 +155,16 @@ h2 {
     }
 
     .box a {
-      width: 30%;
+      width: 33%;
       background-color: transparent;
       padding: 0;
       height: 100px;
     }
 
-    .navText p {
-      font-size: 1rem;
-      padding-top: 25%;
+    .box p {
+      padding-top: 30%;
     }
     .col-md-8  {
       border-bottom: 1px solid lightgray;
   }
-  }
+  } */
