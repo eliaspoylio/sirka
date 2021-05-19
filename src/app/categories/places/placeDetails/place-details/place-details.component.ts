@@ -17,6 +17,7 @@ export class PlaceDetailsComponent implements OnInit {
   message = '';
   currentUser;
 
+  favList = [];
 
   constructor(
     private placeService: PlaceService,
@@ -28,6 +29,11 @@ export class PlaceDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.subscribeToPlace(this.activatedRoute.snapshot.paramMap.get('id'));
+
+    let fav = localStorage.getItem('FAVLIST');
+    if(fav) {
+      this.favList = JSON.parse(fav);
+    }
   }
 
   subscribeToPlace(id): void {
@@ -64,6 +70,11 @@ export class PlaceDetailsComponent implements OnInit {
       error => {
         console.log(error);
       });
+  }
+
+  addFav(currentPlace) {
+    this.favList.push(currentPlace);
+    localStorage.setItem('FAVLIST', JSON.stringify(this.favList));
   }
 
 }

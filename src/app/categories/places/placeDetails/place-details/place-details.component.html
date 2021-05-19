@@ -21,6 +21,8 @@
       </div>
       <p class="mt-3 lead"> {{currentPlace.description.body | stripHTML}} </p>
       <a type="button" (click)="addFavourite()" class="btn btn-danger"><i class="bi bi-heart"></i> Lisää suosikkeihin</a>
+
+      <a (click)="addFav(currentPlace)" type="button" data-toggle="button" class="btn btn-outline-danger"><i class="bi bi-heart"></i> Lisää suosikkeihin</a>
     </div>
   </div>
 </div>

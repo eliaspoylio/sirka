@@ -32,6 +32,7 @@ import { PlaceDetailsComponent } from './categories/places/placeDetails/place-de
 
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { NgxHideOnScrollModule } from 'ngx-hide-on-scroll';
+import { LocalstorageFavoritesComponent } from './localstorage-favorites/localstorage-favorites.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +53,8 @@ import { NgxHideOnScrollModule } from 'ngx-hide-on-scroll';
     StripPipe,
     ActivityDetailsComponent,
     EventDetailsComponent,
-    PlaceDetailsComponent
+    PlaceDetailsComponent,
+    LocalstorageFavoritesComponent
   ],
   imports: [
     BrowserModule,

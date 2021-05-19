@@ -17,7 +17,9 @@ import { PlacesComponent } from './categories/places/places.component';
 import { ActivitiesComponent } from './categories/activities/activities.component';
 import { ActivityDetailsComponent } from './categories/activities/activityDetails/activity-details/activity-details.component';
 import { EventDetailsComponent } from './categories/events/eventDetails/event-details/event-details.component';
-import { PlaceDetailsComponent } from './categories/places/placeDetails/place-details/place-details.component'
+import { PlaceDetailsComponent } from './categories/places/placeDetails/place-details/place-details.component';
+
+import  { LocalstorageFavoritesComponent } from './localstorage-favorites/localstorage-favorites.component';
 
 
 const routes: Routes = [
@@ -38,7 +40,8 @@ const routes: Routes = [
   {path: 'categories/activities', component: ActivitiesComponent},
   {path: 'event-details/:id', component: EventDetailsComponent},
   {path: 'place-details/:id', component: PlaceDetailsComponent},
-  {path: 'activity-details/:id', component: ActivityDetailsComponent}
+  {path: 'activity-details/:id', component: ActivityDetailsComponent},
+  {path: 'localstorage', component:  LocalstorageFavoritesComponent}
 ];
 
 @NgModule({

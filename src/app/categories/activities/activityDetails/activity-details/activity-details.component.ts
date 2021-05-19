@@ -16,6 +16,8 @@ export class ActivityDetailsComponent implements OnInit {
   currentActivity= null;
   message = '';
 
+  favList = [];
+
   constructor(
     private activityService: ActivityService,
     private activatedRoute: ActivatedRoute,
@@ -26,6 +28,11 @@ export class ActivityDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.subscribeToActivity(this.activatedRoute.snapshot.paramMap.get('id'));
+
+    let fav = localStorage.getItem('FAVLIST');
+    if(fav) {
+      this.favList = JSON.parse(fav);
+    }
   }
 
   subscribeToActivity(id): void {
@@ -49,6 +56,11 @@ export class ActivityDetailsComponent implements OnInit {
       error => {
         console.log(error);
       });
+  }
+
+  addFav(currentActivity) {
+    this.favList.push(currentActivity);
+    localStorage.setItem('FAVLIST', JSON.stringify(this.favList));
   }
 
 }

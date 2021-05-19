@@ -20,6 +20,8 @@ export class EventDetailsComponent implements OnInit {
   currentEvent =null;
   message = '';
 
+   favList = [];
+
   constructor(
     private eventService: EventService,
     private activatedRoute: ActivatedRoute,
@@ -29,6 +31,11 @@ export class EventDetailsComponent implements OnInit {
 
   ngOnInit(): void {
    this.subscribeToEvent( this.activatedRoute.snapshot.paramMap.get('id'));
+
+   let fav = localStorage.getItem('FAVLIST');
+   if(fav) {
+     this.favList = JSON.parse(fav);
+   }
   }
 
   subscribeToEvent(id): void {
@@ -65,6 +72,11 @@ export class EventDetailsComponent implements OnInit {
       error => {
         console.log(error);
       });
+  }
+
+  addFav(currentEvent) {
+    this.favList.push(currentEvent);
+    localStorage.setItem('FAVLIST', JSON.stringify(this.favList));
   }
 
 
