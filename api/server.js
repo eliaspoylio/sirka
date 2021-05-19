@@ -7,7 +7,8 @@ const favRoute = require('./routes/addfav')
 var cors = require('cors')
 require('dotenv').config();
 
-dbURL =  process.env.DB_URI
+const port = process.env.PORT || 4201
+const dbURL =  process.env.DB_URI
 
 app.use(cors())
 app.use(express.json())
@@ -33,7 +34,7 @@ app.get('*', (req, res) => {
 db.on("error", (err)=>{console.error(err)})
 db.once("open", () => {console.log("Connected to DB")})
 
-app.listen(4201, () => {console.log("Server listening to port 4201")})
+app.listen(port, () => {console.log("Server listening to port ", port)})
 
 
 
