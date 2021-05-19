@@ -16,7 +16,7 @@
     <div class="card-body">
       <h5 class="card-title">{{fav.name.fi }}</h5>
       <p class="card-text"> {{ fav.description.body | stripHTML }}</p>
-      <button class="btn btn-outline-primary" role="button" aria-pressed="true" routerLink="/event-details/{{ fav.id }}">Lue lisää!</button>
+      <a href="{{fav.info_url}}" class="btn btn-outline-primary" role="button" aria-pressed="true">Verkkosivut</a>
     </div>
   </div>
   </div>
