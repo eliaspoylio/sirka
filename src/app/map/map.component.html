@@ -12,7 +12,7 @@
       [iconUrl]="'http://maps.google.com/mapfiles/ms/icons/lightblue.png'">
       <agm-info-window class="places">
         <h3>{{place.name.fi}}</h3>
-        <p>{{place.description.body}}</p>
+        <p class="card-text">{{place.description.body}}</p>
         <button class="btn btn-info btn-sm" routerLink="/place-details/{{place.id}}">Tutustu lisää!</button>
       </agm-info-window>
     </agm-marker>
@@ -23,7 +23,7 @@
       [iconUrl]="'http://maps.google.com/mapfiles/ms/icons/yellow.png'">
       <agm-info-window class="events">
         <h3>{{event.name.fi}}</h3>
-        <p>{{event.description.body | stripHTML}}</p>
+        <p class="card-text">{{event.description.body | stripHTML}}</p>
         <button class="btn btn-info btn-sm" routerLink="/event-details/{{event.id}}">Tutustu lisää!</button>
       </agm-info-window>
     </agm-marker>
@@ -34,7 +34,7 @@
       [longitude]="activity.location.lon" [iconUrl]="'http://maps.google.com/mapfiles/ms/icons/green.png'">
       <agm-info-window class="activities">
         <h3>{{activity.name.fi}}</h3>
-        <p>{{activity.description.body | stripHTML}}</p>
+        <p class="card-text">{{activity.description.body | stripHTML}}</p>
         <button class="btn btn-info btn-sm" routerLink="/activity-details/{{activity.id}}">Tutustu lisää!</button>
       </agm-info-window>
     </agm-marker>

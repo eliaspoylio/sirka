@@ -5,3 +5,11 @@ agm-map {
 .currentLocation {
   padding: 1rem 0.5rem 0 0.5rem;
 }
+
+.card-text {
+  display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
