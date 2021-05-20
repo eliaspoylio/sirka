@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { WeatherService } from '../_services/weather.service';
 import { AlertService } from '../_services/alert.service';
 import { AuthenticationService } from '../_services/authentication.service';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -15,7 +15,8 @@ export class NavbarComponent implements OnInit {
 
   constructor(private _weatherService: WeatherService,
     private alertService: AlertService,
-    private authenticationService: AuthenticationService) { }
+    private authenticationService: AuthenticationService,
+    private router: Router) { }
 
   ngOnInit(): void {
 
