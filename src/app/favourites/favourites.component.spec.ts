@@ -1,4 +1,6 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { FavouritesComponent } from './favourites.component';
 
@@ -8,7 +10,8 @@ describe('FavouritesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FavouritesComponent ]
+      declarations: [ FavouritesComponent], 
+      imports: [ RouterTestingModule, HttpClientTestingModule ]
     })
     .compileComponents();
   });
@@ -20,7 +23,7 @@ describe('FavouritesComponent', () => {
   });
 
   it('should create favourites component', () => {
-    expect(component).toBeTruthy();
+    expect(FavouritesComponent).toBeTruthy();
   });
 
 });

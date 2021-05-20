@@ -3,6 +3,7 @@ import { WeatherService } from '../_services/weather.service';
 import { AlertService } from '../_services/alert.service';
 import { AuthenticationService } from '../_services/authentication.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2/dist/sweetalert2.js';
 
 @Component({
   selector: 'app-navbar',
@@ -53,8 +54,14 @@ export class NavbarComponent implements OnInit {
     return this.isAuthenticated;
   }
 
+  successAlertBox() {
+    Swal.fire('Olet nyt kirjautunut ulos.', 'Ensi kertaan!', 'success');
+}
+
   onLogout() {
     this.alertService.success('You are logged out!');
     this.authenticationService.logout();
+    this.successAlertBox();
   }
+
 }
