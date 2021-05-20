@@ -22,10 +22,35 @@
               </a>
         </li>
         </ul>
-        <ul class="nav navbar-nav">
-        <!-- <li class="nav-item" id="login">
+        <div class="dropdown">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-2x"></i></button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li *ngIf="!loggedin()" class="dropdown-item">
+              <a class="nav-link" routerLinkActive="active" routerLink="/register">Register</a>
+            </li>
+            <li *ngIf="!loggedin()" class="dropdown-item">
+              <a class="nav-link" routerLinkActive="active" routerLink="/login">Login</a>
+            </li>
+            <li *ngIf="loggedin()" class="dropdown-item">
+              <a href="/user-info" >My Profile</a>
+            </li>
+            <li *ngIf="loggedin()" class="dropdown-item">
+              <a href="/reset-password">
+                Change Password</a>
+            </li>
+            <li *ngIf="loggedin()" class="dropdown-item">
+              <a href="/favourites" >
+                My Favourites</a>
+            </li>
+            <li *ngIf="loggedin()" class="dropdown-item">
+              <a (click)='onLogout()'>Logout</a>
+            </li>
+          </ul>
+        </div>
+        <!-- <ul class="nav navbar-nav">
+         <li class="nav-item" id="login">
           <a class="nav-link" routerLink="/login" routerLinkActive="active"><i class="fas fa-user fa-2x"></i></a>
-      </li> -->
+      </li>
         <li *ngIf="!loggedin()" class="nav-item">
           <a class="nav-link" routerLinkActive="active" routerLink="/register">Register</a>
         </li>
@@ -45,7 +70,7 @@
 
           </div>
         </div>
-      </ul>
+      </ul> -->
     </div>
   </div>
 </nav>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherService } from '../_services/weather.service';
 import { AlertService } from '../_services/alert.service';
+import { AuthenticationService } from '../_services/authentication.service';
 
 
 @Component({
@@ -9,12 +10,12 @@ import { AlertService } from '../_services/alert.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
-  loggedinUser: string;
+  isAuthenticated: any;
   Weatherdata: any;
 
   constructor(private _weatherService: WeatherService,
-    private alertService: AlertService) { }
+    private alertService: AlertService,
+    private authenticationService: AuthenticationService) { }
 
   ngOnInit(): void {
 
@@ -47,12 +48,12 @@ export class NavbarComponent implements OnInit {
   }
 
   loggedin() {
-    this.loggedinUser = localStorage.getItem('token');
-    return this.loggedinUser;
+    this.isAuthenticated = this.authenticationService.isLoggedIn();
+    return this.isAuthenticated;
   }
 
   onLogout() {
-    localStorage.removeItem('token');
     this.alertService.success('You are logged out!');
+    this.authenticationService.logout();
   }
 }
