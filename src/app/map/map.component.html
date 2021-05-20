@@ -31,7 +31,7 @@
 
   <div *ngIf="router.url.includes('activities') || router.url.includes('frontpage')">
     <agm-marker *ngFor="let activity of activities" [latitude]="activity.location.lat"
-      [longitude]="activity.location.lon" [iconUrl]="'http://maps.google.com/mapfiles/ms/icons/green.png'">
+      [longitude]="activity.location.lon" [iconUrl]="'https://maps.google.com/mapfiles/ms/icons/green.png'">
       <agm-info-window class="activities">
         <h3>{{activity.name.fi}}</h3>
         <p class="card-text">{{activity.description.body | stripHTML}}</p>

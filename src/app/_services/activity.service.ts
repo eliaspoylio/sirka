@@ -11,7 +11,7 @@ export class ActivityService {
 
   constructor(private httpClient: HttpClient) { }
 
-   apiURL = "http://open-api.myhelsinki.fi/v1";
+   apiURL = "https://open-api.myhelsinki.fi/v1";
 
    public getActivities() {
      return this.httpClient.get('https://sirka-proxy.herokuapp.com/' + this.apiURL + "/activities/")

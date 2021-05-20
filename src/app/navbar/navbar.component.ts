@@ -15,12 +15,12 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
 
    //Don't show this when using testdata:
-    
+
     this._weatherService.getWeather().subscribe((res) => { this.setWeatherData(res) });
      this.Weatherdata = {
        main: {}
      }
-     
+
 
     //Show this when using testdata:
     //this.getTestData();
@@ -39,6 +39,6 @@ export class NavbarComponent implements OnInit {
     //Get current weather from API:
     this.Weatherdata.current_temp = (this.Weatherdata.current.temp -273.15).toFixed(0);
     //Get current weather icon from API:
-    this.Weatherdata.current_icon  =('http://openweathermap.org/img/wn/' + this.Weatherdata.current.weather[0].icon + '@2x.png');
+    this.Weatherdata.current_icon  =('https://openweathermap.org/img/wn/' + this.Weatherdata.current.weather[0].icon + '@2x.png');
   }
 }

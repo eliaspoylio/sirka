@@ -40,7 +40,7 @@ export class MapComponent implements OnInit {
     }
   ]
 
-  apiURL = "http://open-api.myhelsinki.fi/v1";
+  apiURL = "https://open-api.myhelsinki.fi/v1";
 
   ngOnInit() {
 
@@ -50,7 +50,7 @@ export class MapComponent implements OnInit {
     this.getLocation()
       .then((loc: any) => {
         this.httpClient
-          .get('http://sirka-proxy.herokuapp.com/' + this.apiURL + '/places/?distance_filter=' + loc.lat + '%2C' + loc.lng + '%2C4')
+          .get('https://sirka-proxy.herokuapp.com/' + this.apiURL + '/places/?distance_filter=' + loc.lat + '%2C' + loc.lng + '%2C4')
           .toPromise()
           .then(res => {
             let placeData = res as IApiData;
@@ -62,7 +62,7 @@ export class MapComponent implements OnInit {
           })
 
           this.httpClient
-          .get('http://sirka-proxy.herokuapp.com/' + this.apiURL + '/events/?distance_filter=' + loc.lat + '%2C' + loc.lng + '%2C4')
+          .get('https://sirka-proxy.herokuapp.com/' + this.apiURL + '/events/?distance_filter=' + loc.lat + '%2C' + loc.lng + '%2C4')
           .toPromise()
           .then(res => {
             let eventData = res as IApiData;
@@ -73,7 +73,7 @@ export class MapComponent implements OnInit {
             });
           })
           this.httpClient
-          .get('http://sirka-proxy.herokuapp.com/' + this.apiURL + '/activities/?distance_filter=' + loc.lat + '%2C' + loc.lng + '%2C4')
+          .get('https://sirka-proxy.herokuapp.com/' + this.apiURL + '/activities/?distance_filter=' + loc.lat + '%2C' + loc.lng + '%2C4')
           .toPromise()
           .then(res => {
             let activityData = res as IApiData;
