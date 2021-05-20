@@ -32,7 +32,6 @@ export class ActivityDetailsComponent implements OnInit {
     this.activityService.getOneActivity(id).subscribe(
       data => {
         this.currentActivity = data;
-        console.log(data);
       },
       error => {
         console.log(error)

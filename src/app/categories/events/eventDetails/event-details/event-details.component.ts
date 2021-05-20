@@ -35,7 +35,6 @@ export class EventDetailsComponent implements OnInit {
     this.eventService.getOneEvent(id).subscribe(
         data => {
           this.currentEvent = data;
-          // console.log(data)
         },
         error => {
           console.log(error);

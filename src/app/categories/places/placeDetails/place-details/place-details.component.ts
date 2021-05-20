@@ -34,7 +34,6 @@ export class PlaceDetailsComponent implements OnInit {
     this.placeService.getOnePlace(id).subscribe(
       data => {
         this.currentPlace = data;
-        // console.log(data);
       },
       error => {
         console.log(error)
