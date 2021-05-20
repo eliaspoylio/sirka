@@ -32,6 +32,7 @@ import { PlaceDetailsComponent } from './categories/places/placeDetails/place-de
 
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { NgxHideOnScrollModule } from 'ngx-hide-on-scroll';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,7 +69,7 @@ import { NgxHideOnScrollModule } from 'ngx-hide-on-scroll';
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
 
     // provider used to create fake backend
     //fakeBackendProvider
