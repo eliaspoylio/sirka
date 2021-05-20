@@ -10,6 +10,7 @@ import { User } from '../_models/user';
 export class AuthenticationService {
     private currentUserSubject: BehaviorSubject<User>;
     public currentUser: Observable<User>;
+    isLoggedin: boolean = false;
 
     constructor(private http: HttpClient) {
         this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
@@ -34,5 +35,16 @@ export class AuthenticationService {
         // remove user from local storage to log user out
         localStorage.removeItem('currentUser');
         this.currentUserSubject.next(null);
+    }
+
+    isLoggedIn() {
+      debugger;
+      if(localStorage.getItem('currentUser') == null) {
+        this.isLoggedin = false;
+        return this.isLoggedIn;
+      }
+      else {
+        return true;
+      }
     }
 }
