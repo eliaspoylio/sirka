@@ -38,7 +38,6 @@ export class AuthenticationService {
     }
 
     isLoggedIn() {
-      debugger;
       if(localStorage.getItem('currentUser') == null) {
         this.isLoggedin = false;
         return this.isLoggedIn;
