@@ -26,25 +26,25 @@
           <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-2x"></i></button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
             <li *ngIf="!loggedin()" class="dropdown-item">
-              <a class="nav-link" routerLinkActive="active" routerLink="/register">Rekisteröidy</a>
+              <a routerLinkActive="active" routerLink="/register">Rekisteröidy</a>
             </li>
             <li *ngIf="!loggedin()" class="dropdown-item">
-              <a class="nav-link" routerLinkActive="active" routerLink="/login">Kirjaudu</a>
+              <a routerLinkActive="active" routerLink="/login">Kirjaudu</a>
             </li>
             <li *ngIf="loggedin()" class="dropdown-item">
-              <a href="/user-info" >Profiili</a>
+              <a routerLink="/user-info" routerLinkActive="active">Profiili</a>
             </li>
             <li *ngIf="loggedin()" class="dropdown-item">
-              <a href="/reset-password">
+              <a routerLink="/reset-password" routerLinkActive="active">
                 Muuta salasana</a>
             </li>
             <li *ngIf="loggedin()" class="dropdown-item">
-              <a href="/favourites" >
+              <a routerLink="/favourites" routerLinkActive="active">
                 Suosikit</a>
             </li>
             <li *ngIf="loggedin()"><hr class="dropdown-divider"></li>
             <li *ngIf="loggedin()" class="dropdown-item">
-              <a (click)='onLogout()'>Kirjaudu ulos</a>
+              <a routerLink="/frontpage" routerLinkActive="active" (click)='onLogout()'>Kirjaudu ulos</a>
             </li>
           </ul>
         </div>
