@@ -39,3 +39,10 @@ button:hover {
 a {
   color: white;
 }
+.btn.btn-primary.btn-lg {
+  position: absolute;
+  left: 110%;
+  top: 50%;
+  color: black;
+  border-color: orange;
+}
