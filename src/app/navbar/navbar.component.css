@@ -43,6 +43,13 @@ i:hover {
 
 a {
   padding: 0;
+  text-decoration: none;
+  color: black;
+}
+
+#dropdownMenuButton1 {
+  border: none;
+  background: transparent;
 }
 
 
