@@ -11,7 +11,7 @@ export class EventService {
 
   constructor(private httpClient: HttpClient) { }
 
-  apiURL = "http://open-api.myhelsinki.fi/v1";
+  apiURL = "https://open-api.myhelsinki.fi/v1";
   // limit = '?limit=';
 
   public getEvents() {

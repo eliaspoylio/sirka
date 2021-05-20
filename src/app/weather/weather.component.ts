@@ -15,7 +15,7 @@ export class WeatherComponent implements OnInit {
   ngOnInit(): void {
 
     //Don't show this when using testdata:
-    
+
     this._weatherService.getWeather().subscribe((res) => { this.setWeatherData(res) });
      this.Weatherdata = {
        main: {}
@@ -63,10 +63,10 @@ export class WeatherComponent implements OnInit {
     */
 
     //Get Icons from API:
-    this.Weatherdata.currentIcon =('http://openweathermap.org/img/wn/' + this.Weatherdata.current.weather[0].icon + '@2x.png');
-    this.Weatherdata.secondIcon =('http://openweathermap.org/img/wn/' + this.Weatherdata.hourly[1].weather[0].icon + '@2x.png');
-    this.Weatherdata.thirdIcon =('http://openweathermap.org/img/wn/' + this.Weatherdata.hourly[2].weather[0].icon + '@2x.png');
-    this.Weatherdata.fourthIcon = ('http://openweathermap.org/img/wn/' + this.Weatherdata.hourly[3].weather[0].icon + '@2x.png');
+    this.Weatherdata.currentIcon =('https://openweathermap.org/img/wn/' + this.Weatherdata.current.weather[0].icon + '@2x.png');
+    this.Weatherdata.secondIcon =('https://openweathermap.org/img/wn/' + this.Weatherdata.hourly[1].weather[0].icon + '@2x.png');
+    this.Weatherdata.thirdIcon =('https://openweathermap.org/img/wn/' + this.Weatherdata.hourly[2].weather[0].icon + '@2x.png');
+    this.Weatherdata.fourthIcon = ('https://openweathermap.org/img/wn/' + this.Weatherdata.hourly[3].weather[0].icon + '@2x.png');
 
     //Get temperatures from API:
     this.Weatherdata.current_temp = (this.Weatherdata.current.temp - 273.15).toFixed(0);
